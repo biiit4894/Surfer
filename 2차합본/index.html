@@ -9,7 +9,6 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     </script>
     <script defer src="javascript.js"></script>
-
     <link href="style.css" rel="stylesheet"/>
     <style>
         /* @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap'); 
@@ -248,7 +247,42 @@
                 
                 <p class="election-title">대선 후보 공약 정리</p>
                 <hr class="election-hr" size="2" noshade><br>
-                <div class="question-box">
+
+                <div class="question-box" id="question-box1">
+                    <div class="balloon right"><span><b>탈시설 장애인 문제</b>를 해결할 공약은 무엇인가요?</span></div>
+                </div><br>
+
+                <button class="answer_button" id="answer_button1">답변 보기</button>
+
+                <div class="profile">
+                    <img class="lee" id="lee_1" src="images/lee.png">
+                </div>
+                <div class="balloon left" id="lee_answer1"><span><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.
+                    <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.</span>
+                </div>
+
+                <div class="profile">
+                    <img class="yoon" id="yoon_1" src="images/yoon.png">
+                </div>
+                <div class="balloon left" id="yoon_answer1"><span><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.
+                    <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.</span>
+                </div>
+                
+                <div class="profile">
+                    <img class="sim" id="sim_1" src="images/sim.png">
+                </div>
+                <div class="balloon left" id="sim_answer1"><span><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.
+                    <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.</span>
+                </div>
+
+                <div class="profile">
+                    <img class="ahn" id="ahn_1" src="images/ahn.png">
+                </div>
+                <div class="balloon left" id="ahn_answer1"><span><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.
+                    <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.</span>
+                </div>
+
+                <!-- <div class="question-box">
                     <div class="question q1"><b>탈시설 장애인 문제</b>를 해결할 공약은 무엇인가요?</div>
                 </div><br>
                 <div class="profile">
@@ -274,7 +308,7 @@
                     <p class="answer"><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여<br> 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.<br>
                         <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후<br> 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이<br> 이를 공포하겠습니다.
                     </p>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -314,32 +348,38 @@
                 
                 <p class="election-title">대선 후보 공약 정리</p>
                 <hr class="election-hr" width="30%" size="2" noshade><br>
-                <div class="question-box">
-                    <div class="question q2"><b>청소년 성범죄 문제</b>를 해결할 공약은 무엇인가요?</div>
+                
+                <div class="question-box" id="question-box2">
+                    <div class="balloon right"><span><b>청소년 성범죄 문제</b>를 해결할 공약은 무엇인가요?</span></div>
                 </div><br>
+                <button class="answer_button" id="answer_button2">답변 보기</button>
+
                 <div class="profile">
-                    <img class="lee" src="images/lee.png">
+                    <img class="lee" id="lee_2" src="images/lee.png">
                 </div>
-                <div class="answer-box1">
-                    <p class="answer"><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여<br> 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.<br>
-                        <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후<br> 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이<br> 이를 공포하겠습니다.
-                    </p>
-                </div><br>
+                <div class="balloon left" id="lee_answer2"><span><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.
+                    <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.</span>
+                </div>
+
                 <div class="profile">
-                    <img class="yoon" src="images/yoon.png">
+                    <img class="yoon" id="yoon_2" src="images/yoon.png">
                 </div>
-                <div class="answer-box2">
-                    <p class="answer"><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여<br> 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.<br>
-                        <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후<br> 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이<br> 이를 공포하겠습니다.
-                    </p>
-                </div><br>
+                <div class="balloon left" id="yoon_answer2"><span><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.
+                    <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.</span>
+                </div>
+                
                 <div class="profile">
-                    <img class="sim" src="images/sim.png">
+                    <img class="sim" id="sim_2"src="images/sim.png">
                 </div>
-                <div class="answer-box3">
-                    <p class="answer"><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여<br> 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.<br>
-                        <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후<br> 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이<br> 이를 공포하겠습니다.
-                    </p>
+                <div class="balloon left" id="sim_answer2"><span><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.
+                    <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.</span>
+                </div>
+
+                <div class="profile">
+                    <img class="ahn" id="ahn_2" src="images/ahn.png">
+                </div>
+                <div class="balloon left" id="ahn_answer2"><span><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.
+                    <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.</span>
                 </div>
             </div>
             <footer>

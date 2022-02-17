@@ -323,7 +323,8 @@ img.show {
   }
 }
 
-/* 한빛 - 가운데 정렬 진짜 구리게 한 부분이 많아서.. 웹모바일 호환 수정하면서 거기도 손볼게!*/
+/*************************************   한빛    ***************************************/
+/* 가운데 정렬 진짜 구리게 한 부분이 많아서.. 웹모바일 호환 수정하면서 거기도 손볼게!*/
 html {
   width: 100%;
   height: 100%;
@@ -502,106 +503,126 @@ html {
   margin-bottom: 100px;
 }
 
-.question-box {
-  font-size: 1.12rem;
-  display: inline;
-  float: right;
-  margin-right: 9.37rem;
-  padding: 5px;
-  width: 32.8rem;
-  height: 3rem;
-  background-color: #ffffff;
-  border-radius: 1rem;
-  border: solid 0.12rem #000000;
-  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
-}
-.question {
-  display: inline;
-  color: black;
-  font-family: "Noto Sans KR", sans-serif;
-  text-align: center;
-  vertical-align: middle;
+/*********************말풍선 코드 출처: https://ungdoli0916.tistory.com/753**********************/
+.balloon {
+  position: relative;
+  display: inline-block;
 }
 
+.balloon span {
+  display: inline-block;
+  padding: 1.5rem;
+  color: rgb(0, 0, 0);
+  background: #ffffff;
+  border-radius: 1.25rem;
+  font-family: 'Noto Sans KR', sans-serif;
+  box-shadow: 3px 3px 10px rgb(170, 169, 169);
+}
+
+.balloon.right {
+  float: right;
+  margin-right: 6rem; 
+  margin-bottom: 10rem;;
+  font-size: 1.25rem; 
+}
+
+.balloon.right span {
+  padding: 1rem 1.5rem;
+}
+
+/***질문 말풍선 아래 답변 버튼**/
+.answer_button {
+  float: right;
+  padding: 0.5rem 1.5rem;
+  border: 0 solid;
+  border-radius: 1rem;
+  margin-top: 4rem;
+  margin-right: -25rem;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+  color: #4f77cc;
+;
+  background-color: #ffffff;
+  font-size: 1rem;
+  box-shadow: 3px 3px 10px rgb(119, 119, 119);
+}
+
+.answer_button:hover {
+  background: #ebebeb;
+  background: linear-gradient(0deg, #cfcfcf 0%, #ffffff 100%);
+}
+
+.btn-1:hover {
+  background: rgb(0,3,255);
+background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
+}
+
+.balloon.left{
+  display: inline-block;
+  opacity: 0;
+  /* float: left; */
+  margin-left: 8rem;  
+  margin-top: -6rem;
+  font-size: 1rem;
+  line-height: 200%;
+  width: 36rem;
+}
+
+.balloon:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.balloon.right:after, .balloon.left:after {
+    border-width: 10px 15px;
+    top: 50%;
+    margin-top: -10px;
+}
+
+.balloon.left:after {
+    border-color: transparent #ffffff transparent transparent;
+    left: -25px;
+}
+
+.balloon.right:after {
+    border-color: transparent transparent transparent #ffffff;
+    right: -25px;
+}
+
+#lee_answer1 span, #lee_answer2 span {
+  border: 1px solid #1077ff;  
+}
+
+#yoon_answer1 span, #yoon_answer2 span {
+  border: 1px solid #e21010;
+}
+
+#sim_answer1 span, #sim_answer2 span {
+  border: 1px solid #ffbf10;  
+}
+
+#ahn_answer1 span, #ahn_answer2 span {
+  border: 1px solid #e66327;  
+}
+
+/******************************************************************************************/
+
+
 .profile {
-  margin-left: 15%;
-  margin-top: 200px;
-  width: 6.25rem;
-  height: 6.25rem;
+  margin-top: 10rem;
+  margin-left: 27rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 70%;
   overflow: hidden;
 }
 
-.lee {
-  width: 7.5rem;
-}
-
-.yoon {
-  width: 7.5rem;
-}
-
-.sim {
-  width: 7.5rem;
-}
-
-.answer {
-  color: black;
-  font-family: "Noto Sans KR", sans-serif;
-  text-align: left;
-}
-
-.answer-box1 {
-  display: inline-block;
-  text-align: left;
-  width: 40%;
-  height: 9.37rem;
-  background-color: #ffffff;
-  border-radius: 15px;
-  margin-top: -50px;
-  margin-left: -110px;
-  padding-top: 30px;
-  padding-left: 50px;
-  padding-bottom: 30px;
-  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
-  border-style: solid;
-  border-width: 2px;
-  border-color: #045fe7;
-}
-
-.answer-box2 {
-  display: inline-block;
-  text-align: left;
-  width: 40%;
-  height: 9.37rem;
-  background-color: #ffffff;
-  border-radius: 15px;
-  margin-top: -50px;
-  margin-left: -110px;
-  padding-top: 30px;
-  padding-left: 50px;
-  padding-bottom: 30px;
-  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
-  border-style: solid;
-  border-width: 2px;
-  border-color: #e23939;
-}
-
-.answer-box3 {
-  display: inline-block;
-  text-align: left;
-  width: 40%;
-  height: 9.37rem;
-  background-color: #ffffff;
-  border-radius: 15px;
-  margin-top: -50px;
-  margin-left: -110px;
-  padding-top: 30px;
-  padding-left: 50px;
-  padding-bottom: 30px;
-  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
-  border-style: solid;
-  border-width: 2px;
-  border-color: #e1a500;
+.lee, .yoon, .sim, .ahn {
+  opacity: 0;
+  width: 4rem;
 }
 
 footer {
@@ -820,108 +841,6 @@ footer {
     margin-bottom: 100px;
   }
 
-  .question-box {
-    font-size: 1.12rem;
-    display: inline;
-    float: right;
-    margin: 0 auto;
-    padding: 5px;
-    width: 32.8rem;
-    height: 2.5rem;
-    background-color: #ffffff;
-    border-radius: 1rem;
-    border: solid 0.12rem #000000;
-    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
-  }
-  .question {
-    display: inline;
-    color: black;
-    font-family: "Noto Sans KR", sans-serif;
-    text-align: center;
-    vertical-align: middle;
-  }
-
-  .profile {
-    margin-left: 15%;
-    margin-top: 200px;
-    width: 6.25rem;
-    height: 6.25rem;
-    border-radius: 70%;
-    overflow: hidden;
-  }
-
-  .lee {
-    width: 7.5rem;
-  }
-
-  .yoon {
-    width: 7.5rem;
-  }
-
-  .sim {
-    width: 7.5rem;
-  }
-
-  .answer {
-    color: black;
-    font-family: "Noto Sans KR", sans-serif;
-    text-align: left;
-  }
-
-  .answer-box1 {
-    display: inline-block;
-    text-align: left;
-    width: 40%;
-    height: 9.37rem;
-    background-color: #ffffff;
-    border-radius: 15px;
-    margin-top: -50px;
-    margin-left: -110px;
-    padding-top: 30px;
-    padding-left: 50px;
-    padding-bottom: 30px;
-    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
-    border-style: solid;
-    border-width: 2px;
-    border-color: #045fe7;
-  }
-
-  .answer-box2 {
-    display: inline-block;
-    text-align: left;
-    width: 40%;
-    height: 9.37rem;
-    background-color: #ffffff;
-    border-radius: 15px;
-    margin-top: -50px;
-    margin-left: -110px;
-    padding-top: 30px;
-    padding-left: 50px;
-    padding-bottom: 30px;
-    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
-    border-style: solid;
-    border-width: 2px;
-    border-color: #e23939;
-  }
-
-  .answer-box3 {
-    display: inline-block;
-    text-align: left;
-    width: 40%;
-    height: 9.37rem;
-    background-color: #ffffff;
-    border-radius: 15px;
-    margin-top: -50px;
-    margin-left: -110px;
-    padding-top: 30px;
-    padding-left: 50px;
-    padding-bottom: 30px;
-    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
-    border-style: solid;
-    border-width: 2px;
-    border-color: #e1a500;
-  }
-
   footer {
     background-color: #fffefc;
     text-align: center;
@@ -1094,16 +1013,98 @@ footer {
     font-weight: 700;
   }
 
-  .question-box {
-    font-size: 1.12rem;
-    display: inline;
-    float: right;
-    padding: 5px;
-    width: 25rem;
-    height: 2.5rem;
-    background-color: #ffffff;
-    border-radius: 1rem;
-    border: solid 0.12rem #000000;
-    box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.1);
+   /*말풍선 코드 출처: https://ungdoli0916.tistory.com/753*/
+   .balloon {
+    position: relative;
+    display: inline-block;
   }
+
+  .balloon span {
+    display: inline-block;
+    padding: 1.5rem;
+    color: rgb(0, 0, 0);
+    background: #ffffff;
+    border-radius: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    box-shadow: 3px 3px 10px rgb(170, 169, 169);
+  }
+
+  .balloon.right {
+    margin-bottom: 10rem;;
+    font-size: 1rem; 
+  }
+
+  .balloon.right span {
+    float: right;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .balloon.left span {
+    float: left;
+  }
+
+
+  .balloon.left{
+    display: inline-block;
+    margin-top: -6rem;
+    margin-bottom: 10rem;
+    font-size: 1rem;
+    line-height: 200%;
+    width: 36rem;
+  }
+
+  .balloon:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+  }
+
+  .balloon.right:after, .balloon.left:after {
+    border-width: 10px 15px;
+    top: 50%;
+    margin-top: -10px;
+  }
+
+  .balloon.left:after {
+    border-color: transparent #ffffff transparent transparent;
+    left: -25px;
+  }
+
+  .balloon.right:after {
+    border-color: transparent transparent transparent #ffffff;
+    right: -25px;
+  }
+
+  #lee_answer1 span {
+    border: 1px solid #1077ff;  
+  }
+
+  #yoon_answer1 span {
+    border: 1px solid #e21010;
+  }
+
+  #sim_answer1 span {
+    border: 1px solid #ffbf10;  
+  }
+
+  #ahn_answer1 span {
+    border: 1px solid #e66327;  
+  }
+
+  .profile {
+    margin-top: 10rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 70%;
+    overflow: hidden;
+  }
+
+  .lee, .yoon, .sim, .ahn {
+    width: 4rem;
+  }
+
 }
+
+/*************************************   한빛    ***************************************/
