@@ -127,23 +127,10 @@ hr {
   font-weight: bold;
 }
 
-.category_row_container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.category {
-  font-family: "Noto Sans KR", sans-serif;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 3px 3px 10px gray;
-  font-size: 1.1rem;
-  font-weight: bold;
-  width: 25%;
-  margin: 15px;
-  padding: 15px 5px;
-  background-color: #fffefc;
-  opacity: 0.9;
+#petition_category {
+  box-sizing: border-box;
+  width: 100%;
+  height: 45vh;
 }
 
 .image_container {
@@ -175,9 +162,86 @@ img.show {
   transition-duration: 0.8s;
   transition-timing-function: ease-in-out;
 }
+
+.mobile_hamburger_container {
+  box-sizing: border-box;
+  display: none;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  height: 5vh;
+  top: 1vh;
+  left: 0px;
+  z-index: 1;
+  text-align: center;
+  padding-top: 3px;
+}
+
+.mobile_hamburger_button {
+  border: none;
+  background-color: transparent;
+  font-weight: border;
+  font-size: 1.5rem;
+}
+
+.mobile_menu_container {
+  position: fixed;
+  width: 100%;
+  height: 0vh; /*full height: 30vh*/
+  top: 6vh;
+  left: 0px;
+  z-index: 1;
+  background-color: white;
+
+  transition: height ease-in-out 0.3s;
+}
+
+.mobile_menu {
+  display: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 0vh; /*full height: 6vh*/
+  text-align: center;
+  font-weight: border;
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  padding-top: 11px;
+
+  transition: height ease-in-out 0.3s;
+}
+
+.mobile_menu:hover {
+  background-color: #e4e3e3;
+}
+
+.top_button_container {
+  display: none;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 3px 3px 10px rgb(119, 119, 119);
+  z-index: 1;
+}
+
+.top_button {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  color: gray;
+}
 /************************************************/
 
 @media screen and (max-width: 960px) {
+  .mobile_hamburger_container {
+    display: block;
+  }
   .page_box {
     margin-top: 10vh;
   }
@@ -219,13 +283,8 @@ img.show {
   .subtitle_text {
     font-size: 1.3rem;
   }
-  /* 이거 어떻게 하지...? */
-  .category {
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 0.1rem;
-    margin: 2px;
-    padding: 2px 3px;
-  }
+
+  /*카테고리부분*/
 
   .menubar {
     height: 1vh;
@@ -292,13 +351,6 @@ img.show {
   }
   .subtitle_text {
     font-size: 1.2rem;
-  }
-  /* 이거 어떻게 하지...? */
-  .category {
-    font-family: "Noto Sans KR", sans-serif;
-    font-size: 0.1rem;
-    margin: 2px;
-    padding: 2px 3px;
   }
 
   .menubar {
@@ -515,15 +567,15 @@ html {
   color: rgb(0, 0, 0);
   background: #ffffff;
   border-radius: 1.25rem;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   box-shadow: 3px 3px 10px rgb(170, 169, 169);
 }
 
 .balloon.right {
   float: right;
-  margin-right: 6rem; 
-  margin-bottom: 10rem;;
-  font-size: 1.25rem; 
+  margin-right: 6rem;
+  margin-bottom: 10rem;
+  font-size: 1.25rem;
 }
 
 .balloon.right span {
@@ -532,16 +584,18 @@ html {
 
 /***질문 말풍선 아래 답변 버튼**/
 .answer_button {
+  /* display: block;
+  clear: both; */
   float: right;
   padding: 0.5rem 1.5rem;
   border: 0 solid;
   border-radius: 1rem;
   margin-top: 4rem;
-  margin-right: -25rem;
-  font-family: 'Noto Sans KR', sans-serif;
+  margin-right: -28rem;
+  /* margin-left: 78%; */
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: 700;
   color: #4f77cc;
-;
   background-color: #ffffff;
   font-size: 1rem;
   box-shadow: 3px 3px 10px rgb(119, 119, 119);
@@ -553,15 +607,19 @@ html {
 }
 
 .btn-1:hover {
-  background: rgb(0,3,255);
-background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
+  background: rgb(0, 3, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 3, 255, 1) 0%,
+    rgba(2, 126, 251, 1) 100%
+  );
 }
 
-.balloon.left{
+.balloon.left {
   display: inline-block;
   opacity: 0;
   /* float: left; */
-  margin-left: 8rem;  
+  margin-left: 8rem;
   margin-top: -6rem;
   font-size: 1rem;
   line-height: 200%;
@@ -569,47 +627,51 @@ background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
 }
 
 .balloon:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-style: solid;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
 }
 
-.balloon.right:after, .balloon.left:after {
-    border-width: 10px 15px;
-    top: 50%;
-    margin-top: -10px;
+.balloon.right:after,
+.balloon.left:after {
+  border-width: 10px 15px;
+  top: 50%;
+  margin-top: -10px;
 }
 
 .balloon.left:after {
-    border-color: transparent #ffffff transparent transparent;
-    left: -25px;
+  border-color: transparent #ffffff transparent transparent;
+  left: -25px;
 }
 
 .balloon.right:after {
-    border-color: transparent transparent transparent #ffffff;
-    right: -25px;
+  border-color: transparent transparent transparent #ffffff;
+  right: -25px;
 }
 
-#lee_answer1 span, #lee_answer2 span {
-  border: 1px solid #1077ff;  
+#lee_answer1 span,
+#lee_answer2 span {
+  border: 1px solid #1077ff;
 }
 
-#yoon_answer1 span, #yoon_answer2 span {
+#yoon_answer1 span,
+#yoon_answer2 span {
   border: 1px solid #e21010;
 }
 
-#sim_answer1 span, #sim_answer2 span {
-  border: 1px solid #ffbf10;  
+#sim_answer1 span,
+#sim_answer2 span {
+  border: 1px solid #ffbf10;
 }
 
-#ahn_answer1 span, #ahn_answer2 span {
-  border: 1px solid #e66327;  
+#ahn_answer1 span,
+#ahn_answer2 span {
+  border: 1px solid #e66327;
 }
 
 /******************************************************************************************/
-
 
 .profile {
   margin-top: 10rem;
@@ -620,7 +682,10 @@ background: linear-gradient(0deg, rgba(0,3,255,1) 0%, rgba(2,126,251,1) 100%);
   overflow: hidden;
 }
 
-.lee, .yoon, .sim, .ahn {
+.lee,
+.yoon,
+.sim,
+.ahn {
   opacity: 0;
   width: 4rem;
 }
@@ -1013,8 +1078,8 @@ footer {
     font-weight: 700;
   }
 
-   /*말풍선 코드 출처: https://ungdoli0916.tistory.com/753*/
-   .balloon {
+  /*말풍선 코드 출처: https://ungdoli0916.tistory.com/753*/
+  .balloon {
     position: relative;
     display: inline-block;
   }
@@ -1025,13 +1090,13 @@ footer {
     color: rgb(0, 0, 0);
     background: #ffffff;
     border-radius: 20px;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: "Noto Sans KR", sans-serif;
     box-shadow: 3px 3px 10px rgb(170, 169, 169);
   }
 
   .balloon.right {
-    margin-bottom: 10rem;;
-    font-size: 1rem; 
+    margin-bottom: 10rem;
+    font-size: 1rem;
   }
 
   .balloon.right span {
@@ -1043,8 +1108,7 @@ footer {
     float: left;
   }
 
-
-  .balloon.left{
+  .balloon.left {
     display: inline-block;
     margin-top: -6rem;
     margin-bottom: 10rem;
@@ -1054,14 +1118,15 @@ footer {
   }
 
   .balloon:after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 0;
-      border-style: solid;
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
   }
 
-  .balloon.right:after, .balloon.left:after {
+  .balloon.right:after,
+  .balloon.left:after {
     border-width: 10px 15px;
     top: 50%;
     margin-top: -10px;
@@ -1078,7 +1143,7 @@ footer {
   }
 
   #lee_answer1 span {
-    border: 1px solid #1077ff;  
+    border: 1px solid #1077ff;
   }
 
   #yoon_answer1 span {
@@ -1086,11 +1151,11 @@ footer {
   }
 
   #sim_answer1 span {
-    border: 1px solid #ffbf10;  
+    border: 1px solid #ffbf10;
   }
 
   #ahn_answer1 span {
-    border: 1px solid #e66327;  
+    border: 1px solid #e66327;
   }
 
   .profile {
@@ -1101,10 +1166,12 @@ footer {
     overflow: hidden;
   }
 
-  .lee, .yoon, .sim, .ahn {
+  .lee,
+  .yoon,
+  .sim,
+  .ahn {
     width: 4rem;
   }
-
 }
 
 /*************************************   한빛    ***************************************/

@@ -5,10 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script defer src="//code.jquery.com/jquery-latest.min.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    </script>
+
+    <style type="text/css">
+        div.jqcloud span.r1 {
+          -webkit-writing-mode: vertical-rl;
+          writing-mode: tb-rl;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./jqcloud/jqcloud.css" />
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="./jqcloud/jqcloud-0.2.10.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script defer src="javascript.js"></script>
+
     <link href="style.css" rel="stylesheet"/>
     <style>
         /* @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap'); 
@@ -21,21 +32,37 @@
     </div>
 
     <div id="container" class="menubar">
-        <div id="block1" class="progressBlock" onclick="animateScrollTo('#page0',70,50)">편집자주</div>
-        <div id="block2" class="progressBlock" onclick="animateScrollTo('#page1',70,50)">5년간의 목소리와 응답</div>
-        <div id="block3" class="progressBlock" onclick="animateScrollTo('#page2',70,50)">메시지의 전문</div>
-        <div id="block4" class="progressBlock" onclick="animateScrollTo('#page3',70,50)">미회신 메시지1</div>
-        <div id="block5" class="progressBlock" onclick="animateScrollTo('#page4',70,50)">미회신 메시지2</div>
+        <div id="block1" class="progressBlock" onclick="animateScrollTo('#page0',500)">편집자주</div>
+        <div id="block2" class="progressBlock" onclick="animateScrollTo('#page1',500)">5년간의 목소리와 응답</div>
+        <div id="block3" class="progressBlock" onclick="animateScrollTo('#page2',500)">메시지의 전문</div>
+        <div id="block4" class="progressBlock" onclick="animateScrollTo('#page3',500)">미회신 메시지1</div>
+        <div id="block5" class="progressBlock" onclick="animateScrollTo('#page4',500)">미회신 메시지2</div>
+    </div>
+
+    <div class="mobile_hamburger_container">
+        <button class="mobile_hamburger_button">&#9776;</button>
+    </div>
+
+    <div class="mobile_menu_container">
+        <div class="mobile_menu" onclick="animateScrollTo('#page0',500)">편집자주</div>
+        <div class="mobile_menu" onclick="animateScrollTo('#page1',500)">5년간의 목소리와 응답</div>
+        <div class="mobile_menu" onclick="animateScrollTo('#page2',500)">메시지의 전문</div>
+        <div class="mobile_menu" onclick="animateScrollTo('#page3',500)">미회신 메시지1</div>
+        <div class="mobile_menu" onclick="animateScrollTo('#page4',500)">미회신 메시지2</div>
+    </div>
+
+    <div class="top_button_container">
+        <button class="top_button">▲</button>
     </div>
 
     <div id="top_container">
         <div id="content_container">
-            <!-- 해당 위치로 북마크 -->
-            <div id="page0" class="pages">   
-                <div class="title-casette">
-                    <img class="title-img" src="images/title.png">
-                </div>
+            <div style="margin-top: 15vh;"></div>
+            <div class="title-casette">
+                <img class="title-img" src="images/title.png">
+            </div>
 
+            <div id="page0" class="pages">   
                 <div class="menu_container">
                     <span class="menu_text">편집자주</span>
                     <hr size="2px" color="gray">
@@ -75,36 +102,12 @@
                 <div class="flex_container" style="margin-top: 50px;">
                     <div class="subtitle_container">
                         <span class="subtitle_text">국민청원의 17가지 카테고리 구성</span>
+                        <center>
+                            <div style="font-size: 0.8rem; font-weight: bolder;">2017-2021년 분야별 국민청원 동의 수 기준</div> 
+                        </center>
                     </div>
                     <div style="margin-top: 20px;">
-                        <div class="category_row_container">
-                            <div class="category">정치개혁</div>
-                            <div class="category">외교/통일/국민</div>
-                            <div class="category">일자리</div>
-                            <div class="category">미래</div>
-                            <div class="category">성장동력</div>
-                        </div>
-                        <div class="category_row_container">
-                            <div class="category">인권/성평등</div>
-                            <div class="category">육아/교육</div>
-                            <div class="category">안전/환경</div>
-                            <div class="category">저출산/고령화대책</div>
-                            <div class="category">행정</div>
-                        </div>
-                        <div class="category_row_container">
-                            <div class="category">반려동물</div>
-                            <div class="category">문화/예술/체육/언론</div>
-                            <div class="category">농산어촌</div>
-                            <div class="category">보건복지</div>
-                            <div class="category">교통/건축/국토</div>
-                        </div>
-                        <div class="category_row_container">
-                            <div class="category">경제민주화</div>
-                            <div class="category">기타</div>
-                            <div class="category" style="visibility: hidden;"></div>
-                            <div class="category" style="visibility: hidden;"></div>
-                            <div class="category" style="visibility: hidden;"></div>
-                        </div>
+                        <div id="petition_category"></div>
                     </div>
                 </div>
                 <div class="letters_container">
@@ -185,9 +188,8 @@
                 </div>
             </div>
 
+            <div style="height: 20vh;"></div>
             <!-- 4. 기획기사 부분 --> 
-
-
         </div>
     </div>
 

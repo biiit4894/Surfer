@@ -1,6 +1,43 @@
+// 스크롤 멈춤 이벤트 처리 콜백 함수 (출처: https://yeolco.tistory.com/155 [열코의 프로그래밍 일기])
+$.fn.scrollStopped = function(callback) {
+    var that = this, $this = $(that);
+    $this.scroll(function(ev) {
+        clearTimeout($this.data('scrollTimeout'));
+        $this.data('scrollTimeout', setTimeout(callback.bind(that), 3000, ev));
+    });
+};
+
+// jqcloud 워드리스트 
+let word_list = [
+    {text: "인권/성평등", weight: 13, url: ""},
+    {text: "정치개혁", weight: 10.5, url: ""},
+    {text: "안전/환경", weight: 9.4, url: ""},
+    {text: "기타", weight: 8},
+    {text: "보건복지", weight: 6.2},
+    {text: "육아/교육", weight: 5},
+    {text: "문화/예술/체육/언론", weight: 5},
+    {text: "교통/건축/국토", weight: 5},
+    {text: "행정", weight: 5},
+    {text: "외교/통일/국방", weight: 4},
+    {text: "일자리", weight: 4},
+    {text: "미래", weight: 3},
+    {text: "성장동력", weight: 3},
+    {text: "저출산/고령화대책", weight: 3},
+    {text: "반려동물", weight: 3},
+    {text: "농산어촌", weight: 3},
+    {text: "경제민주화", weight: 3}];
+
 $(document).ready(function() {
-    $(window).scroll(() => setProgress())
-    setMenuPosition();
+    $("#petition_category").jQCloud(word_list, {randomClasses: 3});
+
+    $(window).scroll(() => {
+        setProgress()
+        $(document.querySelector('.top_button_container')).css('display', 'block'); 
+    });
+
+    $(window).scrollStopped(() => {
+        $(document.querySelector('.top_button_container')).css('display', 'none');
+    })
 
     $(window).resize(() => {
         setProgress();
@@ -14,6 +51,8 @@ $(document).ready(function() {
         setProgress();
         setMenuPosition();
     });
+
+    setMenuPosition();
 })
 
 function setMenuPosition() {
@@ -39,40 +78,47 @@ function setProgress() {
     document.querySelector("#progress").style.width = percentage + "%";
 }
 
-animateScrollTo = function(_selector, _speed, _adjust) {
-    const targetEle = document.querySelector(_selector);
-    if (!targetEle) return;
+// animateScrollTo = function(_selector, _speed, _adjust) {
+//     const targetEle = document.querySelector(_selector);
+//     if (!targetEle) return;
 
-    // - Get current & target positions
-    const scrollEle = document.documentElement || window.scrollingElement,
-    currentY = scrollEle.scrollTop,
-    targetY = targetEle.offsetTop - (_adjust || 0);
-    animateScrollTo(currentY, targetY, _speed);
+//     // - Get current & target positions
+//     const scrollEle = document.documentElement || window.scrollingElement,
+//     currentY = scrollEle.scrollTop,
+//     targetY = targetEle.offsetTop - (_adjust || 0);
+//     animateScrollTo(currentY, targetY, _speed);
 
-    // - Animate and scroll to target position
-    function animateScrollTo(_startY, _endY, _speed) {
-        _speed = _speed ? _speed : 100;
+//     // - Animate and scroll to target position
+//     function animateScrollTo(_startY, _endY, _speed) {
+//         _speed = _speed ? _speed : 100;
 
-        const scrollTo = 
-        (_startY < _endY) ?
-        function() {
-            _startY = scrollEle.scrollTop;
-            if(_startY < _endY) {
-                scrollEle.scrollTop = _startY + _speed;
-                requestAnimationFrame(scrollTo);
-            }
-        }
-        : 
-        function() {
-            _startY = scrollEle.scrollTop;
-            if(_startY > _endY) {
-                scrollEle.scrollTop = _startY - _speed;
-                requestAnimationFrame(scrollTo);
-            }
-        }
-        requestAnimationFrame(scrollTo); 
-    };
-};
+//         const scrollTo = 
+//         (_startY < _endY) ?
+//         function() {
+//             _startY = scrollEle.scrollTop;
+//             if(_startY < _endY) {
+//                 scrollEle.scrollTop = _startY + _speed;
+//                 requestAnimationFrame(scrollTo);
+//             }
+//         }
+//         : 
+//         function() {
+//             _startY = scrollEle.scrollTop;
+//             if(_startY > _endY) {
+//                 scrollEle.scrollTop = _startY - _speed;
+//                 requestAnimationFrame(scrollTo);
+//             }
+//         }
+//         requestAnimationFrame(scrollTo); 
+//     };
+// };
+
+function animateScrollTo(_selector, _speed) {
+    let page = document.querySelector(_selector);
+    $("body,html").animate({
+        scrollTop : (page.offsetTop - 60) // offset: 60 
+    }, _speed);
+}
 
 function typing(_selector, _selector2, _text) {
     let textObj = document.querySelector(_selector);
@@ -116,32 +162,75 @@ spyEls.forEach(function (spyEl) {
 })
 
 // 탈시설 장애인 타이핑 
-new ScrollMagic.Scene({
-    triggerElement: '.q1',
-    triggerHook: .8
-})
-.setClassToggle('.q1', 'show_q1') // 요소가 화면에 보이는지 않보이는지 클래스 추가로 체크 
-.on('enter', () => {
-    typing('.q1', '.show_q1', "탈시설 장애인 문제를 해결할 공약은 무엇인가요?");
-})
-.on('leave', () => {
-    clearText('.q1'); 
-})
-.addTo(controller);
+// new ScrollMagic.Scene({
+//     triggerElement: '.q1',
+//     triggerHook: .8
+// })
+// .setClassToggle('.q1', 'show_q1') // 요소가 화면에 보이는지 않보이는지 클래스 추가로 체크 
+// .on('enter', () => {
+//     typing('.q1', '.show_q1', "탈시설 장애인 문제를 해결할 공약은 무엇인가요?");
+// })
+// .on('leave', () => {
+//     clearText('.q1'); 
+// })
+// .addTo(controller);
 
 // 청소년 성범죄 타이핑 
-new ScrollMagic.Scene({
-    triggerElement: '.q2',
-    triggerHook: .8
+// new ScrollMagic.Scene({
+//     triggerElement: '.q2',
+//     triggerHook: .8
+// })
+// .setClassToggle('.q2', 'show_q2') // 요소가 화면에 보이는지 않보이는지 클래스 추가로 체크 
+// .on('enter', () => {
+//     typing('.q2', '.show_q2', "청소년 성범죄 문제를 해결할 공약은 무엇인가요?");
+// })
+// .on('leave', () => {
+//     clearText('.q2'); 
+// })
+// .addTo(controller);
+
+// 모바일 햄버거 메뉴바 
+let num = 0; 
+let hamburger_button = document.querySelector('.mobile_hamburger_button');
+$(hamburger_button).click(() => {
+    if(num % 2 == 0) {
+        hamburger_button.innerHTML = 'Ⅹ';  
+        $('.mobile_menu_container').css('height', '25vh');
+        $('.mobile_menu').css('height', '5vh');
+        setTimeout(()=>{
+            $('.mobile_menu').css('display', 'block'); 
+        }, 150); 
+    } else {
+        hamburger_button.innerHTML = '&#9776;'; 
+        $('.mobile_menu_container').css('height', '0vh');
+        $('.mobile_menu').css('height', '0vh');
+        setTimeout(()=>{
+            $('.mobile_menu').css('display', 'none'); 
+        }, 200); 
+    }
+    num += 1; 
 })
-.setClassToggle('.q2', 'show_q2') // 요소가 화면에 보이는지 않보이는지 클래스 추가로 체크 
-.on('enter', () => {
-    typing('.q2', '.show_q2', "청소년 성범죄 문제를 해결할 공약은 무엇인가요?");
+
+let mobile_menus = document.querySelectorAll('.mobile_menu');
+mobile_menus.forEach((mobile_menu) => {
+    $(mobile_menu).click(() => {
+        hamburger_button.innerHTML = '&#9776;'; 
+        $('.mobile_menu_container').css('height', '0vh');
+        $('.mobile_menu').css('height', '0vh');
+        setTimeout(()=>{
+            $('.mobile_menu').css('display', 'none'); 
+        }, 200); 
+        num += 1; 
+    })
 })
-.on('leave', () => {
-    clearText('.q2'); 
+
+// 페이지 맨 위로 이동 
+let top_button = document.querySelector('.top_button');
+$(top_button).click(() => {
+    $("body,html").animate({
+        scrollTop : 0
+    }, 500);
 })
-.addTo(controller);
 
 // 한빛
 // 답변 보기 버튼 클릭 시 이재명 답변 먼저 fadeIn
