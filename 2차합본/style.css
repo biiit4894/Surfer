@@ -1,0 +1,1177 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Song+Myung&display=swap");
+
+.menubar {
+  position: fixed;
+  width: 100%;
+  height: 5vh;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+}
+
+#progressBar {
+  background-color: black;
+}
+
+#progress {
+  width: 0%;
+  height: 100%;
+  background-color: #4f77cc;
+}
+
+.progressBlock {
+  position: absolute;
+  left: 0%;
+  width: 0%;
+  height: 100%;
+  background-color: transparent;
+  font-size: 1.1rem;
+  border: 0.5px solid gray;
+  color: white;
+  font-style: bold;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #e4e3e3;
+  font-family: "Noto Serif KR", serif;
+}
+
+#top_container {
+  width: 100%;
+  margin-top: 5vh;
+}
+
+#content_container {
+  margin-left: 20vw;
+  margin-right: 20vw;
+  width: 60vw;
+}
+
+.pages {
+  margin-top: 15vh;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.menu_container {
+  margin-top: 15vh;
+}
+
+.menu_text {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+hr {
+  margin-top: 15px;
+}
+
+#subject {
+  font-size: 2.5rem;
+}
+
+#subject_desc {
+  font-size: 1.5rem;
+  color: #808080;
+  margin-top: 10px;
+}
+
+.flex_container {
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#goal {
+  color: #4f77cc;
+  font-weight: bold;
+  font-size: 1.7rem;
+  text-align: center;
+  margin-top: 15vh;
+}
+
+.letters_container {
+  margin-top: 5vh;
+}
+
+.letters {
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+  color: black;
+}
+
+.title_container {
+  margin-top: 15vh;
+}
+
+.title_text {
+  font-size: 2.2rem;
+  color: #4f77cc;
+  font-weight: bolder;
+}
+
+.subtitle_container {
+  margin-top: 15vh;
+  text-align: center;
+}
+
+.subtitle_text {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+#petition_category {
+  box-sizing: border-box;
+  width: 100%;
+  height: 45vh;
+}
+
+.image_container {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 60vh;
+  margin-top: 6vh;
+  padding: 6vh 20vw;
+  background-color: #fffefc;
+  margin-left: -21vw;
+}
+
+.image_content {
+  width: 60vw;
+  height: 48vh;
+}
+
+/**************** 새로 추가 *********************/
+
+img.scroll-spy {
+  opacity: 0;
+  transform: scale(1.05, 1.05);
+}
+
+img.show {
+  opacity: 1;
+  transform: scale(1, 1);
+  transition-property: transform opacity;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-in-out;
+}
+
+.mobile_hamburger_container {
+  box-sizing: border-box;
+  display: none;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  height: 5vh;
+  top: 1vh;
+  left: 0px;
+  z-index: 1;
+  text-align: center;
+  padding-top: 3px;
+}
+
+.mobile_hamburger_button {
+  border: none;
+  background-color: transparent;
+  font-weight: border;
+  font-size: 1.5rem;
+}
+
+.mobile_menu_container {
+  position: fixed;
+  width: 100%;
+  height: 0vh; /*full height: 30vh*/
+  top: 6vh;
+  left: 0px;
+  z-index: 1;
+  background-color: white;
+
+  transition: height ease-in-out 0.3s;
+}
+
+.mobile_menu {
+  display: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 0vh; /*full height: 6vh*/
+  text-align: center;
+  font-weight: border;
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  padding-top: 11px;
+
+  transition: height ease-in-out 0.3s;
+}
+
+.mobile_menu:hover {
+  background-color: #e4e3e3;
+}
+
+.top_button_container {
+  display: none;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 3px 3px 10px rgb(119, 119, 119);
+  z-index: 1;
+}
+
+.top_button {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  color: gray;
+}
+/************************************************/
+
+@media screen and (max-width: 960px) {
+  .mobile_hamburger_container {
+    display: block;
+  }
+  .page_box {
+    margin-top: 10vh;
+  }
+  .menu_container {
+    margin-top: 10vh;
+  }
+  .menu_text {
+    font-size: 1.4rem;
+  }
+  .flex_container {
+    margin-top: 10vh;
+  }
+  #subject {
+    font-size: 2rem;
+  }
+  #subject_desc {
+    font-size: 1.2rem;
+  }
+  #goal {
+    font-size: 1.35rem;
+    margin-top: 10vh;
+  }
+  .letters_container {
+    margin-top: 3vh;
+  }
+  .letters {
+    font-size: 1.1rem;
+    line-height: 2rem;
+  }
+  .title_container {
+    margin-top: 10vh;
+  }
+  .title_text {
+    font-size: 1.6rem;
+  }
+  .subtitle_container {
+    margin-top: 10vh;
+  }
+  .subtitle_text {
+    font-size: 1.3rem;
+  }
+
+  /*카테고리부분*/
+
+  .menubar {
+    height: 1vh;
+  }
+  .progressBlock {
+    display: none;
+  }
+  #content_container {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80vw;
+  }
+  .image_container {
+    height: 50vh;
+    margin-top: 3vh;
+    margin-left: -11vw;
+    padding: 8vh 5vw;
+  }
+
+  .image_content {
+    width: 90vw;
+    height: 34vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .page_box {
+    margin-top: 7vh;
+  }
+  .menu_container {
+    margin-top: 7vh;
+  }
+  .menu_text {
+    font-size: 1.3rem;
+  }
+  .flex_container {
+    margin-top: 7vh;
+  }
+  #subject {
+    font-size: 1.9rem;
+  }
+  #subject_desc {
+    font-size: 1.1rem;
+  }
+  #goal {
+    font-size: 1.2rem;
+    margin-top: 7vh;
+  }
+  .letters_container {
+    margin-top: 3vh;
+  }
+  .letters {
+    font-size: 1rem;
+    line-height: 1.9rem;
+  }
+  .title_container {
+    margin-top: 7vh;
+  }
+  .title_text {
+    font-size: 1.6rem;
+  }
+  .subtitle_container {
+    margin-top: 7vh;
+  }
+  .subtitle_text {
+    font-size: 1.2rem;
+  }
+
+  .menubar {
+    height: 1vh;
+  }
+  .progressBlock {
+    display: none;
+  }
+  #content_container {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+  }
+  .image_container {
+    height: 30vh;
+    margin-left: -6vw;
+    padding: 6vh 3vw;
+  }
+  .image_content {
+    width: 94vw;
+    height: 18vh;
+  }
+}
+
+/*************************************   한빛    ***************************************/
+/* 가운데 정렬 진짜 구리게 한 부분이 많아서.. 웹모바일 호환 수정하면서 거기도 손볼게!*/
+html {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "Noto Serif KR", serif;
+  color: #ffffff;
+  background-color: #232222;
+}
+
+/* .header {
+      position: fixed;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+  }
+
+  .progress-container {
+      width: 100%;
+      height: 50px;
+      background-color: #232222;
+      opacity: 0.8;
+  }
+    
+  .progress-bar {
+      width: 0%;
+      height: 50px;
+      color: #3C74D4;
+      transition: all .3s ease;
+      opacity: 0.8;
+      z-index: 1;
+  }   */
+
+.title-casette {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20%;
+}
+
+.title-img {
+  vertical-align: middle;
+  width: 640px;
+  height: 380px;
+  border-radius: 3%;
+}
+
+.txt {
+  font-size: 1.25rem;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 800px;
+  margin: 0 auto;
+  margin-bottom: 200px;
+  line-height: 300%;
+}
+
+.txt1 {
+  font-size: 1.25rem;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 800px;
+  margin: 0 auto;
+  margin-bottom: 200px;
+  line-height: 300%;
+}
+
+.txt1-title {
+  text-align: center;
+  font-size: 2.18rem;
+  font-weight: 700;
+}
+
+.fixed {
+  background: url("images/sexual_violence.png") no-repeat center center fixed;
+}
+
+.txt2 {
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("images/sexual_violence.png"); */
+  background-size: cover;
+  height: 700px;
+}
+
+.txt2 p {
+  margin: 0 auto;
+  padding-top: 200px;
+  font-size: 1.25rem;
+  width: 800px;
+  line-height: 300%;
+}
+
+.txt4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("images/chatroom.png");
+  background-size: cover;
+  height: 700px;
+}
+
+.txt4 p {
+  margin: 0 auto;
+  padding-top: 100px;
+  font-size: 1.25rem;
+  width: 800px;
+  line-height: 300%;
+}
+
+.space {
+  height: 400px;
+  background-color: #232222;
+}
+
+.txt5 {
+  background-color: #fffefc;
+  height: 700px;
+}
+
+.txt5 p {
+  color: #000000;
+  margin: 0 auto;
+  padding-top: 100px;
+  font-size: 1.25rem;
+  width: 800px;
+  line-height: 300%;
+}
+
+.txt5-title {
+  text-align: center;
+  font-size: 2.18rem;
+  font-weight: 700;
+}
+
+.tape4you {
+  width: 100%;
+  background-color: #e4e3e3;
+  text-align: center;
+  padding-bottom: 300px;
+}
+
+#tape-hands {
+  margin-top: 100px;
+  text-align: center;
+  width: 25%;
+}
+
+.tape-title {
+  font-size: 1.88rem;
+  color: #3c74d4;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.description {
+  color: black;
+  line-height: 260%;
+  font-size: 1.12rem;
+  margin-top: 50px;
+}
+
+.election-title {
+  margin-top: 150px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.56rem;
+  color: black;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.election-hr {
+  width: 28rem;
+  color: black;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+/*********************말풍선 코드 출처: https://ungdoli0916.tistory.com/753**********************/
+.balloon {
+  position: relative;
+  display: inline-block;
+}
+
+.balloon span {
+  display: inline-block;
+  padding: 1.5rem;
+  color: rgb(0, 0, 0);
+  background: #ffffff;
+  border-radius: 1.25rem;
+  font-family: "Noto Sans KR", sans-serif;
+  box-shadow: 3px 3px 10px rgb(170, 169, 169);
+}
+
+.balloon.right {
+  float: right;
+  margin-right: 6rem;
+  margin-bottom: 10rem;
+  font-size: 1.25rem;
+}
+
+.balloon.right span {
+  padding: 1rem 1.5rem;
+}
+
+/***질문 말풍선 아래 답변 버튼**/
+.answer_button {
+  /* display: block;
+  clear: both; */
+  float: right;
+  padding: 0.5rem 1.5rem;
+  border: 0 solid;
+  border-radius: 1rem;
+  margin-top: 4rem;
+  margin-right: -28rem;
+  /* margin-left: 78%; */
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  color: #4f77cc;
+  background-color: #ffffff;
+  font-size: 1rem;
+  box-shadow: 3px 3px 10px rgb(119, 119, 119);
+}
+
+.answer_button:hover {
+  background: #ebebeb;
+  background: linear-gradient(0deg, #cfcfcf 0%, #ffffff 100%);
+}
+
+.btn-1:hover {
+  background: rgb(0, 3, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 3, 255, 1) 0%,
+    rgba(2, 126, 251, 1) 100%
+  );
+}
+
+.balloon.left {
+  display: inline-block;
+  opacity: 0;
+  /* float: left; */
+  margin-left: 8rem;
+  margin-top: -6rem;
+  font-size: 1rem;
+  line-height: 200%;
+  width: 36rem;
+}
+
+.balloon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.balloon.right:after,
+.balloon.left:after {
+  border-width: 10px 15px;
+  top: 50%;
+  margin-top: -10px;
+}
+
+.balloon.left:after {
+  border-color: transparent #ffffff transparent transparent;
+  left: -25px;
+}
+
+.balloon.right:after {
+  border-color: transparent transparent transparent #ffffff;
+  right: -25px;
+}
+
+#lee_answer1 span,
+#lee_answer2 span {
+  border: 1px solid #1077ff;
+}
+
+#yoon_answer1 span,
+#yoon_answer2 span {
+  border: 1px solid #e21010;
+}
+
+#sim_answer1 span,
+#sim_answer2 span {
+  border: 1px solid #ffbf10;
+}
+
+#ahn_answer1 span,
+#ahn_answer2 span {
+  border: 1px solid #e66327;
+}
+
+/******************************************************************************************/
+
+.profile {
+  margin-top: 10rem;
+  margin-left: 27rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 70%;
+  overflow: hidden;
+}
+
+.lee,
+.yoon,
+.sim,
+.ahn {
+  opacity: 0;
+  width: 4rem;
+}
+
+footer {
+  background-color: #fffefc;
+  text-align: center;
+  height: 37.5rem;
+}
+
+.projectname {
+  margin: 0 auto;
+  padding-top: 100px;
+  margin-bottom: 30px;
+}
+
+.sea-waves {
+  width: 3.75rem;
+  margin-right: 8px;
+  padding-top: 5px;
+}
+
+.surfer {
+  display: inline;
+  font-size: 2.19rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #000000;
+  padding-top: -5px;
+}
+
+.about-us {
+  margin-left: 30%;
+}
+
+.datateam {
+  color: black;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 100%;
+  float: left;
+  box-sizing: border-box;
+  background-color: #fffefc;
+}
+
+.coverteam {
+  color: black;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 100%;
+  float: left;
+  margin-left: 5%;
+  box-sizing: border-box;
+  background-color: #fffefc;
+}
+
+.developmentteam {
+  color: black;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 100%;
+  float: left;
+  margin-left: 5%;
+  box-sizing: border-box;
+  background-color: #fffefc;
+}
+
+.team-name {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.sns {
+  text-align: center;
+}
+
+.copyright {
+  clear: left;
+  font-size: 0.7rem;
+  margin-top: 21rem;
+  text-align: center;
+  color: black;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* media query 수정중... */
+@media screen and (max-width: 960px) {
+  .title-casette {
+    text-align: center;
+  }
+
+  .title-img {
+    vertical-align: middle;
+    width: 480px;
+    height: 285px;
+    border-radius: 3%;
+  }
+
+  .txt {
+    font-size: 1.1rem;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 200px;
+    line-height: 300%;
+  }
+
+  .txt1 {
+    font-size: 1.1rem;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 200px;
+    line-height: 300%;
+  }
+
+  .txt1-title {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+  }
+
+  .txt2 {
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("images/sexual_violence.png"); */
+    background-size: cover;
+    height: 700px;
+  }
+
+  .txt2 p {
+    margin: 0 auto;
+    padding-top: 200px;
+    font-size: 1.1rem;
+    width: 800px;
+    line-height: 300%;
+  }
+
+  .txt4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("images/chatroom.png");
+    background-size: cover;
+    height: 700px;
+  }
+
+  .txt4 p {
+    margin: 0 auto;
+    padding-top: 100px;
+    font-size: 1.1rem;
+    width: 800px;
+    line-height: 300%;
+  }
+
+  .space {
+    height: 400px;
+    background-color: #232222;
+  }
+
+  .txt5 {
+    background-color: #fffefc;
+    height: 700px;
+  }
+
+  .txt5 p {
+    color: #000000;
+    margin: 0 auto;
+    padding-top: 100px;
+    font-size: 1.1rem;
+    width: 800px;
+    line-height: 300%;
+  }
+
+  .txt5-title {
+    text-align: center;
+    font-size: 2.18rem;
+    font-weight: 700;
+  }
+
+  .tape4you {
+    width: 100%;
+    background-color: #e4e3e3;
+    text-align: center;
+    padding-bottom: 300px;
+  }
+
+  #tape-hands {
+    margin-top: 100px;
+    text-align: center;
+    width: 25%;
+  }
+
+  .tape-title {
+    font-size: 1.5rem;
+    color: #3c74d4;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .description {
+    color: black;
+    line-height: 260%;
+    font-size: 1rem;
+    margin-top: 50px;
+  }
+
+  .election-title {
+    margin-top: 150px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .election-hr {
+    width: 28rem;
+    color: black;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+
+  footer {
+    background-color: #fffefc;
+    text-align: center;
+    height: 37.5rem;
+  }
+
+  .projectname {
+    margin: 0 auto;
+    padding-top: 100px;
+    margin-bottom: 30px;
+  }
+
+  .sea-waves {
+    width: 3.75rem;
+    margin-right: 8px;
+    padding-top: 5px;
+  }
+
+  .surfer {
+    display: inline;
+    font-size: 2.19rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #000000;
+    padding-top: -5px;
+  }
+
+  .about-us {
+    margin-left: 30%;
+  }
+
+  .datateam {
+    color: black;
+    font-family: "Noto Sans KR", sans-serif;
+    line-height: 100%;
+    float: left;
+    box-sizing: border-box;
+    background-color: #fffefc;
+  }
+
+  .coverteam {
+    color: black;
+    font-family: "Noto Sans KR", sans-serif;
+    line-height: 100%;
+    float: left;
+    margin-left: 5%;
+    box-sizing: border-box;
+    background-color: #fffefc;
+  }
+
+  .developmentteam {
+    color: black;
+    font-family: "Noto Sans KR", sans-serif;
+    line-height: 100%;
+    float: left;
+    margin-left: 5%;
+    box-sizing: border-box;
+    background-color: #fffefc;
+  }
+
+  .team-name {
+    font-weight: bold;
+    font-size: 1.25rem;
+  }
+
+  .sns {
+    text-align: center;
+  }
+
+  .copyright {
+    clear: left;
+    font-size: 0.7rem;
+    margin-top: 21rem;
+    text-align: center;
+    color: black;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title-casette {
+    text-align: center;
+  }
+
+  .title-img {
+    vertical-align: middle;
+    width: 384px;
+    height: 228px;
+    border-radius: 3%;
+  }
+
+  .txt {
+    font-size: 1rem;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 800px;
+    margin: 0 auto;
+    margin-bottom: 200px;
+    line-height: 300%;
+  }
+
+  .txt1 {
+    font-size: 1rem;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 200px;
+    line-height: 300%;
+  }
+
+  .txt1-title {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+  }
+
+  .txt2 {
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("images/sexual_violence.png"); */
+    background-size: cover;
+    height: 700px;
+  }
+
+  .txt2 p {
+    margin: 0 auto;
+    padding-top: 200px;
+    font-size: 1rem;
+    width: 800px;
+    line-height: 300%;
+  }
+
+  .txt4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("images/chatroom.png");
+    background-size: cover;
+    height: 700px;
+  }
+
+  .txt4 p {
+    margin: 0 auto;
+    padding-top: 100px;
+    font-size: 1rem;
+    width: 800px;
+    line-height: 300%;
+  }
+
+  .space {
+    height: 400px;
+    background-color: #232222;
+  }
+
+  .txt5 {
+    background-color: #fffefc;
+    height: 700px;
+  }
+
+  .txt5 p {
+    color: #000000;
+    margin: 0 auto;
+    padding-top: 100px;
+    font-size: 1rem;
+    width: 800px;
+    line-height: 300%;
+  }
+
+  .txt5-title {
+    text-align: center;
+    font-size: 2.18rem;
+    font-weight: 700;
+  }
+
+  /*말풍선 코드 출처: https://ungdoli0916.tistory.com/753*/
+  .balloon {
+    position: relative;
+    display: inline-block;
+  }
+
+  .balloon span {
+    display: inline-block;
+    padding: 1.5rem;
+    color: rgb(0, 0, 0);
+    background: #ffffff;
+    border-radius: 20px;
+    font-family: "Noto Sans KR", sans-serif;
+    box-shadow: 3px 3px 10px rgb(170, 169, 169);
+  }
+
+  .balloon.right {
+    margin-bottom: 10rem;
+    font-size: 1rem;
+  }
+
+  .balloon.right span {
+    float: right;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .balloon.left span {
+    float: left;
+  }
+
+  .balloon.left {
+    display: inline-block;
+    margin-top: -6rem;
+    margin-bottom: 10rem;
+    font-size: 1rem;
+    line-height: 200%;
+    width: 36rem;
+  }
+
+  .balloon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+
+  .balloon.right:after,
+  .balloon.left:after {
+    border-width: 10px 15px;
+    top: 50%;
+    margin-top: -10px;
+  }
+
+  .balloon.left:after {
+    border-color: transparent #ffffff transparent transparent;
+    left: -25px;
+  }
+
+  .balloon.right:after {
+    border-color: transparent transparent transparent #ffffff;
+    right: -25px;
+  }
+
+  #lee_answer1 span {
+    border: 1px solid #1077ff;
+  }
+
+  #yoon_answer1 span {
+    border: 1px solid #e21010;
+  }
+
+  #sim_answer1 span {
+    border: 1px solid #ffbf10;
+  }
+
+  #ahn_answer1 span {
+    border: 1px solid #e66327;
+  }
+
+  .profile {
+    margin-top: 10rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 70%;
+    overflow: hidden;
+  }
+
+  .lee,
+  .yoon,
+  .sim,
+  .ahn {
+    width: 4rem;
+  }
+}
+
+/*************************************   한빛    ***************************************/
