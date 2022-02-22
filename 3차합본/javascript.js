@@ -28,7 +28,7 @@ let word_list = [
     {text: "경제민주화", weight: 3}];
 
 $(document).ready(function() {
-    $("#petition_category").jQCloud(word_list, {randomClasses: 3});
+    //$("#petition_category").jQCloud(word_list, {randomClasses: 3});
 
     $(window).scroll(() => {
         setProgress()
@@ -40,23 +40,18 @@ $(document).ready(function() {
     })
 
     $(window).resize(() => {
-        setProgress();
-        setMenuPosition(); 
+        location.reload(); 
     });
 
     $(window).on('load', () => {
-        // $("body,html").animate({
-        //     scrollTop : 0
-        // }, 500);
         setProgress();
         setMenuPosition();
+        resize_img(); 
     });
-
-    setMenuPosition();
 })
 
 function setMenuPosition() {
-    let totalY = $(document).outerHeight() - $(window).height(); // 전체 페이지 크기 제대로 구하기 
+    let totalY = $(document).outerHeight() - $(window).height(); 
 
     // 인덱스 위치 지정 
     let preTopPos = 0; 
@@ -67,51 +62,15 @@ function setMenuPosition() {
         preTopPos = curTopPos;
         if(i == 5) curTopPos = $(document).outerHeight(); 
         else curTopPos = $(`#page${i}`).offset().top;
-        document.querySelector(`#block${i}`).style.width = ((curTopPos - preTopPos) / totalY * 100) + "%"; 
+        document.querySelector(`#block${i}`).style.width = `${(curTopPos - preTopPos) / totalY * 100}%`; 
     }
 }
 
 function setProgress() {
     let currY = $(window).scrollTop(); 
     let totalY = $(document).outerHeight() - $(window).height();
-    let percentage = (currY / totalY) * 100; 
-    document.querySelector("#progress").style.width = percentage + "%";
+    document.querySelector("#progress").style.width = `${(currY / totalY) * 100}%`;
 }
-
-// animateScrollTo = function(_selector, _speed, _adjust) {
-//     const targetEle = document.querySelector(_selector);
-//     if (!targetEle) return;
-
-//     // - Get current & target positions
-//     const scrollEle = document.documentElement || window.scrollingElement,
-//     currentY = scrollEle.scrollTop,
-//     targetY = targetEle.offsetTop - (_adjust || 0);
-//     animateScrollTo(currentY, targetY, _speed);
-
-//     // - Animate and scroll to target position
-//     function animateScrollTo(_startY, _endY, _speed) {
-//         _speed = _speed ? _speed : 100;
-
-//         const scrollTo = 
-//         (_startY < _endY) ?
-//         function() {
-//             _startY = scrollEle.scrollTop;
-//             if(_startY < _endY) {
-//                 scrollEle.scrollTop = _startY + _speed;
-//                 requestAnimationFrame(scrollTo);
-//             }
-//         }
-//         : 
-//         function() {
-//             _startY = scrollEle.scrollTop;
-//             if(_startY > _endY) {
-//                 scrollEle.scrollTop = _startY - _speed;
-//                 requestAnimationFrame(scrollTo);
-//             }
-//         }
-//         requestAnimationFrame(scrollTo); 
-//     };
-// };
 
 function animateScrollTo(_selector, _speed) {
     let page = document.querySelector(_selector);
@@ -161,34 +120,6 @@ spyEls.forEach(function (spyEl) {
         .addTo(controller) // 컨트롤러에 장면을 할당(필수!)
 })
 
-// 탈시설 장애인 타이핑 
-// new ScrollMagic.Scene({
-//     triggerElement: '.q1',
-//     triggerHook: .8
-// })
-// .setClassToggle('.q1', 'show_q1') // 요소가 화면에 보이는지 않보이는지 클래스 추가로 체크 
-// .on('enter', () => {
-//     typing('.q1', '.show_q1', "탈시설 장애인 문제를 해결할 공약은 무엇인가요?");
-// })
-// .on('leave', () => {
-//     clearText('.q1'); 
-// })
-// .addTo(controller);
-
-// 청소년 성범죄 타이핑 
-// new ScrollMagic.Scene({
-//     triggerElement: '.q2',
-//     triggerHook: .8
-// })
-// .setClassToggle('.q2', 'show_q2') // 요소가 화면에 보이는지 않보이는지 클래스 추가로 체크 
-// .on('enter', () => {
-//     typing('.q2', '.show_q2', "청소년 성범죄 문제를 해결할 공약은 무엇인가요?");
-// })
-// .on('leave', () => {
-//     clearText('.q2'); 
-// })
-// .addTo(controller);
-
 // 모바일 햄버거 메뉴바 
 let num = 0; 
 let hamburger_button = document.querySelector('.mobile_hamburger_button');
@@ -230,6 +161,57 @@ $(top_button).click(() => {
     $("body,html").animate({
         scrollTop : 0
     }, 500);
+})
+
+// 이미지 크기 조정 
+function resize_img() {
+    let img_ctn_width;
+    if($(window) != null) {
+        img_ctn_width = $(window).width();
+    } else if(window.document != null && window.document.documentElement != null 
+        && img_ctn_width.document.documentElement.clientWidth != null) {
+        img_ctn_width = window.document.documentElement.clientWidth;
+    }
+    img_ctn_width *= (img_ctn_width > 960) ? 0.75 : (img_ctn_width > 500) ? 0.9 : 1; 
+
+    for(let i = 1; i <= 4; i++) {
+        let img = document.querySelector('#img' + i);
+        let img_width = img.naturalWidth;
+        let img_height = img.naturalHeight;         
+        let img_ctn_height = img_ctn_width * (img_height / img_width); 
+
+        let img_ctn = document.querySelector('#img_ctn' + i);
+        img_ctn.style.height = parseInt(img_ctn_height) + "px";
+    }
+}
+
+let category_num = 1; 
+$('#next_btn').click(() => {
+    category_num = (category_num % 17) + 1;
+    $('#category_graph_img').attr('src', './images/category_graph' + category_num + '.jpeg'); 
+    $('#category_desc_text' + ((category_num == 1) ? 17 : category_num - 1)).css('display', 'none'); 
+    $('#category_desc_text' + category_num).css('display', 'block');
+})
+
+$('#prev_btn').click(() => {
+    category_num = (category_num == 1) ? 17 : category_num - 1;
+    $('#category_graph_img').attr('src', './images/category_graph' + category_num + '.jpeg'); 
+    $('#category_desc_text' + ((category_num % 17) + 1)).css('display', 'none'); 
+    $('#category_desc_text' + category_num).css('display', 'block');
+})
+
+let post_num = 0;
+$('.graph_text_switch_btn').click(() => {
+    if(post_num % 2 == 0) {
+        $('#category_graph_img_ctn').css('display', 'none');
+        $('#category_desc_text_ctn').css('display', 'block');
+        document.querySelector('.graph_text_switch_btn').innerHTML = "G"; 
+    } else {
+        $('#category_graph_img_ctn').css('display', 'block');
+        $('#category_desc_text_ctn').css('display', 'none');
+        document.querySelector('.graph_text_switch_btn').innerHTML = "T"; 
+    }
+    post_num++; 
 })
 
 // 한빛
