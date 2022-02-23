@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--
+    <style type="text/css">
+        div.jqcloud span.r1 {
+          -webkit-writing-mode: vertical-rl;
+          writing-mode: tb-rl;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./jqcloud/jqcloud.css" />
+    -->
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <!--<script type="text/javascript" src="./jqcloud/jqcloud-0.2.10.js"></script>-->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="javascript.js"></script>
+
+    <link href="style.css" rel="stylesheet"/>
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap'); 
+        style.css에 사이트에서 쓴 폰트 4개(Montserrat, Noto Sans, Noto Serif, Song Myung) import했음*/
+    </style>
+</head>
+<body>
+    <div id="progressBar" class="menubar">
+        <div id="progress"></div>
+    </div>
+
+    <div id="container" class="menubar">
+        <div id="block1" class="progressBlock" onclick="animateScrollTo('#page0',500)">편집자주</div>
+        <div id="block2" class="progressBlock" onclick="animateScrollTo('#page1',500)">5년간의 목소리와 응답</div>
+        <div id="block3" class="progressBlock" onclick="animateScrollTo('#page2',500)">메시지의 전문</div>
+        <div id="block4" class="progressBlock" onclick="animateScrollTo('#page3',500)">미회신 메시지1</div>
+        <div id="block5" class="progressBlock" onclick="animateScrollTo('#page4',500)">미회신 메시지2</div>
+    </div>
+
+    <div class="mobile_hamburger_container">
+        <button class="mobile_hamburger_button">&#9776;</button>
+    </div>
+
+    <div class="mobile_menu_container">
+        <div class="mobile_menu" onclick="animateScrollTo('#page0',500)">편집자주</div>
+        <div class="mobile_menu" onclick="animateScrollTo('#page1',500)">5년간의 목소리와 응답</div>
+        <div class="mobile_menu" onclick="animateScrollTo('#page2',500)">메시지의 전문</div>
+        <div class="mobile_menu" onclick="animateScrollTo('#page3',500)">미회신 메시지1</div>
+        <div class="mobile_menu" onclick="animateScrollTo('#page4',500)">미회신 메시지2</div>
+    </div>
+
+    <div class="top_button_container">
+        <button class="top_button">▲</button>
+    </div>
+
+    <div id="top_container">
+        <div id="content_container">
+            <div style="margin-top: 20vh;"></div>
+            <div class="title-casette">
+                <img class="title-img" src="images/title.png">
+            </div>
+
+            <div id="page0" class="pages">   
+                <div class="menu_container">
+                    <span class="menu_text">편집자주</span>
+                    <hr size="2px" color="gray">
+                </div>
+                <div class="flex_container" style="text-align: center; font-weight: bold;">
+                    <span id="subject">온고지신</span>
+                    <span id="subject_desc">(溫故知新,옛것을 익히고 그것을 미루어서 새것을 앎)</span>
+                </div>
+                <div id="goal">
+                    <i>문재인 정부에서 해결하지 못한 과제를 파악하고<br>
+                    유권자들이 대선 후보를 선택하는데 도움을 줄 수 있도록 한다.</i>
+                </div>
+
+                <div class="flex_container">
+                    <span class="letters" style="font-weight: 900;">대선 후보들의 비호감도 역대 어느 대선보다 높은 상태. 사람들은 후보자 검증에 그 후보 국정 능력을 나타낼 수 있는 정책, 
+                    그 정책에 얼마나 공감하고 이해하고 있는지를 살피지 않음. 언론과 정치계에서 쏟아내는 네거티브에 휘말려 5년을 이끌어갈 
+                    대선 후보의 자질을 확인하는데 어려움을 겪고 있음.</span>
+                    <br><br>
+                    <span class="letters">그러면 후보의 공약만 공부하면 될까? 후보들의 공약의 필요성과 중요성을 파악하기 위해서는 그 이전의 우리 사회가 어떤 결핍을 겪었는지부터 알아야함.</span>
+                    <br><br>
+                    <span class="letters">국민들의 목소리를 제일 잘 담아낸 곳이 국민청원이라고 생각했고, 국민청원의 5년을 살펴본 후 대선 후보의 공약을 짚어보고자함.</span>
+                    <br><br>
+                    <span class="letters">프로젝트 ‘서퍼’는 국민 청원 도입 5주년을 맞아 국민 청원에 올라온 게시판을 분석해 문재인의 5년을 추적해보고자 한다. 
+                    5년 동안 올라왔던 청원을 범주화하여 국민들이 변화를 가장 원했던 분야는 무엇이었는지 분석하고 그 문제가 5년 동안 얼마나 변화했는지 알아본다. 
+                    5년 동안의 국민 청원 분석을 마무리한 후, 해결되지 못한 문제들을 위해 다음 타자가 내세운 공약이 있는지 살펴보며 끝맺는다.</span>
+                </div>
+            </div>
+
+            <div id="page1" class="pages"> 
+                <div class="menu_container">
+                    <span class="menu_text">국민청원 데이터 수집 및 분석 결과</span>
+                    <hr size="2px" color="gray">
+                </div>
+
+                <br>
+                <div id="analysis">
+                    <div>이렇게 분석했어요!</div>
+                    <ul>
+                        <li>웹크롤링을 통해 국민청원 사이트에 접속해 '분야', '청원 제목', '청원 시작일', '청원 마감일', '참여 인원'을 수집하였습니다.</li>
+                        <li>2019년 3월 31일부터 국민청원 시스템이 100명의 사전동의를 얻어야 글을 게시할 수 있도록 개편됨에 따라 2017-2018년 또한 청원 수가 100명 이상인 데이터만 수집하였습니다.</li>
+                        <li>수집 기간은 2017년 8월 19일 ~ 2021년 12월 31일로 설정하였습니다.</li>
+                        <li>데이터 분석 시각화는 R과 Python을 이용해 구현하였습니다.</li>
+                    </ul>
+                </div>
+
+                <div class="title_container">
+                    <span class="title_text">"5년 동안의 목소리 그리고 응답"</span>
+                </div>
+                <div class="flex_container" style="margin-top: 50px;">
+                    <div class="subtitle_container">
+                        <span class="subtitle_text">국민청원의 17가지 카테고리 구성</span>
+                    </div>
+                    <center>
+                        <div class="category_container">
+                            <div class="category">정치개혁</div>
+                            <div class="category long_ctg">외교/통일/국민</div>
+                            <div class="category">일자리</div>
+                            <div class="category">미래</div>
+                            <div class="category">성장동력</div>
+                            <div class="category">인권/성평등</div>
+                            <div class="category">육아/교육</div>
+                            <div class="category">안전/환경</div>
+                            <div class="category long_ctg">저출산/고령화대책</div>
+                            <div class="category">행정</div>
+                            <div class="category">반려동물</div>
+                            <div class="category long_ctg">문화/예술/체육/언론</div>
+                            <div class="category">농산어촌</div>
+                            <div class="category">보건복지</div>
+                            <div class="category long_ctg">교통/건축/국토</div>
+                            <div class="category">경제민주화</div>
+                            <div class="category">기타</div>
+                        </div>
+                    </center>
+                </div>
+                <div class="letters_container">
+                    <span class="letters">
+                        국민청원은 청원을 등록할 떄 청원인이 직접 분야를 선택할 수 있도록 되어 있다. 이러한 분류를 통해 참여자들은 
+                        자신이 관심있는 분야의 청원을 선택해서 볼 수 있다. 17가지 카테고리는 국민들의 다양한 목소리를 최대한 반영할 수 
+                        있도록 정책 분야 등을 참고하여 설정한 것이다. 
+                    </span>
+                </div>
+
+                <div class="flex_container">
+                    <div id="img_ctn1" class="image_container">
+                        <center>
+                            <img src="./images/petition_category.png" id="img1" class="scroll-spy"/>
+                        </center>
+                    </div>
+                    <div class="letters_container">
+                        <span class="letters">
+                            위 두개의 표를 보면 동의 수와 게시글 수 모두 구성하고 있는 분야갸 같은 것을 알 수 있습니다. 차지하고 있는 순위도 1-3단계 차이로 
+                            크게 다르지 않습니다. 그런데 동의 수와 게시글 수의 순위 차이가 두드러지는 분야가 았습니다. 바로 '보건복지'와 '안전/환경'이었는데요. 
+                            보건복지의 경우 청원 동의 수에서는 5위이지만 게시글 수는 1위를 차지하였습니다. 반대로 안전/환경 분야는 청원 수는 3위이지만 
+                            게시글 수는 7위로 내려갔네요. 그렇다면 이 두개의 분야를 구성하고 있는 세부적인 의제들로는 무엇이 있을까요?  
+                        </span>
+                    </div>
+
+                    <div id="img_ctn2" class="image_container">
+                        <center>
+                            <img src="./images/graph1.png" id="img2" class="scroll-spy"/>
+                        </center>
+                    </div>
+                    <div class="letters_container">
+                        <span class="letters">
+                            두 개의 분야를 구성하고 있는 청원 게시글의 제목을 수집해 워드클라우드 형태로 시각화한 결과입니다. 
+                            '보건복지'를 구성하고 있는 의제로는 '코로나', '백신', '마스크'처럼 코로나 바이러스와 관련된 키워드로 
+                            구성되어 있습니다. 외에도 장애인, 의료사고, 의료보험, 건강보험 등의 키워드의 언급도 높은 비중을 
+                            차지하였습니다.<br>
+                            '안전/환경'의 경우 '처벌'과 '반대'와 같은 특정 사건과 정책에 대한 제재를 담은 키워드들이 높은 빈도수를 
+                            보이고 있습니다. 이와 함께 '강서구', '조두순', '살인사건'과 같이 특정 사건명의 일부가 언급되었습니다. 
+                        </span>
+                    </div>
+                </div>
+
+                <div class="flex_container">
+                    <div id="img_ctn3" class="image_container">
+                        <center>
+                            <img src="./images/agree_category.gif" id="img3"/> <!--fade-in하고 싶으면 class="scroll-spy" 추가-->
+                        </center>
+                    </div>
+                    <div class="letters_container">
+                        <span class="letters">
+                            이번에는 각 지표의 수치를 연도별로 나누어 양상을 살펴보았습니다.<br>
+                            2019년을 제외한 모든 년도에서 '인권/성평등'이 가장 높은 청원수를 보였습니다. 많은 국민들이 청원을 통해 사회권 보장의 
+                            목소리를 내고 있음을 알 수 있습니다. 종합적으로 수치를 보니 유독 2020년에 청원의 열기가 높음을 알 수 있습니다. 
+                        </span>
+                    </div>
+
+                    <div id="img_ctn4" class="image_container">
+                        <center>
+                            <img src="./images/bulletin_category.gif" id="img4"/>
+                        </center>
+                    </div>
+                    <div class="letters_container">
+                        <span class="letters">
+                            분야별 게시글 수의 변화를 연도별로 살펴보았습니다. 2019년까지만 해도 1000건 이하에 머물러있던 '보건복지'가 2020년 이후 
+                            2배 가량 게시글 수가 증가함을 알 수 있습니다. 해당 수치의 변화가 코로나에 당면한 국내 정세를 반영하고 있음을 유추해볼 수 
+                            있습니다. 이번에는 더 깊숙히 들어가 분야별로 각 어떤 청원이 있었는지 살펴볼까요? 
+                        </span>
+                    </div>
+                </div>
+
+                <div class="flex_container">
+                    <div class="subtitle_container">
+                        <span class="subtitle_text">분야별 게시글 수의 추이</span>
+                    </div>
+
+                    <!--------------------------추가------------------------>
+                    <div id="post_by_ctg_ctn">
+                        <div id="post_by_ctg">
+                            <!--그래프 이미지-->
+                            <div id="category_graph_img_ctn">
+                                <img id="category_graph_img" height="100%" src="./images/category_graph1.jpeg"/>
+                            </div>
+
+                            <!--설명 텍스트-->
+                            <div id="category_desc_text_ctn">
+                                <!--경제민주화-->
+                                <div id="category_desc_text1" class="category_desc_txt" style="display: block;">
+                                    <span><em>주요 사안들</em> : 공매도 폐지, 국회의원 연봉 삭감, 특정 기업의 적폐 
+                                        및 비리 개선, 소상공인 지원, 주식 양도소득세 부과 반대</span>
+                                    <ul>
+                                        <li>2018년 4월 6일 : '삼성증권 시스템 규제와 공매도 금지'(청원인원 242,286명)</li>
+                                        <ul style="list-style: none; padding-left: 10px;">
+                                            <li>개요 : 삼성증권이 우리사주 보유 직원들에게 배당금을 주면서 28억원 대신 28억주(113조원 규모)를 잘못 지급한 사건</li>
+                                        </ul>
+                                        <li>2018년 10월 : '국민연금 주식 대여 금지'(청원인원 102,846명)</li>
+                                    </ul>
+                                </div>
+
+                                <!--교통/건축/국토-->
+                                <div id="category_desc_text2" class="category_desc_txt"">
+                                    <span><em>주요 사안들</em> : 특정 시설 설립 요구 및 반대, 음주운전 처벌 강화, 그리벨트 
+                                    해제 반대 및 찬성, 부동산 대책</span>
+                                    <ul>
+                                        <li>2018년 4월</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>대한한공 항공사명 회수 청원 : 조현민의 물컵 갑질 사건 발생</li>
+                                            <li>다산신도시 ‘실버택배’ 반대 청원 : 택배 차량의 아파트 단지 
+                                                진입을 막아 '택배 갑질' '택배 전쟁' 논란을 일으킨 경기도 
+                                                남양주시의 다산 신도시가 '실버택배'를 도입하기로 결정한 가운데, 
+                                                이 금액의 일부를 지자체가 지원하기로 하면서 세금 투입 논란이 불거진 사건 
+                                                (*실버택배 : 노인 인력을 활용하는 아파트 단지 내 택배 화물 운송)
+                                            </li>
+                                            <li>무단 횡단 교통사고 법률 개선 청원 : 광주에서 무단횡단을 하다 대학생이 
+                                                숨지는 사건 발생, 무단횡단 사고 시 운전자에게 법적 책임과 구속을 금지하는 청원 
+                                            </li>
+                                        </ul>
+
+                                        <li>2018년 10월</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>카카오택시 카풀(car-pool) 반대 청원 : 카카오모빌리티의 카풀 서비스 사업 진출에 반대하는 청원</li>
+                                        </ul>
+
+                                        <li>2020년 7월</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>617, 710 부동산 대책 발표 관련 청원</li>
+                                        </ul>
+                                    </ul>
+                                </div>
+
+                                <!--기타-->
+                                <div id="category_desc_text3" class="category_desc_txt"">
+                                    <ul>
+                                        <li>2018년 4월</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>대한한공 항공사명 회수 청원</li>
+                                            <li>다산신도시 ‘실버택배’ 반대 청원 : 택배 차량의 아파트 단지 진입을 막아 
+                                                '택배 갑질' '택배 전쟁' 논란을 일으킨 경기도 남양주시의 다산 신도시가 
+                                                '실버택배'를 도입하기로 결정한 가운데, 이 금액의 일부를 지자체가 지원하기로 
+                                                하면서 세금 투입 논란이 불거진 사건 (*실버택배 : 노인 인력을 활용하는 
+                                                아파트 단지 내 택배 화물 운송)
+                                            </li>
+                                            <li>인천 초등생 폭행 사건 관련 청원 : 인천광역시 연수구 동춘동에서 사건 당시 
+                                                16세 고등학교를 자퇴한 김모 양이 당시 초등학교 2학년 여학생 A양을 유괴 살인한 
+                                                사건에 대한 판결이 징역 13년으로 감형되자 재심을 촉구하는 청원글 다수가 게시
+                                            </li>
+                                        </ul>
+
+                                        <li>2018년 7월</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>‘워마드’ 폐지 청원 : 워마드에 성체(聖體)를 훼손한 사진과 예수를 조롱하는 글이 올라와 
+                                                해당 사이트를 폐지하자는 청원글 다수가 게시됨.
+                                            </li>
+                                            <li>이재명,은수미의 진상규명 청원 : 2018년 6.13 지방선거에 이어 ‘그것이 알고 싶다’를 통해 
+                                                이재명 전 경기지사의 조폭연루설과 은수미 현 성남시장의 운전기사 무상지원 의혹이 제기됨.
+                                            </li>
+                                            <li>전기 누진세 폐지 청원 : 가정용 전기에 전력 사용량에 따라 전기요금 단가를 높이는 누진제 적용을 폐지할 것을 요청</li>
+                                        </ul>
+
+                                        <li>2018년 10월</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>강서구 PC방 살인사건 관련 청원 : 가해자 신상 공개, 심신미약으로 인해 감형을 받아서는 안된다는 청원글 다수가 게시됨</li>
+                                        </ul>
+
+                                        <li>2019년 11월</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>거제도 음주 폭행살인사건 관련 청원 : 가해자에 대한 엄중 처벌 청원</li>
+                                        </ul>
+
+                                        <li>2020년 3월</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>코로나19로 인한 중소기업 재정난 해소 청원</li>
+                                            <li>마스크 공급 관련 청원 : 마스크 부족 사태로 인한 공급 지원 관련 청원글이 다수 게시됨.</li>
+                                        </ul>
+                                    </ul>
+                                </div>
+
+                                <!--농산어촌-->
+                                <div id="category_desc_text4" class="category_desc_txt"">
+                                    <span><em>주요 사안들</em> : 농촌 소멸, 지역 방송국 폐쇄 중단, 농가 피해 보상,  AI로 인한 살처분 방지 정책 중단, 농산물 유통 구조 개혁
+                                    </span>
+                                </div>
+
+                                <!--문화/예술/체육/언론-->
+                                <div id="category_desc_text5" class="category_desc_txt"">
+                                    <span><em>주요 사안들</em> : 가짜뉴스 처벌, 평창올림픽, 포털 사이트 여론조작 방지, 체육계 내 폭행 사건 처벌, 드라마의 역사 왜곡, 코로나로 인한 문화예술 산업 쇠퇴
+                                    </span>
+                                    <ul>
+                                        <li>2018년 2월 : 2018 평창 동계올림픽/대한민국 여자 팀추월 대표팀 논란</li>
+                                        <ul style="list-style: none; padding-left: 10px;">
+                                            <li>
+                                                여자 팀추월 경기에서 마지막 두바퀴를 남기고 노선영 선수가 혼자 뒤처졌음에도 김보름과 박지우 선수가 알아채지 못하고 
+                                                계속 나아가며 셋 사이의 거리를 좁히지 못해 준결승 진출이 무산된 사건, 집단 따돌림 논란과 함께 빙상 연맹의 미숙한 행정에 
+                                                분노한 국민들이 선수 출전 중단, 빙상연맹 폐지 및 감사에 대해 청원함.
+                                            </li>
+                                        </ul>
+                                        <li>2018년 4월 : 전 대한빙상경기연맹 전 부회장 ‘전명규’ 파면 청원</li>
+                                        <ul style="list-style: none; padding-left: 10px;">
+                                            <li>
+                                                ‘그것이 알고싶다’가  빙상계 ‘적폐 논란’을 부른전명규(한국체대 교수)의 실세를 보도하면서 국민들이 대한빙상경기연맹 부회장 
+                                                보직에서 사퇴할 것을 청원, 故 노진규 선수가 종양이 있음에도 스케이트 출전을 요구한 한체대 전명규 교수의 파면을 요청
+                                            </li>
+                                        </ul>
+                                    </ul>
+                                </div>
+
+                                <!--미래-->
+                                <div id="category_desc_text6" class="category_desc_txt"">
+                                    <span><em>주요 사안들</em> : 가상 화폐 및 거래소 폐지, 조두순 출소 반대, 소년법 폐지, 난민 수용 반대
+                                    </span>
+                                    <ul>
+                                        <li>2018년 6월 : 제주도 예멘 난민 입국 반대</li>
+                                        <ul style="list-style: none; padding-left: 10px;">
+                                            <li>제주도에서 입국 신청을 한 예멘인 500여명에 대한 입국 찬반 논란</li>
+                                        </ul>
+                                    </ul>
+                                </div>
+
+                                <!--반려동물-->
+                                <div id="category_desc_text7" class="category_desc_txt"">
+                                    <span><em>주요 사안들</em>동물병원 의료 사고 처벌, 동물보호법 강화, 불법 동물 번식장 폐쇄, 반려동물 분양 금지
+                                    </span>
+                                </div>
+
+                                <!--보건복지-->
+                                <div id="category_desc_text8" class="category_desc_txt"">
+                                    <span><em>주요 사안들</em>수술실 CCTV 의무화(불법 대리시술 방지), 코로나 확산 방지, 백신 강제접종 반대, 마스크 공급 및 지원
+                                    </span>
+                                    <ul>
+                                        <li>2019년 8월 - 국민연금 폐지</li>
+                                        <ul style="list-style: none; padding-left: 10px;">
+                                            <li>국민연금 보험료 인상과 가입연령 상향조정 내용을 담은 연금 개정안을 발표되자 비판여론이 들끓고 국민연금 폐지 청원글 다수가 게시됨.</li>
+                                        </ul>
+                                        <li>2020년 2월 - 우한폐렴(현 코로나바이러스) 확산 방지를 위한 해외 출국 금지, 마스크 공급 및 지원 청원, 전국 신천지 교회 폐쇄</li>
+                                        <li>2020년 8월 - 가지각색 코로나 관련 청원</li>
+                                        <li>2021년 12월 - 백신 패스 도입 반대, 백신 접종 후 이상반응 및 사망</li>
+                                    </ul>
+                                </div>
+
+                                <!--성장동력-->
+                                <div id="category_desc_text9" class="category_desc_txt"">
+                                    <span><em>주요 사안들</em>가상화폐 규제 반대, 전기용품 및 생활용품 안전관리법 개정(전안법), 탈원전 정책 반대
+                                    </span>
+                                    <ul>
+                                        <li>전안법 관련 청원 :  기존에 전기 공산품이나 유아복에만 적용되었던 KC인증(국가통합인증)대상이 일반 의류, 
+                                            잡화 등 신체에 직접 접촉하는 대부분의 용품들로 확대되면서 소상공인이 20~30만원의 인증 비용을 부담해야 
+                                            하는 사실에 대한 문제 제기
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!--안전/환경-->
+                                <div id="category_desc_text10" class="category_desc_txt"">
+                                    <ul>
+                                        <li>2018.1</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>아동성범죄 처벌 강화 촉구 청원: 1월 3일 SBS뉴스는 경남 창원에서 50대 중년 남성이 6살 유치원생 여자아이를 성폭행한 혐의로 
+                                                경찰에 체포된 사실이 뒤늦게 알려졌다며 해당 사건을 보도. 가해자는 “술에 취해 기억이 나지 않는다"고 진술해 주취감형 폐지 청원이 
+                                                폭발적으로 증가했음.
+                                            </li>
+                                            <li>제천 화재 관련 소방공무원 사법 처리 반대 청원: 제천에서 화재로 29명이 숨지는 등 참사가 발생했는데, 이를 두고 경찰은 현장 지휘관들을 
+                                                소환해 피해 규모가 커지는 데 대해 책임을 물을 수 있는지 조사.
+                                            </li>
+                                            <li>미세먼지 대책 요구 청원</li>
+                                        </ul>
+                                        
+                                        <li>2018.5-7</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>광주 폭력조직의 집단 폭행 사건 엄벌 청원: 4월30일 광주 광산구 일대 한 도로에서 폭력조직 소속 남성 8명이 30대 남성을 집단폭행, 
+                                                사실상 실명 등 피해를 입힌 사건. 당시 현장에는 경찰관이 출동했지만 가해 남성들을 즉각 제압하지 않아 소극적으로 대응했다는 논란이 일었음.
+                                            </li>
+                                            <li>라돈 매트리스 처리 청원: 라돈(호흡기성 발암물질)이 대진침대 매트리스와 까사미아 침구류에서 발견돼 수십만 명의 사람들이 방사능에 피폭됐을 것으로 추정되지만, 
+                                                원자력 안전 위원회에서는 이를 방사성 폐기물이 아닌 ‘폐기물'로 보고 있어 국민의 불안이 높아졌던 사건.
+                                            </li>
+                                            <li>제주 난민 수용 반대 청원</li>
+                                            <li>대구 수돗물 청원: 5월 낙동강 대구 취수장에서 발암물질이 포함된 과불화화합물이 검출된 이후 수돗물에 대한 시민들의 불안과 불신이 높아진 사건.</li>
+                                            <li>여름철 누진세 폐지 청원</li>
+                                        </ul>
+
+                                        <li>2018.10-11</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>강서구 pc방 알바생 살인사건 강경처벌 청원</li>
+                                            <li>거제도 묻지마 살인사건 피의자 공개 청원</li>
+                                            <li>광양 중국 알루미늄 공장 반대 청원</li>
+                                        </ul>
+
+                                        <li>2020.2</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>코로나 바이러스 관련 청원: 중국발 입국 금지, 마스크 가격 안정화, 확진자 동선 공개 요청, 신천지 압수수색 요청 등</li>
+                                        </ul>
+                                    </ul>
+                                </div>
+
+                                <!--외교/통일/국방-->
+                                <div id="category_desc_text11" class="category_desc_txt"">
+                                    <ul>
+                                        <li>2018.2</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>천안함 사건 재조사 청원: 북한 김영철 노동당 부위원장의 방남을 계기로 제기된 청원.</li>
+                                        </ul>
+
+                                        <li>2018.6-7</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>제주 예멘 난민 수용 반대 청원: 난민법 폐지 등</li>
+                                        </ul>
+
+                                        <li>2018.11</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>양구 군인 사망 사건 진상 규명 청원: GP 철수 이후 벌어진 일.</li>
+                                        </ul>
+
+                                        <li>2019.8</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>한일군사정보보호협정(GSOMIA) 청원 관련: 일본 여행 제한국 지정, COREA로 바꾸자는 청원, 주00을 처벌해달라는 청원 등</li>
+                                        </ul>
+
+                                        <li>2020.3</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>코로나 관련 청원: 입국 제한 청원 vs. 전세기 요청 청원 등 해외 교민 구제</li>
+                                        </ul>
+                                    </ul>
+                                </div>
+
+                                <!--육야/교육-->
+                                <div id="category_desc_text12" class="category_desc_txt"">
+                                    <ul>
+                                        <li>2018.7</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>어린이집 아동학대 청원: 18일 서울 강서구 어린이집에서 영아 사망 사건이 발생했고, 보육교사 김씨가 사망한 피해 아동을 포함해 
+                                                원생 5명에 대해 잠을 재운다며 이불을 머리까지 씌운 채 10회 이상 팔이나 다리로 누름. 뿐만 아니라, 서울 도봉구 어린이집에서는 
+                                                교사 2명이 자신들이 돌보던 1~2세 아이 10명의 팔을 잡아끌어 강제로 자리에 앉히고 여러 차례 무릎으로 머리를 치거나 손으로 밀치는 등 총 30차례 학대함.
+                                            </li>
+                                        </ul>
+
+                                        <li>2018.10-11</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>울산 성민이 사건 재수사 청원: 23개월 영아가 어린이집 원장 남편의 폭행에 의해 장이 끊어져 복막염과 패혈증으로 사망한 성민이 사건이 
+                                                &lt;추적60분&gt;에 방영되면서 재조명 된 청원.
+                                            </li>
+                                            <li>사립유치원 비리 조사 청원: 박용진 더불어민주당 의원이 사립유치원 비리근절을 해결하기 위해 마련한 정책토론회가 
+                                                유치원 단체의 집단행동으로 아수라장으로 변했고, 이달 말 박 의원이 공개한 사립유치원 회계비리는 당시 최근 5년간 
+                                                16,122건(382억원)으로 드러났다.
+                                            </li>
+                                            <li>김포 맘카페 폐쇄 청원: 김포지역 맘카페에 “아이가 교사에게 안기려고 했지만, 교사가 돗자리 터는 데만 신경 써 밀쳤다"는 게시글이 올라와 
+                                                어린이집 실명과 해당 교사의 신상정보가 공개되었고, 이튿날 아이의 이모가 어린이집에 찾아와 교사를 질책해 이 다음날 교사가 극단적인 선택을 한 사건.
+                                            </li>
+                                            <li>경피용 bcg 백신 청원: 영아를 대상으로 접종하는 일본산 결핵 예방 도장형 BCG 백신에서 비소가 검출되었음.</li>
+                                            <li>수시 폐지 및 정시 확대 청원: 숙명여고 시험지 유출 후폭풍</li>
+                                        </ul>
+
+                                        <li>2020.3</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>코로나로 인한 개학 연기 요구 청원</li>
+                                        </ul>
+
+                                        <li>2020.5</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>등교 및 개학 연기 요구 청원</li>
+                                            <li>9월 학기제 시행 요구 청원</li>
+                                        </ul>
+                                    </ul>
+                                </div>
+
+                                <!--인권/성평등-->
+                                <div id="category_desc_text13" class="category_desc_txt"">
+                                    <ul>
+                                        <li>2018.5</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>홍대 누드크로키 모델 불법촬영 관련 청원</li>
+                                        </ul>
+
+                                        <li>2018.10</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>김포 맘카페 폐지 청원</li>
+                                            <li>강서구 PC방 살인사건 엄벌 청원</li>
+                                            <li>위디스크 양진호 회장 처벌 청원: 위디스크와 파일노리의 실소유주인 양진호 한국미래기술 회장이 디지털성범죄에 연루
+                                                (각종 음란물과 리벤지 포르노 파일 등을 통해 막대한 부를 축적)돼 경찰 수사를 받고 있는 와중, 
+                                                전직 직원을 무차별 폭행한 영상이 폭로돼 처벌 여론이 들끓음.
+                                            </li>
+                                        </ul>
+
+                                        <li>2019.3</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>조선일보 방가와 고 장자연씨 사건에 대한 수사 연장 청원</li>
+                                        </ul>
+
+                                        <li>2020.3</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>텔레그램 N번방 청원 관련: 피의자 신상 공개, (관련) 지인능욕 관련자 처벌 등</li>
+                                        </ul>
+                                    </ul>
+                                </div>
+
+                                <!--일자리-->
+                                <div id="category_desc_text14" class="category_desc_txt"">
+                                    <span><em>주요 사안들</em>노동 환경 개선, 기업 비리 척결, 공정한 채용 추진 등
+                                    </span>
+                                </div>
+
+                                <!--저출산/고령화대책-->
+                                <div id="category_desc_text15" class="category_desc_txt"">
+                                    <ul>
+                                        <li>2017.9</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>난임지원 횟수제한 폐지 청원</li>
+                                        </ul>
+
+                                        <li>그 외: 대부분 난임지원 횟수제한 폐지 청원 등 난임부부 지원 대책 촉구</li>
+                                    </ul>
+                                </div>
+
+                                <!--정치개혁-->
+                                <div id="category_desc_text16" class="category_desc_txt"">
+                                    <ul>
+                                        <li>2018.4-5</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>국회의원 해외연수 전수조사 청원: 김기식 금융감독원장이 국회의원 시절 인턴 비서와의 ‘로비성 해외 출장’으로 논란을 빚었는데, 
+                                                여기에 의원 임기 말에 해외 출장이 추가로 논란이 되어 국회의원 해외연수를 전수조사 해야한다는 움직임이 생겼다.
+                                            </li>
+                                            <li>자유한국당 해산 청원: 홍준표 (당시) 자유한국당 대표가 “위장평화쇼” “세 번 속으면 공범” 등의 발언으로 남북한 정상회담 성과를 깎아내리자 생긴 반대 여론.</li>
+                                            <li>조원진 의원 처벌 청원: 4월 28일, 대한애국당 조원진 대표가 서울역 광장 '태극기 집회'에서 문재인 대통령을 향해 '미친 XX'라고 욕설. 해당 사실은 5월 1일 
+                                                서울의 소리 편집인인 백은종씨에 의해 폭로되었음.
+                                            </li>
+                                            <li>김성태 의원 단식투쟁 조사 청원: 거짓으로 단식을 하는 것 같으니 진짜로 단식을 하는건지 조사해 달라는 청원.</li>
+                                            <li>국회 해산 청원: 4월 국회파행에 이어 5월 국회까지 정쟁만 일삼는 국회의 모습을 보고 국민들이 청와대 청원 게시판에 국회해산을 요구. (당시 20대 국회)</li>
+                                            <li>박창훈 비서관 처벌 청원: 나경원 자유한국당 의원의 비서관이 한 중학생과의 통화 과정에서 욕설과 문재인 대통령을 비난하고 고 노 전 대통령을 조롱하는 듯한 발언을 하여 논란에 휩싸임. 
+                                                통화 녹음 파일은 백은종씨 유튜브에서 공개되었음.
+                                            </li>
+                                        </ul>
+
+                                        <li>2018.7</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>이재명 은수미 조폭 연루 사건 조사 청원: SBS <그것이 알고싶다>가 이재명 경기도지사와 조직폭력배가 연루돼있다는 의혹을 제기하였는데, 
+                                                보도된 사실에 의하면 은수미 성남시장도 연루되어 있는 것으로 추정돼 이를 조사해달라는 청원.
+                                            </li>
+                                        </ul>
+
+                                        <li>2018.12</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>국회의원 세비(연봉) 인상 반대 청원: 더불어민주당과 자유한국당이 합의한 2019년도 예산안 수정안에 국회의원 세비 인상이 포함돼, 
+                                                세비 결정을 하는 국회의원들의 ‘셀프 세비 인상’ 행태가 비판을 받음.
+                                            </li>
+                                        </ul>
+                                    </ul>
+                                </div>
+
+                                <!--행정-->
+                                <div id="category_desc_text17" class="category_desc_txt"">
+                                    <ul>
+                                        <li>2018.4</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>대한항공 갑질 청원 관련: 대한항공 명칭 변경, 태극문양 도안 사용금지</li>
+                                            <li>다산신도시 택배 지원 사업 반대 청원: 후진하는 택배 차량에 아이가 치일 뻔한 사고가 일어난 뒤에 입주민들이 단지 내 택배차량 출입을 막았는데, 
+                                                택배회사들은 이에 반발해 단지 입구에 배송물을 쌓아두고 돌아갔음. 이에 국토교통부가 중재에 나서 ‘실버 택배'를 도입하겠다고 나섰으나, 
+                                                여기에는 국민 세금이 투입된다는 사실이 알려지면서 발발한 청원.
+                                            </li>
+                                        </ul>
+
+                                        <li>2020.3</li>
+                                        <ul style="padding-left: 30px;">
+                                            <li>코로나19 청원 관련: 정책적 지원 촉구, 대구 경북 특별재난지역 선포 요청, 자가격리 중 여행한 확진자 처벌 등</li>
+                                        </ul>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="category_btn_ctn">
+                            <button id="prev_btn" class="category_btn">
+                                &lt;
+                            </button>
+
+                            <div class="graph_text_switch_btn_space" style="width: 10px;"></div>
+                            <button class="graph_text_switch_btn">
+                                T
+                            </button>
+
+                            <div style="width: 10px;"></div>
+                            <button id="next_btn" class="category_btn">
+                                &gt;
+                            </button>
+                        </div>
+                    </div>
+                    <!------------------------------------------------->
+                </div>
+            </div>
+
+            <div id="page2" class="pages">
+                <div class="menu_container">
+                    <span class="menu_text">3차 분류 결과</span>
+                    <hr size="2px" color="gray">
+                </div>
+                <div class="title_container">
+                    <span class="title_text">"그들이 전하는 메시지의 전문"</span>
+                </div>
+                <br><br>
+                <div class="letters_container">
+                    <span class="letters">
+                        트랙1앞서 가장 많은 청원 수와 게시글 수를 기록했던 인권/성평등. 인권/성평등에 대해 많은 사람들이 목소리리를 내고 있다는 것은 파악
+                        했지만 세부적인 내용을 파악하기 위해서는 그들이 남긴 메시지를 하나씩 읽어보는 작업이 필요했음. 따라서 미성년자 성범죄 문제가 가장 
+                        심각하다는 것을 알 수 있었고 미성년자 성범죄 처벌 기준 조정의 문제가 해결되지 않아 혹은 의견이 분분하다는 것을 파악함. 
+                    </span>
+                </div>
+                <br><br>
+                <div class="image_container">
+                    <center>
+                        <img class="scroll-spy"/>
+                    </center>
+                </div>
+                <div class="letters_container">
+                    <span class="letters">
+                        워드클라우드가 - 했다는 것을 제시하며 분류의 타당성 제시, 부연설명 및 데이터 분석 결과 나열. 워드 클라우드가 -했다는 것을 제시하여
+                        분류의 타당성 제시, 부연설명 및 데이터 분석 결과 나열. 워드클라우드가 - 했다는 것을 제시하며 분류의 타당성 제시, 부연설명 및 
+                        데이터 분석 결과 나열. 워드클라우드가 - 했다는 것을 제시하며 분류의 타당성 제시, 부연설명 및 데이터 분석 결과 나열. 워드클라우드가
+                        - 했다는 것을 제시하며 분류의 타당성 제시, 부연설명 및 데이터 분석 결과 나열. 워드클라우드가 - 했다는 것을 제시하며 분류의 타당성 
+                        제시, 부연설명 및 데이터 분석 결과 나열.
+                    </span>
+                </div>
+            </div>
+
+            <div style="height: 20vh;"></div>
+            <!-- 4. 기획기사 부분 --> 
+        </div>
+    </div>
+
+    <!--한빛-->
+    <div class="container">
+        <div class="container" id="page3">
+            <div class="txt1">
+                <p class="txt1-title">"회신받지 못한 첫번째 메시지 - 청소년 성범죄"</p>
+                미성년자 대상 성범죄, 디지털 성범죄는 국민들의 많은 관심을 받아 비교적 빠르게 입법 혹은 개정 절차를 밟고 있음. 
+                그러나 **미성년자가 가해자인 사건**에 대해서는 구체적으로 처벌 강화하거나 해결 방안을 제시하지 않음. 
+                소년법 폐지, 촉법 소년 연령 하향 등의 청원도 나오고 있음. 청소년이 자행하는 강력범죄가 많아지기 때문. 
+                그 중에서도 10대가 접하기 쉽고 죄의식을 느끼기 어려운 디지털 성범죄. 그 심각성을 알리고 ‘미성년자'라는 
+                까다로운 처벌 대상으로 인해 사회적 논의와 해결점을 찾기 어려운 문제이기에 대선 후보가 챙겨야할 문제라는 점을 담아내고자 함.
+                
+                <p id="txt1_semititle">시선에 벗어났던 가해자, 청소년</p>
+                우리나라에서는 한 해에 몇 건의 성폭력 사건이 일어날까? 2020년 범죄 통계를 살펴보니, 
+                일 년에 약 4만 건 정도의 성폭력 사건이 발생하고 있다. 강간이나 강제추행, 유사강간과
+                같은 전통적인 성폭력 해당 사건은 27,651건 발생했고, 최근 폭증하고 있는 각종 카메라와
+                인터넷 등 신기술을 이용한 신규 성폭력도 11,795건 발생했다. 이 4만 건과는 별도로 아동을
+                대상으로 성학대를 한 아동복지법 위반 사건과 아동청소년 성보호에 관한 법률 위반 사건도 있다.
+                
+            
+            </div>
+
+            <div class="fixed">
+                <div class="txt2">
+                    
+                    <p id="txt2_semititle">정말 '요즘 애들'이 잔인해진 걸까?</p>
+                    성폭력 사건은 피해자의 나이를 가리지 않기에, 수많은 미성년자들도 성폭력 피해를 경험한다. 
+                        그러나 성장을 거의 마친 성인 피해자와는 달리 아직 발달 중에 있는 아동 청소년은 생각과 상황
+                        판단에 중요한 역할을 하는 전두엽이 다 완성되지 못했기에, 이러한 점을 감안하여 성폭력 피해를 당한 
+                        아동청소년을 위한 각종 보호제도를 마련하고 있는 것이다.성폭력 사건은 피해자의 나이를 가리지 않기에, 수많은 미성년자들도 성폭력 피해를 경험한다. 
+                        그러나 성장을 거의 마친 성인 피해자와는 달리 아직 발달 중에 있는 아동 청소년은 생각과 상황
+                        판단에 중요한 역할을 하는 전두엽이 다 완성되지 못했기에, 이러한 점을 감안하여 성폭력 피해를 당한 
+                        아동청소년을 위한 각종 보호제도를 마련하고 있는 것이다.
+                </div>
+            </div>
+
+            <div class="space"></div>
+
+            <div class="txt4" width="100%">
+                이번 위헌 결정의 대상이 된 규정은 “신뢰관계인 진술로 미성년자 진술 영상의 진정성립을 인정”하는 2003. 12.
+                    성폭력범죄의처벌및피해자보호등에관한법률 제21조의 2(2004. 3. 시행)(이 당시 대상 피해자는 13세 미만 미성
+                    년자였다가, 2006. 10. 16세 미만의 미성년자로 확대되었고, 2012.12.부터 19세 미만의 미성년자로 확대되었다.)
+
+                    <p id="txt4_semititle">엄벌주의 VS 교정주의</p>
+                    
+                    이다. 결정이 내려지던 2021년 12월은 이 조문이 만들어진 지 18년이 지난 시점이다. 18년 동안이나 사건 하나하나
+                    로 켜켜이 쌓여 이루어진 아동 성범죄 수사와 재판 실무를 단번에 위헌결정으로 뒤엎을만한 기본권 침해는 대체 무엇
+                    이었을까? 헌법재판소는 ‘피고인의 반대신문권’을 보장하기 위함이라고 강조한다. 이다. 결정이 내려지던 2021년 12월은 이 조문이 만들어진 지 18년이 지난 시점이다. 18년 동안이나 사건 하나하나
+                    로 켜켜이 쌓여 이루어진 아동 성범죄 수사와 재판 실무를 단번에 위헌결정으로 뒤엎을만한 기본권 침해는 대체 무엇
+                    이었을까? 헌법재판소는 ‘피고인의 반대신문권’을 보장하기 위함이라고 강조한다. 
+            </div>
+
+            <div class="space"></div>
+
+            <div class="tape4you">
+                <img id="tape-hands" src="images/tape_hands.png">
+                <p class="tape-title">"당신께 테이프를 전달하며"</p>
+                <p class="description">음성사서함에서 떠나가지 못한 목소리를 해결해 줄 앞으로의 정부가 해야할 일은 무엇일까.<br>
+                    각 대선 후보들의 공약을 분석한 후 국민청원의 이야기를 담고 있는지 현황을 파악하며 마무리한다.</p>
+                
+                <p class="election-title">대선 후보 공약 정리</p>
+                <hr class="election-hr" size="2" noshade><br>
+
+                <div class="question-box">
+                    <strong>청소년 성범죄 문제</strong>를 해결할 공약은 무엇인가요?
+                </div><br>
+
+                <button class="answer-button" id="answer_button1">답변 보기</button>
+
+                <div class="answer-box1" id="topic1-answer-box1">
+                    <div class="profile">
+                        <img class="lee" src="images/lee.png">
+                        <div class="candidate-name">이재명 후보</div>
+                    </div>
+                    <div class="answer-box1-text" id="topic1-answer-box1-text">
+                        <b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 
+                        가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.<br>
+                            <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 
+                            정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.
+                    </div>
+                </div>
+
+                <div class="answer-box2" id="topic1-answer-box2">
+                    <div class="profile">
+                        <img class="yoon" src="images/yoon.png">
+                    </div>
+                    <div class="answer-box2-text" id="topic1-answer-box2-text">
+                        <b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 
+                        가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.<br>
+                            <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 
+                            정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.
+                    </div>
+                </div>
+
+                <div class="answer-box3" id="topic1-answer-box3">
+                    <div class="profile">
+                        <img class="sim" src="images/sim.png">
+                    </div>
+                    <div class="answer-box3-text" id="topic1-answer-box3-text">
+                        <b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 
+                        가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.<br>
+                            <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 
+                            정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.
+                    </div>
+                </div>
+
+                <div class="answer-box4" id="topic1-answer-box4">
+                    <div class="profile">
+                        <img class="ahn" src="images/ahn.png">
+                    </div>
+                    <div class="answer-box4-text" id="topic1-answer-box4-text">
+                        <b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 
+                        가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.<br>
+                            <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 
+                            정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.
+                    </div>
+                </div>
+ 
+                <!-------------------------------------------------------대선 채팅방 코드 많이 바뀜------------------------------------------------------------->
+                    <!-- *잠깐 숨김 <div class="question-box" id="question-box1">
+                        <div class="balloon right"><span><b>탈시설 장애인 문제</b>를 해결할 공약은 무엇인가요?</span></div>
+                    </div><br>
+
+                    <button class="answer_button" id="answer_button1">답변 보기</button>
+
+                    <div class="profile" width="100%">
+                        <img class="lee" id="lee_1" src="images/lee.png">
+                    </div>
+                    <div class="balloon left" id="lee_answer1"><span><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.
+                        <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.</span>
+                    </div>
+
+                    <div class="profile">
+                        <img class="yoon" id="yoon_1" src="images/yoon.png">
+                    </div>
+                    <div class="balloon left" id="yoon_answer1"><span><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.
+                        <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.</span>
+                    </div>
+                    
+                    <div class="profile">
+                        <img class="sim" id="sim_1" src="images/sim.png">
+                    </div>
+                    <div class="balloon left" id="sim_answer1"><span><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.
+                        <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.</span>
+                    </div>
+
+                    <div class="profile">
+                        <img class="ahn" id="ahn_1" src="images/ahn.png">
+                    </div>
+                    <div class="balloon left" id="ahn_answer1"><span><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.
+                        <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.</span>
+                    </div>
+                </div> -->
+                <!-------------------------------------------------------대선 채팅방 코드 많이 바뀜------------------------------------------------------------->
+                <!-- <div class="question-box">
+                    <div class="question q1"><b>탈시설 장애인 문제</b>를 해결할 공약은 무엇인가요?</div>
+                </div><br>
+                <div class="profile">
+                    <img class="lee" src="images/lee.png">
+                </div>
+                <div class="answer-box1">
+                    <p class="answer"><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여<br> 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.<br>
+                        <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후<br> 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이<br> 이를 공포하겠습니다.
+                    </p>
+                </div><br>
+                <div class="profile">
+                    <img class="yoon" src="images/yoon.png">
+                </div>
+                <div class="answer-box2">
+                    <p class="answer"><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여<br> 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.<br>
+                        <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후<br> 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이<br> 이를 공포하겠습니다.
+                    </p>
+                </div><br>
+                <div class="profile">
+                    <img class="sim" src="images/sim.png">
+                </div>
+                <div class="answer-box3">
+                    <p class="answer"><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여<br> 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.<br>
+                        <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후<br> 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이<br> 이를 공포하겠습니다.
+                    </p>
+                </div> -->
+            </div>
+        </div>
+
+        <div id="page4">    
+            <div class="txt5" width="100%">
+                <div class="txt5-title" style="font-size: 35px;">"회신받지 못한 두번째 메시지 - 탈시설 장애인"</div>
+                2017년부터 2021년까지. 20만 이상의 동의로 청와대 답변을 받은 277개의 청원을 전수조사한 결과, 
+                태깅 상위권 카테고리(성범죄/코로나/아동학대/검·경찰 개혁 등)는 ‘최소 한 번씩’ 답변을 받은 사실 확인.
+                이에 중요한 사회적 문제이지만, 20만 건의 동의를 받지 못해 잊힌 청원들(a.k.a. 서퍼의 기획의도에 적합한)
+                을 위주로 파악한 결과, 소수자 중에서도 ‘장애인’에 관한 답변이 없는 것을 발견.
+                키워드 ‘장애인’을 검색해 나온 청원의 개수는 5년 간 6,937건.
+                이를 또다시 전수조사한 결과 1만 이상 동의를 받은 청원은 11건에 불과. 이중 장애인의 ‘생활권’에 관한 청원(3건)이 비교적 많은 동의를 받음.
+
+                <p id="txt5_semititle">기획의도 데이터화 및 시각화</p>
+                기획의도 데이터화 및 시각화 내용.기획의도 데이터화 및 시각화 내용.기획의도 데이터화 및 시각화 내용.
+                기획의도 데이터화 및 시각화 내용.기획의도 데이터화 및 시각화 내용.기획의도 데이터화 및 시각화 내용.
+                기획의도 데이터화 및 시각화 내용.기획의도 데이터화 및 시각화 내용.기획의도 데이터화 및 시각화 내용.
+                기획의도 데이터화 및 시각화 내용.기획의도 데이터화 및 시각화 내용.기획의도 데이터화 및 시각화 내용.
+                기획의도 데이터화 및 시각화 내용.기획의도 데이터화 및 시각화 내용.기획의도 데이터화 및 시각화 내용.
+           
+            </div>
+        
+            <div class="txt6" width="100%">
+                <div class="topic2_txt6_qna_wrap">
+                    <p id="txt6_semititle1">탈시설 개념 정리 (Q&A)</p>
+                    <strong>Q1.</strong> 탈시설에 관하여 이러이러한 개념은 이러이러하다고 보는 것이 맞을까?<br>
+                    <strong>A1.</strong> X. 실상은 이러이러하다. 이러이러해서 이러이러하다고 보는 것이 맞다.
+                    실상은 이러이러하다. 이러이러해서 이러이러하다고 보는 것이 맞다.
+                    실상은 이러이러하다. 이러이러해서 이러이러하다고 보는 것이 맞다.<br><br>
+                    <strong>Q2.</strong> 탈시설에 관하여 이러이러한 개념은 이러이러하다고 보는 것이 맞을까?<br>
+                    <strong>A2.</strong> X. 실상은 이러이러하다. 이러이러해서 이러이러하다고 보는 것이 맞다.
+                    실상은 이러이러하다. 이러이러해서 이러이러하다고 보는 것이 맞다.
+                    실상은 이러이러하다. 이러이러해서 이러이러하다고 보는 것이 맞다.<br><br>
+                    <strong>Q3.</strong> 탈시설에 관하여 이러이러한 개념은 이러이러하다고 보는 것이 맞을까?<br>
+                    <strong>A3.</strong> X. 실상은 이러이러하다. 이러이러해서 이러이러하다고 보는 것이 맞다.
+                    실상은 이러이러하다. 이러이러해서 이러이러하다고 보는 것이 맞다.
+                    실상은 이러이러하다. 이러이러해서 이러이러하다고 보는 것이 맞다.<br><br>
+                </div>
+
+                <p id="txt6_semititle2">장애인 거주 실태 파악</p>
+                장애인 거주실태에 대한 상술 내용.장애인 거주실태에 대한 상술 내용.장애인 거주실태에 대한 상술 내용.
+                장애인 거주실태에 대한 상술 내용.장애인 거주실태에 대한 상술 내용.장애인 거주실태에 대한 상술 내용.
+                장애인 거주실태에 대한 상술 내용.장애인 거주실태에 대한 상술 내용.장애인 거주실태에 대한 상술 내용.
+                장애인 거주실태에 대한 상술 내용.장애인 거주실태에 대한 상술 내용.장애인 거주실태에 대한 상술 내용.
+                장애인 거주실태에 대한 상술 내용.장애인 거주실태에 대한 상술 내용.장애인 거주실태에 대한 상술 내용.
+            </div>
+        
+            <div class="txt7">
+                <p id="txt7_semititle1">정부의 탈시설 로드맵 정책 정리</p>
+                <img id="topic2_txt7_roadmap_img" src="images/roadmap.png"><br>
+
+                <p id="txt7_semititle2">관련자 인터뷰</p>
+                <div class="topic2_interviewee_cover">
+                    <img class="topic2_interviewee_img" src="images/interviewee.png">
+                </div>
+                <div id="topic2_txt7_interview_wrap">
+                    <p id="topic2_interviewee_1_name">장애인지원주택 사회복지사, 성민복지관 안은정 사회복지사</p><br>
+                    <strong>Q1.</strong> 관련자 인터뷰 질문 1<br>
+                    <strong>A1.</strong> 관련자 인터뷰 질문 1에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 1에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 1에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 1에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 1에 대한 답변으로 공란을 채운다.<br><br>
+                    <strong>Q2.</strong> 관련자 인터뷰 질문 2<br>
+                    <strong>A2.</strong> 관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.<br><br>
+                    <strong>Q3.</strong> 관련자 인터뷰 질문 3<br>
+                    <strong>A3.</strong> 관련자 인터뷰 질문 3에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.<br><br>
+                    <strong>Q4.</strong> 관련자 인터뷰 질문 4<br>
+                    <strong>A4.</strong> 관련자 인터뷰 질문 4에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+    
+                    <div class="topic2_interviewee_cover">
+                        <img class="topic2_interviewee_img" src="images/interviewee.png">
+                    </div>
+                    <p id="topic2_interviewee_2_name">전국장애인연대 혹은 전국장애인부모연대 : 실제 장애인 혹은 장애인 부모</p><br>
+                    <strong>Q1.</strong> 관련자 인터뷰 질문 1<br>
+                    <strong>A1.</strong> 관련자 인터뷰 질문 1에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 1에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 1에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 1에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 1에 대한 답변으로 공란을 채운다.<br><br>
+                    <strong>Q2.</strong> 관련자 인터뷰 질문 2<br>
+                    <strong>A2.</strong> 관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.<br><br>
+                    <strong>Q3.</strong> 관련자 인터뷰 질문 3<br>
+                    <strong>A3.</strong> 관련자 인터뷰 질문 3에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.<br><br>
+                    <strong>Q4.</strong> 관련자 인터뷰 질문 4<br>
+                    <strong>A4.</strong> 관련자 인터뷰 질문 4에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+    
+                    <div class="topic2_interviewee_cover">
+                        <img class="topic2_interviewee_img" src="images/interviewee.png">
+                    </div>
+                    <p id="topic2_interviewee_3_name">장애인 거주시설 둘다섯해누리</p><br>
+                    <strong>Q1.</strong> 관련자 인터뷰 질문 1<br>
+                    <strong>A1.</strong> 관련자 인터뷰 질문 1에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 1에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 1에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 1에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 1에 대한 답변으로 공란을 채운다.<br><br>
+                    <strong>Q2.</strong> 관련자 인터뷰 질문 2<br>
+                    <strong>A2.</strong> 관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.<br><br>
+                    <strong>Q3.</strong> 관련자 인터뷰 질문 3<br>
+                    <strong>A3.</strong> 관련자 인터뷰 질문 3에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.<br><br>
+                    <strong>Q4.</strong> 관련자 인터뷰 질문 4<br>
+                    <strong>A4.</strong> 관련자 인터뷰 질문 4에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+    
+                    <div class="topic2_interviewee_cover">
+                        <img class="topic2_interviewee_img" src="images/interviewee.png">
+                    </div>
+                    <p id="topic2_interviewee_4_name">장애인 탈시설 지원을 위한 법체계 개선 방안>의 유동철 동의대 사회복지학과 교수 </p><br>
+                    <strong>Q1.</strong> 관련자 인터뷰 질문 1<br>
+                    <strong>A1.</strong> 관련자 인터뷰 질문 1에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 1에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 1에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 1에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 1에 대한 답변으로 공란을 채운다.<br><br>
+                    <strong>Q2.</strong> 관련자 인터뷰 질문 2<br>
+                    <strong>A2.</strong> 관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.<br><br>
+                    <strong>Q3.</strong> 관련자 인터뷰 질문 3<br>
+                    <strong>A3.</strong> 관련자 인터뷰 질문 3에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.<br><br>
+                    <strong>Q4.</strong> 관련자 인터뷰 질문 4<br>
+                    <strong>A4.</strong> 관련자 인터뷰 질문 4에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                    관련자 인터뷰 질문 2에 대한 답변으로 공란을 채운다.
+                </div>
+            </div>
+        
+            <div class="tape4you">
+                <img id="tape-hands" src="images/tape_hands.png">
+                <p class="tape-title">"당신께 테이프를 전달하며"</p>
+                <p class="description">음성사서함에서 떠나가지 못한 목소리를 해결해 줄 앞으로의 정부가 해야할 일은 무엇일까.<br>
+                    각 대선 후보들의 공약을 분석한 후 국민청원의 이야기를 담고 있는지 현황을 파악하며 마무리한다.</p>
+                
+                <p class="election-title">대선 후보 공약 정리</p>
+                <hr class="election-hr" width="30%" size="2" noshade><br>
+
+                <div class="question-box">
+                    <strong>탈시설 장애인 문제</strong>를 해결할 공약은 무엇인가요?
+                </div><br>
+
+                <button class="answer-button" id="answer_button2">답변 보기</button>
+
+                <div class="answer-box1" id="topic2-answer-box1">
+                    <div class="profile">
+                        <img class="lee" src="images/lee.png">
+                        <div class="candidate-name">이재명 후보</div>
+                    </div>
+                    <div class="answer-box1-text" id="topic2-answer-box1-text">
+                        <b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 
+                        가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.<br>
+                            <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 
+                            정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.
+                    </div>
+                </div>
+
+                <div class="answer-box2" id="topic2-answer-box2">
+                    <div class="profile">
+                        <img class="yoon" src="images/yoon.png">
+                    </div>
+                    <div class="answer-box2-text" id="topic2-answer-box2-text">
+                        <b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 
+                        가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.<br>
+                            <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 
+                            정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.
+                    </div>
+                </div>
+
+                <div class="answer-box3" id="topic2-answer-box3">
+                    <div class="profile">
+                        <img class="sim" src="images/sim.png">
+                    </div>
+                    <div class="answer-box3-text" id="topic2-answer-box3-text">
+                        <b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 
+                        가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.<br>
+                            <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 
+                            정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.
+                    </div>
+                </div>
+
+                <div class="answer-box4" id="topic2-answer-box4">
+                    <div class="profile">
+                        <img class="ahn" src="images/ahn.png">
+                    </div>
+                    <div class="answer-box4-text" id="topic2-answer-box4-text">
+                        <b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 
+                        가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.<br>
+                            <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 
+                            정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.
+                    </div>
+                </div>
+
+                <!-------------------------------------------------------대선 채팅방 코드 많이 바뀜------------------------------------------------------------->
+                <!-- 잠시 숨김<div class="question-box" id="question-box2">
+                    <div class="balloon right"><span><b>청소년 성범죄 문제</b>를 해결할 공약은 무엇인가요?</span></div>
+                </div><br>
+                <button class="answer_button" id="answer_button2">답변 보기</button>
+
+                <div class="profile">
+                    <img class="lee" id="lee_2" src="images/lee.png">
+                </div>
+                <div class="balloon left" id="lee_answer2"><span><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.
+                    <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.</span>
+                </div>
+
+                <div class="profile">
+                    <img class="yoon" id="yoon_2" src="images/yoon.png">
+                </div>
+                <div class="balloon left" id="yoon_answer2"><span><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.
+                    <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.</span>
+                </div>
+                
+                <div class="profile">
+                    <img class="sim" id="sim_2"src="images/sim.png">
+                </div>
+                <div class="balloon left" id="sim_answer2"><span><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.
+                    <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.</span>
+                </div>
+
+                <div class="profile">
+                    <img class="ahn" id="ahn_2" src="images/ahn.png">
+                </div>
+                <div class="balloon left" id="ahn_answer2"><span><b>첫째,</b> 국가는 농수산물의 수급균형과 유통구조의 개선에 노력하여 가격안정을 도모함으로써 농·어민의 이익을 보호하겠습니다.
+                    <b>둘째,</b> 제5항에 의하여 법률이 확정된 후 또는 제4항에 의한 확정법률이 정부에 이송된 후 5일 이내에 대통령이 공포하지 아니할 때에는 국회의장이 이를 공포하겠습니다.</span>
+                </div> -->
+                <!-------------------------------------------------------대선 채팅방 코드 많이 바뀜------------------------------------------------------------->
+            </div>
+            <footer>
+            <div class="projectname">
+                <img class="sea-waves" src="images/sea-waves.png">
+                <p class="surfer">Surfer</p>
+            </div>
+            <div class="about-us">
+                <div class="datateam">
+                    <p class="team-name">데이터팀</p>
+                    <p class="member-name">조은수</p>
+                    <p class="member-name">박성영 </p>
+                </div>
+                <div class="coverteam">
+                    <p class="team-name">취재팀</p>
+                    <p class="member-name">정세진</p>
+                    <p class="member-name">고나린</p>
+                    <p class="member-name">이나혜</p>
+                    <p class="member-name">최인선</p>
+                </div>
+                <div class="developmentteam">
+                    <p class="team-name">개발팀</p>
+                    <p class="member-name">김다은</p>
+                    <p class="member-name">장한빛</p>
+                </div><br>
+            </div>
+            <!-- <div class="sns">
+                    <img src="images/notion.png">
+                    <img src="images/instagram.png">
+            </div> -->
+            <p class="copyright">2022. Project Surfer. All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
