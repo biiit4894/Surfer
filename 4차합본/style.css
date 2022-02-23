@@ -1,0 +1,1638 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Song+Myung&display=swap");
+
+.menubar {
+  position: fixed;
+  width: 100%;
+  height: 5vh;
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+}
+
+#progressBar {
+  background-color: black;
+}
+
+#progress {
+  width: 0%;
+  height: 100%;
+  background-color: #4f77cc;
+}
+
+.progressBlock {
+  position: absolute;
+  left: 0%;
+  width: 0%;
+  height: 100%;
+  background-color: transparent;
+  border: 0.5px solid rgba(128, 128, 128, 0.7);
+  font-size: 0.95rem;
+  font-style: bold;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #e4e3e3;
+  font-family: "Noto Serif KR", serif;
+}
+
+#top_container {
+  width: 100%;
+  margin-top: 5vh;
+}
+
+#content_container {
+  margin-left: 20vw;
+  margin-right: 20vw;
+  width: 60vw;
+}
+
+.pages {
+  margin-top: 15vh;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.menu_container {
+  margin-top: 15vh;
+}
+
+.menu_text {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+hr {
+  margin-top: 15px;
+}
+
+#subject {
+  font-size: 2.5rem;
+}
+
+#subject_desc {
+  font-size: 1.5rem;
+  color: #808080;
+  margin-top: 10px;
+}
+
+.flex_container {
+  margin-top: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#goal {
+  color: #4f77cc;
+  font-weight: bold;
+  font-size: 1.7rem;
+  text-align: center;
+  margin-top: 15vh;
+}
+
+.letters_container {
+  margin-top: 5vh;
+}
+
+.letters {
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+  color: black;
+}
+
+.title_container {
+  margin-top: 15vh;
+}
+
+.title_text {
+  font-size: 2.2rem;
+  color: #4f77cc;
+  font-weight: bolder;
+}
+
+.subtitle_container {
+  margin-top: 15vh;
+  text-align: center;
+}
+
+.subtitle_text {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+.category_container {
+  width: 60vw;
+  height: 45vh;
+  margin-top: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.category {
+  width: 20%;
+  padding: 15px;
+  margin: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px gray;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: #fffefc;
+  opacity: 0.9;
+}
+
+.long_ctg {
+  font-size: 0.9rem;
+}
+
+.image_container {
+  box-sizing: border-box;
+  width: 100vw;
+  margin-top: 6vh;
+  padding-top: 6%;
+  background-color: #fffefc;
+  margin-left: -21vw;
+}
+
+/**************** 새로 추가 *********************/
+.image_container > center > img {
+  width: 60%;
+}
+
+img.scroll-spy {
+  opacity: 0;
+  transform: scale(1.05, 1.05);
+}
+
+img.show {
+  opacity: 1;
+  transform: scale(1, 1);
+  transition-property: transform opacity;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-in-out;
+}
+
+.mobile_hamburger_container {
+  box-sizing: border-box;
+  display: none;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  height: 5vh;
+  top: 1vh;
+  left: 0px;
+  z-index: 2;
+  text-align: center;
+  padding-top: 3px;
+}
+
+.mobile_hamburger_button {
+  border: none;
+  background-color: transparent;
+  font-weight: border;
+  font-size: 1.5rem;
+}
+
+.mobile_menu_container {
+  position: fixed;
+  width: 100%;
+  height: 0vh; /*full height: 30vh*/
+  top: 6vh;
+  left: 0px;
+  z-index: 2;
+  background-color: white;
+
+  transition: height ease-in-out 0.3s;
+}
+
+.mobile_menu {
+  display: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 0vh; /*full height: 6vh*/
+  text-align: center;
+  font-weight: border;
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+  padding-top: 11px;
+
+  transition: height ease-in-out 0.3s;
+}
+
+.mobile_menu:hover {
+  background-color: #e4e3e3;
+}
+
+.top_button_container {
+  display: none;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 3px 3px 10px rgb(119, 119, 119);
+  z-index: 2;
+}
+
+.top_button {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  font-weight: bolder;
+  font-size: 1.2rem;
+  color: gray;
+}
+
+#analysis > div {
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+#analysis > ul > li {
+  font-size: 1rem;
+}
+
+#category_desc_text > div > ul > li {
+  padding: 10px;
+}
+
+/*스크롤바 관련*/
+#category_graph_img_ctn,
+#category_desc_text_ctn {
+  -ms-overflow-style: none; /* IE and Edge*/
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: gray transparent;
+}
+
+/* Chorme, Safari, Opera */
+/*전체 스크롤바*/
+#category_graph_img_ctn::-webkit-scrollbar,
+#category_desc_text_ctn::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+/*스크롤바 배경*/
+#category_graph_img_ctn::-webkit-scrollbar-track,
+#category_desc_text_ctn::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+/*스크롤바 막대*/
+#category_graph_img_ctn::-webkit-scrollbar-thumb,
+#category_desc_text_ctn::-webkit-scrollbar-thumb {
+  border-radius: 7px;
+  background-color: gray;
+}
+
+#post_by_ctg_ctn {
+  box-sizing: border-box;
+  padding: 5vh 4vw;
+  width: 100vw;
+  height: 60vh;
+  background-color: white;
+  margin-top: 3vh;
+  margin-left: -21vw;
+  display: flex;
+  flex-direction: column;
+}
+
+#post_by_ctg {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#category_graph_img_ctn {
+  display: block;
+  width: 47.5%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+#category_desc_text_ctn {
+  display: block;
+  width: 47.5%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.category_desc_txt {
+  width: 100%;
+  margin-top: 20px;
+  box-sizing: border-box;
+  padding-right: 20px;
+  display: none;
+  line-height: 30px;
+}
+
+#category_btn_ctn {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.category_btn {
+  border: none;
+  background-color: rgba(128, 128, 128, 0.7);
+  width: 40px;
+  height: 40px;
+  margin-top: 13px;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.graph_text_switch_btn_space {
+  display: none;
+}
+
+.graph_text_switch_btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  border: none;
+  margin-top: 13px;
+  color: white;
+  background-color: rgba(128, 128, 128, 0.7);
+}
+
+/************************************************/
+
+@media screen and (max-width: 960px) {
+  .mobile_hamburger_container {
+    display: block;
+  }
+  .page_box {
+    margin-top: 10vh;
+  }
+  .menu_container {
+    margin-top: 10vh;
+  }
+  .menu_text {
+    font-size: 1.4rem;
+  }
+  .flex_container {
+    margin-top: 10vh;
+  }
+  #subject {
+    font-size: 2rem;
+  }
+  #subject_desc {
+    font-size: 1.2rem;
+  }
+  #goal {
+    font-size: 1.35rem;
+    margin-top: 10vh;
+  }
+  .letters_container {
+    margin-top: 3vh;
+  }
+  .letters {
+    font-size: 1.1rem;
+    line-height: 2rem;
+  }
+  .title_container {
+    margin-top: 10vh;
+  }
+  .title_text {
+    font-size: 1.6rem;
+  }
+  .subtitle_container {
+    margin-top: 10vh;
+  }
+  .subtitle_text {
+    font-size: 1.3rem;
+  }
+
+  /*카테고리 부분*/
+  .category_container {
+    width: 80vw;
+    height: 45vh;
+  }
+
+  .category {
+    font-size: 0.9rem;
+  }
+
+  .long_ctg {
+    font-size: 0.7rem;
+  }
+
+  .menubar {
+    height: 1vh;
+  }
+  .progressBlock {
+    display: none;
+  }
+  #content_container {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    width: 80vw;
+  }
+  .image_container {
+    margin-top: 3vh;
+    margin-left: -11vw;
+    padding-top: 3%;
+  }
+
+  .image_container > center > img {
+    width: 80%;
+  }
+
+  #analysis > div {
+    font-size: 1.1rem;
+    font-weight: bolder;
+  }
+
+  #analysis > ul > li {
+    font-size: 0.9rem;
+  }
+
+  /*분야별 게시글 수*/
+  #post_by_ctg_ctn {
+    height: 55vh;
+    margin-left: -11vw;
+  }
+
+  #post_by_ctg {
+    justify-content: center;
+  }
+
+  #category_graph_img_ctn {
+    width: 90%;
+  }
+
+  #category_desc_text_ctn {
+    width: 90%;
+    display: none;
+  }
+
+  .graph_text_switch_btn_space {
+    display: block;
+  }
+
+  .graph_text_switch_btn {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .page_box {
+    margin-top: 7vh;
+  }
+  .menu_container {
+    margin-top: 7vh;
+  }
+  .menu_text {
+    font-size: 1.3rem;
+  }
+  .flex_container {
+    margin-top: 7vh;
+  }
+  #subject {
+    font-size: 1.9rem;
+  }
+  #subject_desc {
+    font-size: 1.1rem;
+  }
+  #goal {
+    font-size: 1.2rem;
+    margin-top: 7vh;
+  }
+  .letters_container {
+    margin-top: 3vh;
+  }
+  .letters {
+    font-size: 1rem;
+    line-height: 1.9rem;
+  }
+  .title_container {
+    margin-top: 7vh;
+  }
+  .title_text {
+    font-size: 1.6rem;
+  }
+  .subtitle_container {
+    margin-top: 7vh;
+  }
+  .subtitle_text {
+    font-size: 1.2rem;
+  }
+
+  /*카테고리 부분*/
+  .category_container {
+    width: 90vw;
+    height: 25vh;
+  }
+
+  .category {
+    margin: 3px;
+    padding: 5px;
+    font-size: 0.6rem;
+  }
+
+  .long_ctg {
+    font-size: 0.4rem;
+  }
+
+  .menubar {
+    height: 1vh;
+  }
+  .progressBlock {
+    display: none;
+  }
+  #content_container {
+    margin-left: 5vw;
+    margin-right: 5vw;
+    width: 90vw;
+  }
+  .image_container {
+    margin-left: -6vw;
+  }
+
+  .image_container > center > img {
+    width: 90%;
+  }
+
+  #analysis > div {
+    font-size: 1rem;
+    font-weight: bolder;
+  }
+
+  #analysis > ul > li {
+    font-size: 0.8rem;
+  }
+
+  #post_by_ctg_ctn {
+    margin-left: -6vw;
+  }
+
+  .category_desc_txt {
+    font-size: 0.7rem;
+    line-height: 20px;
+  }
+
+  .category_btn {
+    width: 35px;
+    height: 35px;
+  }
+
+  .graph_text_switch_btn {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/*************************************   한빛    ***************************************/
+/* 가운데 정렬 진짜 구리게 한 부분이 많아서.. 웹모바일 호환 수정하면서 거기도 손볼게!*/
+html {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "Noto Serif KR", serif;
+  color: #ffffff;
+  background-color: #232222;
+}
+
+/* .header {
+      position: fixed;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+  }
+
+  .progress-container {
+      width: 100%;
+      height: 50px;
+      background-color: #232222;
+      opacity: 0.8;
+  }
+    
+  .progress-bar {
+      width: 0%;
+      height: 50px;
+      color: #3C74D4;
+      transition: all .3s ease;
+      opacity: 0.8;
+      z-index: 1;
+  }   */
+
+.title-casette {
+  text-align: center;
+  width: 60vw;
+}
+
+.title-img {
+  width: 60%;
+  border-radius: 3%;
+}
+
+.txt1 {
+  font-size: 1.25rem;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 50rem;
+  margin: 0 auto;
+  margin-bottom: 200px;
+  line-height: 300%;
+}
+
+.txt1-title {
+  text-align: center;
+  font-size: 2.18rem;
+  font-weight: 700;
+  margin-bottom: 3.125rem;
+}
+
+.txt2 {
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("images/sexual_violence.png"); */
+  /*background: url("images/sexual_violence.png") no-repeat center center fixed;*/
+  /* background-size: cover; */
+  box-sizing: border-box;
+  width: 70vw;
+  margin-left: 15vw;
+  padding: 20vh 10vw;
+  font-size: 1.25rem;
+  line-height: 300%;
+}
+
+.txt6 strong,
+.txt7 strong {
+  font-size: 1.7rem;
+  margin-right: 0.2rem;
+}
+
+.fixed {
+  background: url("images/sexual_violence.png") no-repeat center center fixed;
+  overflow: hidden;
+}
+
+.txt4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("images/chatroom.png");
+  padding-left: 20vw;
+  padding-right: 20vw;
+  height: 43.75rem;
+  margin: 0 auto;
+  padding-top: 100px;
+  font-size: 1.25rem;
+  line-height: 300%;
+}
+
+.space {
+  height: 400px;
+  background-color: #232222;
+}
+
+.txt5 {
+  background-color: #fffefc;
+  height: 1200px;
+  color: #000000;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  font-size: 1.25rem;
+  /* width: 800px; */
+  line-height: 300%;
+}
+
+.txt5-title {
+  text-align: center;
+  font-size: 2.18rem;
+  font-weight: 700;
+  margin-bottom: 3.125rem;
+}
+
+.txt6 {
+  font-size: 1.25rem;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  margin: 0 auto;
+  /* margin-bottom: 200px; */
+  line-height: 300%;
+}
+
+.topic2_txt6_qna_wrap {
+  line-height: 230%;
+}
+
+.txt7 {
+  font-size: 1.25rem;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 20vw;
+  padding-right: 20vw;
+  margin: 0 auto;
+  margin-bottom: 200px;
+  line-height: 300%;
+}
+
+#txt1_semititle, 
+#txt2_semititle, 
+#txt4_semititle, 
+#txt4_semititle_2, 
+#txt4_semititle_3,
+#txt5_semititle, 
+#txt6_semititle1,
+#txt6_semititle2,
+#txt7_semititle1,
+#txt7_semititle2
+{
+  text-decoration: underline;
+  padding-top: 7rem;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+#topic2_txt7_interview_wrap {
+  line-height: 230%;
+}
+#topic2_txt7_roadmap_img {
+  display: block;
+  margin: 0 auto;
+  width: 30rem;
+}
+
+.topic2_interviewee_img {
+  display: block;
+  width: 6rem;
+  margin: 0 auto;
+  margin-top: 5rem;;
+}
+
+#topic2_interviewee_1_name,
+#topic2_interviewee_2_name,
+#topic2_interviewee_3_name,
+#topic2_interviewee_4_name {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.tape4you {
+  width: 100%; /*채팅방 정렬 위해서 추가*/
+  height: 140rem;
+  background-color: #e4e3e3;
+  text-align: center;
+  padding-bottom: 300px;
+}
+
+#tape-hands {
+  margin-top: 100px;
+  text-align: center;
+  width: 25%;
+}
+
+.tape-title {
+  font-size: 1.88rem;
+  color: #3c74d4;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.description {
+  color: black;
+  line-height: 260%;
+  font-size: 1.12rem;
+  margin-top: 50px;
+}
+
+.election-title {
+  margin-top: 150px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.56rem;
+  color: black;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.election-hr {
+  width: 28rem;
+  color: black;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.question-box {
+  float: right;
+  color: #000000;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.25rem;
+  border-radius: 1.25rem;
+  margin-right: 10%;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  box-shadow: 3px 3px 10px rgb(170, 169, 169);
+}
+
+.answer-button {
+  float: right;
+  padding: 0.5rem 1.5rem;
+  border: 0 solid;
+  border-radius: 1rem;
+  margin-top: 4rem;
+  margin-right: -28rem;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  color: #4f77cc;
+  background-color: #ffffff;
+  font-size: 1rem;
+  box-shadow: 3px 3px 10px rgb(119, 119, 119);
+}
+
+.answer-button:hover {
+  background: #ebebeb;
+  background: linear-gradient(0deg, #cfcfcf 0%, #ffffff 100%);
+}
+
+.answer-box1, 
+.answer-box2, 
+.answer-box3, 
+.answer-box4 {
+  opacity: 0;
+  float: left;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-top: 8rem;
+}
+
+.profile {
+  float:left; /*answer-box1, profile 둘다 left*/
+  width: 4rem;
+  height: 4rem;
+  border-radius: 70%;
+  overflow: hidden;
+}
+
+.lee, .yoon, .sim, .ahn {
+  width: 4rem;
+}
+
+.candidate-name {
+  color:#000000;
+}
+
+.answer-box1-text, 
+.answer-box2-text, 
+.answer-box3-text, 
+.answer-box4-text {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  line-height: 200%;
+  background: #ffffff;
+  width:31.25rem;
+  margin-left: 6rem;
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  box-shadow: 3px 3px 10px rgb(170, 169, 169);
+}
+
+.answer-box1-text {
+  border: 1px solid #1077ff;
+}
+
+.answer-box2-text {
+  border: 1px solid #e21010;
+}
+
+.answer-box3-text {
+  border: 1px solid #ffbf10;
+}
+
+.answer-box4-text {
+  border: 1px solid #e66327;
+} 
+
+
+
+/*******잠깐숨김**************말풍선 코드 출처: https://ungdoli0916.tistory.com/753**********************/
+/* .balloon {
+  position: relative;
+  display: inline-block;
+}
+
+.balloon span {
+  display: inline-block;
+  padding: 1.5rem;
+  color: rgb(0, 0, 0);
+  background: #ffffff;
+  border-radius: 1.25rem;
+  font-family: "Noto Sans KR", sans-serif;
+  box-shadow: 3px 3px 10px rgb(170, 169, 169);
+}
+
+.balloon.right {
+  float: right;
+  margin-right: 6rem;
+  margin-bottom: 10rem;
+  font-size: 1.25rem;
+}
+
+.balloon.right span {
+  padding: 1rem 1.5rem;
+} */
+
+/***질문 말풍선 아래 답변 버튼**/
+/* 잠깐 숨김 .answer_button {
+  display: block; // 원래지울부분
+  clear: both; // 원래지울부분
+  float: right;
+  padding: 0.5rem 1.5rem;
+  border: 0 solid;
+  border-radius: 1rem;
+  margin-top: 4rem;
+  margin-right: -28rem;
+  margin-left: 78%; // 원래 지울부분
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  color: #4f77cc;
+  background-color: #ffffff;
+  font-size: 1rem;
+  box-shadow: 3px 3px 10px rgb(119, 119, 119);
+}
+
+.answer_button:hover {
+  background: #ebebeb;
+  background: linear-gradient(0deg, #cfcfcf 0%, #ffffff 100%);
+}
+
+.btn-1:hover {
+  background: rgb(0, 3, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 3, 255, 1) 0%,
+    rgba(2, 126, 251, 1) 100%
+  );
+}
+
+.balloon.left {
+  display: inline-block;
+  opacity: 0;
+  float: left; // 원래 지울 부분
+  margin-left: 8rem;
+  margin-top: -6rem;
+  font-size: 1rem;
+  line-height: 200%;
+  width: 36rem;
+}
+
+.balloon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.balloon.right:after,
+.balloon.left:after {
+  border-width: 10px 15px;
+  top: 50%;
+  margin-top: -10px;
+}
+
+.balloon.left:after {
+  border-color: transparent #ffffff transparent transparent;
+  left: -25px;
+}
+
+.balloon.right:after {
+  border-color: transparent transparent transparent #ffffff;
+  right: -25px;
+}
+
+#lee_answer1 span,
+#lee_answer2 span {
+  border: 1px solid #1077ff;
+}
+
+#yoon_answer1 span,
+#yoon_answer2 span {
+  border: 1px solid #e21010;
+}
+
+#sim_answer1 span,
+#sim_answer2 span {
+  border: 1px solid #ffbf10;
+}
+
+#ahn_answer1 span,
+#ahn_answer2 span {
+  border: 1px solid #e66327;
+} */
+
+/******************************************************************************************/
+
+/* 잠깐 숨김.profile {
+  margin-top: 10rem;
+  margin-left: 27rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 70%;
+  overflow: hidden;
+}
+
+.lee,
+.yoon,
+.sim,
+.ahn {
+  opacity: 0;
+  width: 4rem;
+} */
+
+footer {
+  background-color: #fffefc;
+  text-align: center;
+  height: 37.5rem;
+}
+
+.projectname {
+  margin: 0 auto;
+  padding-top: 100px;
+  margin-bottom: 30px;
+}
+
+.sea-waves {
+  width: 3.75rem;
+  margin-right: 8px;
+  padding-top: 5px;
+}
+
+.surfer {
+  display: inline;
+  font-size: 2.19rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #000000;
+  padding-top: -5px;
+}
+
+.about-us {
+  width: 100%;
+}
+
+.datateam {
+  color: black;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 100%;
+  float: left;
+  width: 10%;
+  box-sizing: border-box;
+  background-color: #fffefc;
+  margin-left: 35%;
+}
+
+.coverteam,
+.developmentteam {
+  color: black;
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 100%;
+  float: left;
+  width: 10%;
+  box-sizing: border-box;
+  background-color: #fffefc;
+}
+
+.team-name {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.sns {
+  text-align: center;
+}
+
+.copyright {
+  clear: left;
+  font-size: 0.7rem;
+  margin-top: 21rem;
+  text-align: center;
+  color: black;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* media query 수정중... */
+@media screen and (max-width: 960px) {
+  .title-casette {
+    width: 80vw;
+  }
+
+  .title-img {
+    width: 70%;
+  }
+
+  .txt1 {
+    font-size: 1.1rem;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 200px;
+    line-height: 300%;
+  }
+
+  .txt1-title {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+  }
+
+  .txt2 {
+    padding: 20vh 0vw;
+  }
+
+  .txt4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("images/chatroom.png");
+    padding-left: 10vw;
+    padding-right: 10vw;
+    height: 43.75rem;
+    margin: 0 auto;
+    padding-top: 100px;
+    font-size: 1.25rem;
+    line-height: 300%;
+  }
+
+  .space {
+    height: 400px;
+    background-color: #232222;
+  }
+
+  .txt5 {
+    background-color: #fffefc;
+    height: 700px;
+    color: #000000;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    font-size: 1.25rem;
+    /* width: 800px; */
+    line-height: 300%;
+  }
+
+  .txt5-title {
+    text-align: center;
+    font-size: 2.18rem;
+    font-weight: 700;
+    margin-bottom: 3.125rem;
+  }
+
+  .txt6,
+  .txt7 {
+    font-size: 1.25rem;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: 0 auto;
+    margin-bottom: 200px;
+    line-height: 300%;
+  }
+
+  .tape4you {
+    width: 100%; /*채팅방 정렬 위해서 추가*/
+    height: 140rem;
+    background-color: #e4e3e3;
+    text-align: center;
+    padding-bottom: 300px;
+  }
+
+  /* 잠깐 숨김.question-box {
+    margin: 0 auto;
+    width: 100%;
+  } */
+
+  #tape-hands {
+    margin-top: 100px;
+    text-align: center;
+    width: 25%;
+  }
+
+  .tape-title {
+    font-size: 1.5rem;
+    color: #3c74d4;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .description {
+    color: black;
+    line-height: 260%;
+    font-size: 1rem;
+    margin-top: 50px;
+  }
+
+  .election-title {
+    margin-top: 150px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 2px;
+  }
+
+  .election-hr {
+    width: 28rem;
+    color: black;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+
+  /* 잠깐 숨김.balloon.left span {
+    float: left;
+    max-width: 576px;
+  } */
+
+  footer {
+    background-color: #fffefc;
+    text-align: center;
+    height: 37.5rem;
+  }
+
+  .projectname {
+    margin: 0 auto;
+    padding-top: 100px;
+    margin-bottom: 30px;
+  }
+
+  .sea-waves {
+    width: 3.75rem;
+    margin-right: 8px;
+    padding-top: 5px;
+  }
+
+  .surfer {
+    display: inline;
+    font-size: 2.19rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #000000;
+    padding-top: -5px;
+  }
+
+  .about-us {
+    width: 100%;
+  }
+
+  .datateam {
+    color: black;
+    font-family: "Noto Sans KR", sans-serif;
+    line-height: 100%;
+    float: left;
+    width: 10%;
+    box-sizing: border-box;
+    background-color: #fffefc;
+    margin-left: 35%;
+  }
+
+  .coverteam,
+  .developmentteam {
+    color: black;
+    font-family: "Noto Sans KR", sans-serif;
+    line-height: 100%;
+    float: left;
+    width: 10%;
+    box-sizing: border-box;
+    background-color: #fffefc;
+  }
+
+  .team-name {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .sns {
+    text-align: center;
+  }
+
+  .copyright {
+    clear: left;
+    font-size: 0.7rem;
+    margin-top: 21rem;
+    text-align: center;
+    color: black;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .answer-box1-text, .answer-box2-text, .answer-box3-text, .answer-box4-text {
+    width: 20rem;
+  }
+
+  .tape4you {
+    width: 100%; /*채팅방 정렬 위해서 추가*/
+    height: 140rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title-casette {
+    width: 90vw;
+  }
+
+  .title-img {
+    width: 80%;
+  }
+
+  .txt1 {
+    font-size: 1rem;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 200px;
+    line-height: 300%;
+  }
+
+  .txt1-title {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+  }
+
+  .txt2 {
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("images/sexual_violence.png"); */
+    width: 80vw;
+    margin-left: 10vw;
+    padding: 15vh 0vw;
+    font-size: 1rem;
+  }
+
+  .txt4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("images/chatroom.png");
+    padding-left: 5vw;
+    padding-right: 5vw;
+    height: 43.75rem;
+    margin: 0 auto;
+    padding-top: 100px;
+    font-size: 1rem;
+    line-height: 300%;
+  }
+
+  .space {
+    height: 400px;
+    background-color: #232222;
+  }
+
+  .txt5 {
+    background-color: #fffefc;
+    height: 700px;
+    color: #000000;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-size: 1rem;
+    /* width: 800px; */
+    line-height: 300%;
+  }
+
+  .txt5-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3.125rem;
+  }
+
+  .txt6,
+  .txt7 {
+    font-size: 1rem;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin: 0 auto;
+    margin-bottom: 200px;
+    line-height: 300%;
+  }
+
+  #topic2_txt7_roadmap_img {
+    display: block;
+    margin: 0 auto;
+    width: 20rem;
+  }
+
+  .tape4you {
+    width: 100%; /*채팅방 정렬 위해서 추가*/
+    height: 140rem;
+  }
+
+  .description {
+    color: black;
+    line-height: 230%;
+    font-size: 1rem;
+    margin-top: 50px;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .question-box {
+    margin-right: 0;
+  }
+
+  .answer-box1, .answer-box2, .answer-box3, .answer-box4 {
+    margin-left: 1rem;
+  }
+
+  .answer-box1-text, .answer-box2-text, .answer-box3-text, .answer-box4-text {
+    width: 14rem;
+  }
+
+  /*말풍선 코드 출처: https://ungdoli0916.tistory.com/753*/
+  /* 잠깐 숨김 .balloon {
+    position: relative;
+    display: inline-block;
+  }
+
+  .balloon span {
+    display: inline-block;
+    padding: 1.5rem;
+    color: rgb(0, 0, 0);
+    background: #ffffff;
+    border-radius: 20px;
+    font-family: "Noto Sans KR", sans-serif;
+    box-shadow: 3px 3px 10px rgb(170, 169, 169);
+  }
+
+  .balloon.right {
+    margin-bottom: 10rem;
+    font-size: 1rem;
+  }
+
+  .balloon.right span {
+    float: right;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .balloon.left span {
+    float: left;
+    max-width: 467.2px;
+  }
+
+  .balloon.left {
+    display: inline-block;
+    margin-top: -6rem;
+    margin-bottom: 10rem;
+    font-size: 1rem;
+    line-height: 200%;
+  }
+
+  .balloon:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+
+  .balloon.right:after,
+  .balloon.left:after {
+    border-width: 10px 15px;
+    top: 50%;
+    margin-top: -10px;
+  }
+
+  .balloon.left:after {
+    border-color: transparent #ffffff transparent transparent;
+    left: -25px;
+  }
+
+  .balloon.right:after {
+    border-color: transparent transparent transparent #ffffff;
+    right: -25px;
+  }
+
+  #lee_answer1 span {
+    border: 1px solid #1077ff;
+  }
+
+  #yoon_answer1 span {
+    border: 1px solid #e21010;
+  }
+
+  #sim_answer1 span {
+    border: 1px solid #ffbf10;
+  }
+
+  #ahn_answer1 span {
+    border: 1px solid #e66327;
+  }
+
+  .profile {
+    margin-top: 10rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 70%;
+    overflow: hidden;
+  }
+
+  .lee,
+  .yoon,
+  .sim,
+  .ahn {
+    width: 4rem;
+  } */
+
+  footer {
+    background-color: #fffefc;
+    text-align: center;
+    height: 37.5rem;
+  }
+
+  .projectname {
+    margin: 0 auto;
+    padding-top: 100px;
+    margin-bottom: 30px;
+  }
+
+  .sea-waves {
+    width: 3rem;
+    margin-right: 8px;
+    padding-top: 5px;
+  }
+
+  .surfer {
+    display: inline;
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #000000;
+    padding-top: -5px;
+  }
+
+  .about-us {
+    text-align: center;
+  }
+
+  .datateam {
+    color: black;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1em;
+    line-height: 100%;
+    float: left;
+    box-sizing: border-box;
+    background-color: #fffefc;
+  }
+
+  .coverteam,
+  .developmentteam {
+    color: black;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 1rem;
+    line-height: 100%;
+    float: left;
+    margin-left: 1rem;
+    box-sizing: border-box;
+    background-color: #fffefc;
+  }
+
+  .team-name {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  .sns {
+    text-align: center;
+  }
+
+  .copyright {
+    clear: left;
+    font-size: 0.7rem;
+    margin-top: 21rem;
+    text-align: center;
+    color: black;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+}
+
+/*************************************   한빛    ***************************************/
