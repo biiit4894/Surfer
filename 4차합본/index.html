@@ -36,7 +36,7 @@
     <div id="container" class="menubar">
         <div id="block1" class="progressBlock" onclick="animateScrollTo('#page0',500)">편집자주</div>
         <div id="block2" class="progressBlock" onclick="animateScrollTo('#page1',500)">5년간의 목소리와 응답</div>
-        <div id="block3" class="progressBlock" onclick="animateScrollTo('#page2',500)">메시지의 전문</div>
+        <div id="block3" class="progressBlock" onclick="animateScrollTo('#page2',500)"><center>메시지<br>전문</center></div>
         <div id="block4" class="progressBlock" onclick="animateScrollTo('#page3',500)">미회신 메시지1</div>
         <div id="block5" class="progressBlock" onclick="animateScrollTo('#page4',500)">미회신 메시지2</div>
     </div>
@@ -48,7 +48,7 @@
     <div class="mobile_menu_container">
         <div class="mobile_menu" onclick="animateScrollTo('#page0',500)">편집자주</div>
         <div class="mobile_menu" onclick="animateScrollTo('#page1',500)">5년간의 목소리와 응답</div>
-        <div class="mobile_menu" onclick="animateScrollTo('#page2',500)">메시지의 전문</div>
+        <div class="mobile_menu" onclick="animateScrollTo('#page2',500)">메시지 전문</div>
         <div class="mobile_menu" onclick="animateScrollTo('#page3',500)">미회신 메시지1</div>
         <div class="mobile_menu" onclick="animateScrollTo('#page4',500)">미회신 메시지2</div>
     </div>
@@ -99,521 +99,518 @@
                     <hr size="2px" color="gray">
                 </div>
 
+                <div class="title_container">
+                    <span class="title_text">"5년간 쌓여온 메세지들"</span>
+                </div>
+                <div class="flex_container">
+                    <div class="letters">
+                        제20대 대선이 얼마 남지 않았다. 새로운 정부가 출범하기 전 지난 5년간의 국정 현황을 되돌아볼 때가 왔다. 
+                        5년이라는 시간 동안 국민들은 정부에게 무엇을 묻고 요청했을까? 우리는 이 질문에 대한 답을 ‘국민청원 데이터’를 통해서 찾고자 한다. 
+                        5년 동안 켜켜이 쌓인 시민들의 메세지를 풀어보며 다양한 정책 분야의 공공 이슈를 톺아보자.
+                    </div>
+                </div>
                 <br>
                 <div id="analysis">
-                    <div>이렇게 분석했어요!</div>
+                    <div>분석 방법</div>
                     <ul>
-                        <li>웹크롤링을 통해 국민청원 사이트에 접속해 '분야', '청원 제목', '청원 시작일', '청원 마감일', '참여 인원'을 수집하였습니다.</li>
-                        <li>2019년 3월 31일부터 국민청원 시스템이 100명의 사전동의를 얻어야 글을 게시할 수 있도록 개편됨에 따라 2017-2018년 또한 청원 수가 100명 이상인 데이터만 수집하였습니다.</li>
-                        <li>수집 기간은 2017년 8월 19일 ~ 2021년 12월 31일로 설정하였습니다.</li>
-                        <li>데이터 분석 시각화는 R과 Python을 이용해 구현하였습니다.</li>
+                        <li>
+                            데이터 수집 기간을  청와대 국민청원이 시작된 2017년 8월 19일부터 2021년 12월 31일로 설정한 후, 
+                            웹크롤링을 통해 국민청원 사이트에 접속해 ‘분야’, ‘청원 제목’, ‘청원 시작일’, ‘청원 마감일’, ‘참여 인원’을 수집했다.
+                        </li>
+                        <li>
+                            2019년 3월 31부터는 국민청원 시스템이 100명의 사전동의를 얻어야 글을 게시할 수 있도록 개편됨에 따라 
+                            2017-2018년 또한 청원 수가 100명 이상인 데이터만 수집했다.
+                        </li>
+                        <li>데이터분석과 시각화는 R과 Python을 통해 진행했다.</li>
                     </ul>
                 </div>
 
-                <div class="title_container">
-                    <span class="title_text">"5년 동안의 목소리 그리고 응답"</span>
-                </div>
-                <div class="flex_container" style="margin-top: 50px;">
+
+                <div class="flex_container">
                     <div class="subtitle_container">
-                        <span class="subtitle_text">국민청원의 17가지 카테고리 구성</span>
+                        <span class="subtitle_text">국민청원의 17가지 분야 구성</span>
                     </div>
                     <center>
-                        <div class="category_container">
+                        <div class="category_container" style="margin-top: 20px;">
                             <div class="category">정치개혁</div>
-                            <div class="category long_ctg">외교/통일/국민</div>
+                            <div class="category">외교/통일/국민</div>
                             <div class="category">일자리</div>
                             <div class="category">미래</div>
                             <div class="category">성장동력</div>
                             <div class="category">인권/성평등</div>
                             <div class="category">육아/교육</div>
                             <div class="category">안전/환경</div>
-                            <div class="category long_ctg">저출산/고령화대책</div>
+                            <div class="category">저출산/고령화대책</div>
                             <div class="category">행정</div>
                             <div class="category">반려동물</div>
-                            <div class="category long_ctg">문화/예술/체육/언론</div>
+                            <div class="category">문화/예술/체육/언론</div>
                             <div class="category">농산어촌</div>
                             <div class="category">보건복지</div>
-                            <div class="category long_ctg">교통/건축/국토</div>
+                            <div class="category">교통/건축/국토</div>
                             <div class="category">경제민주화</div>
                             <div class="category">기타</div>
                         </div>
                     </center>
                 </div>
                 <div class="letters_container">
-                    <span class="letters">
-                        국민청원은 청원을 등록할 떄 청원인이 직접 분야를 선택할 수 있도록 되어 있다. 이러한 분류를 통해 참여자들은 
-                        자신이 관심있는 분야의 청원을 선택해서 볼 수 있다. 17가지 카테고리는 국민들의 다양한 목소리를 최대한 반영할 수 
-                        있도록 정책 분야 등을 참고하여 설정한 것이다. 
-                    </span>
+                    <div class="letters">
+                        대한민국 국민이라면 누구나 국민청원을 신청할 수 있다. 국민청원에서는 청원을 등록할 때 청원인이 직접 분야를 선택할 수 있도록 되어 있다. 
+                        또, 이러한 분류를 통해 청원인은 자신이 관심있는 분야의 청원을 선택해서 볼 수도 있다.
+                    </div>
+                    <div class="letters">
+                        국민청원을 구성하고 있는 카테고리는 위와 같다. 청와대에 따르면, 
+                        위 17가지의 분야는 국민들의 다양한 목소리를 최대한 반영할 수 있도록 정책 분야 등을 참고하여 설정한 것이다.
+                    </div>
                 </div>
 
                 <div class="flex_container">
+                    <div class="subtitle_container">
+                        <span class="subtitle_text">분야별 국민청원 동의 수 및 게시글 수의 랭킹</span>
+                    </div>
                     <div id="img_ctn1" class="image_container">
                         <center>
                             <img src="./images/petition_category.png" id="img1" class="scroll-spy"/>
                         </center>
                     </div>
                     <div class="letters_container">
-                        <span class="letters">
-                            위 두개의 표를 보면 동의 수와 게시글 수 모두 구성하고 있는 분야갸 같은 것을 알 수 있습니다. 차지하고 있는 순위도 1-3단계 차이로 
-                            크게 다르지 않습니다. 그런데 동의 수와 게시글 수의 순위 차이가 두드러지는 분야가 았습니다. 바로 '보건복지'와 '안전/환경'이었는데요. 
-                            보건복지의 경우 청원 동의 수에서는 5위이지만 게시글 수는 1위를 차지하였습니다. 반대로 안전/환경 분야는 청원 수는 3위이지만 
-                            게시글 수는 7위로 내려갔네요. 그렇다면 이 두개의 분야를 구성하고 있는 세부적인 의제들로는 무엇이 있을까요?  
-                        </span>
-                    </div>
-
-                    <div id="img_ctn2" class="image_container">
-                        <center>
-                            <img src="./images/graph1.png" id="img2" class="scroll-spy"/>
-                        </center>
-                    </div>
-                    <div class="letters_container">
-                        <span class="letters">
-                            두 개의 분야를 구성하고 있는 청원 게시글의 제목을 수집해 워드클라우드 형태로 시각화한 결과입니다. 
-                            '보건복지'를 구성하고 있는 의제로는 '코로나', '백신', '마스크'처럼 코로나 바이러스와 관련된 키워드로 
-                            구성되어 있습니다. 외에도 장애인, 의료사고, 의료보험, 건강보험 등의 키워드의 언급도 높은 비중을 
-                            차지하였습니다.<br>
-                            '안전/환경'의 경우 '처벌'과 '반대'와 같은 특정 사건과 정책에 대한 제재를 담은 키워드들이 높은 빈도수를 
-                            보이고 있습니다. 이와 함께 '강서구', '조두순', '살인사건'과 같이 특정 사건명의 일부가 언급되었습니다. 
-                        </span>
+                        <div class="letters">
+                            그렇다면 지난 5년간 국민들은 어떤 정책 분야에 관심이 많았고 어떤 목소리를 냈을까? 
+                            국민의 정치적 관심 척도를 크게 ‘동의 수’와 ‘게시글 수’로 나누어 살펴보았다. 
+                            두 개의 표를 보면 전체 17개의 분야 중 10위까지는 ‘동의 수’와 ‘게시글 수’를 구성하고 있는 분야가 같은 것을 알 수 있다. 
+                            또한, 이를 차지하고 있는 순위 차이 또한 1-3단계 정도밖에 되지 않아 대략적으로 ‘동의 수'와 ‘게시글 수'는 비례한다고 볼 수 있다. 
+                        </div>
+                        <br>
+                        <div class="letters">
+                            그러나 ‘보건복지’와 ‘안전/환경’에서만큼은 두 지표의 순위 차이가 다른 분야들보다 뚜렷하다. 
+                            ‘보건복지’의 경우 청원 동의 수에서는 5위이지만 게시글 수에서는 1위를 차지하였으며 이는 코로나 정세를 반영한 결과로 보인다. 
+                            반대로 ‘안전/환경’의 청원 동의 수는 3위였지만 게시글 수에서는 7위로 내려갔다. 
+                            역대 가장 많은 동의 수를 얻은 청원 1,2위가 모두 ‘텔레그램 n번방 사태’ 관련 청원이었고 사회적 파급력이 높었던 두 청원 모두 ‘안전/환경’ 분야에 속했기 때문으로 풀이된다.
+                        </div>
                     </div>
                 </div>
 
                 <div class="flex_container">
+                    <div class="subtitle_container">
+                        <span class="subtitle_text">워드클라우드 <br><span class="footnote">(청원 수와 게시글 수의 순위 차이가 극명하게 드러나는 분야들 중심으로)</span></span>
+                    </div>
+
+                    <div id="img_ctn2" class="image_container">
+                        <center>
+                            <img src="./images/wordcloud.png" id="img2" class="scroll-spy"/>
+                        </center>
+                    </div>
+
+                    <div class="letters_container">
+                        <div class="letters">
+                            그렇다면 동의 수와 게시글 수의 순위 차이가 유독 컸던 ‘보건복지’와 ‘안전/환경’에서는 어떤 목소리가 나왔을까.
+                        </div>
+                        <div class="letters">
+                            두 분야를 구성하는 국민청원의 제목을 수집해 워드클라우드 형태로 시각화해본 결과, 
+                            ‘보건복지’를 구성하고 있는 의제로는 ‘코로나’, ‘백신’, ‘마스크’ 등으로 코로나 바이러스와 관련된 키워드가 압도적인 비중을 차지하고 있었다. 
+                            이외에도 장애인, 의료사고, 의료보험, 건강보험 등의 키워드도 눈에 띈다.
+                        </div>
+                        <div class="letters">
+                            ‘안전/환경’의 경우 ‘처벌’과 ‘반대’와 같은 특정 사건과 정책에 대한 제재를 담은 키워드들이 높은 빈도수를 보이고 있으며 
+                            ‘강서구’, ‘조두순’, ‘살인사건’ 과 같이 특정 사건명의 일부도 함께 언급되었다. 이외에도 ‘미세먼지’ 키워드가 보이는데, 
+                            국민들이 국민청원을 통해 미세먼지에 대한 위험을 우려하여 저감을 조치를 요구하였음을 유추해볼 수 있다. 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex_container">
+                    <div class="subtitle_container">
+                        <span class="subtitle_text">카테고리별 국민청원 동의 수의 변화</span>
+                    </div>
                     <div id="img_ctn3" class="image_container">
                         <center>
                             <img src="./images/agree_category.gif" id="img3"/> <!--fade-in하고 싶으면 class="scroll-spy" 추가-->
                         </center>
                     </div>
                     <div class="letters_container">
-                        <span class="letters">
-                            이번에는 각 지표의 수치를 연도별로 나누어 양상을 살펴보았습니다.<br>
-                            2019년을 제외한 모든 년도에서 '인권/성평등'이 가장 높은 청원수를 보였습니다. 많은 국민들이 청원을 통해 사회권 보장의 
-                            목소리를 내고 있음을 알 수 있습니다. 종합적으로 수치를 보니 유독 2020년에 청원의 열기가 높음을 알 수 있습니다. 
-                        </span>
+                        <div class="letters">5년치의 데이터를 연도별로 나누어 본다면, 각 분야별 청원 동의 수는 어떤 형태를 띄고 있을까.</div>
+                        <div class="letters">위의 그래프는 17가지 분야의 국민청원 동의 수를 연도별로 나타낸 것이다. </div>
+                        <div class="letters">
+                            ‘정치개혁' 청원이 빗발쳤던 2019년을 제외하고는 모든 년도에서 ‘인권/성평등’이 가장 높은 청원 수를 보였다. 
+                            이는 많은 국민들이 청원을 통해 사회권 보장의 목소리를 내고 있음을 보여준다.
+                        </div>
+                        <div class="letters">
+                            한편, 연도별로 ‘청원 동의 수’만을 놓고 보면 유독 2020년에 청원의 열기가 높았다. 
+                            2020년에 올라온 대표적인 청원으로는 ‘텔레그램 n번방 용의자 신상공개’, ‘신천지 강제 해체’ ,’중국인 입국 금지’가 있다. 
+                        </div>
                     </div>
 
+                    <div class="subtitle_container">
+                        <span class="subtitle_text">카테고리별 게시글 수의 변화</span>
+                    </div>
                     <div id="img_ctn4" class="image_container">
                         <center>
                             <img src="./images/bulletin_category.gif" id="img4"/>
                         </center>
                     </div>
                     <div class="letters_container">
-                        <span class="letters">
-                            분야별 게시글 수의 변화를 연도별로 살펴보았습니다. 2019년까지만 해도 1000건 이하에 머물러있던 '보건복지'가 2020년 이후 
-                            2배 가량 게시글 수가 증가함을 알 수 있습니다. 해당 수치의 변화가 코로나에 당면한 국내 정세를 반영하고 있음을 유추해볼 수 
-                            있습니다. 이번에는 더 깊숙히 들어가 분야별로 각 어떤 청원이 있었는지 살펴볼까요? 
-                        </span>
+                        <div class="letters">청원 동의 수와 마찬가지로 17가지 분야의 게시글 수 또한 연도별 흐름을 볼 수 있다.</div>
+                        <div class="letters">
+                            2019년까지만 해도 ‘정치개혁', ‘인권/성평등', ‘기타' 분야가 게시글 수 상위권을 차지했지만, 
+                            2020년 이후부터는 1000건 이하에 머물러있던 ‘보건복지’의 게시글 수가 2배 가량 증가함을 알 수 있다. 
+                            해당 수치의 변화는 코로나에 당면한 국내 정세의 반영이다.
+                        </div>
                     </div>
                 </div>
 
                 <div class="flex_container">
                     <div class="subtitle_container">
-                        <span class="subtitle_text">분야별 게시글 수의 추이</span>
+                        <span class="subtitle_text">게시글 수의 추이</span>
+                    </div>
+                    <div class="letters_container">
+                        <div class="letters">마지막으로 각 분야별로 ‘월’ 단위로 더 세밀하게 나누어 보았다.</div>
+                        <div class="letters">
+                            어떤 청원들이 17가지의 분야를 꾸리어 나가고 있었을까? 
+                            화살표 버튼을 클릭하면 2017년부터 2021년까지의 주요 청원과 정책적 사안들을 분야별로 하나씩 살펴볼 수 있다. 
+                            지난 5년간 쌓여온 공공 이슈들을 확인해볼 수 있을 것이다.
+                        </div>
                     </div>
 
                     <!--------------------------추가------------------------>
                     <div id="post_by_ctg_ctn">
+                        <!--제목-->
+                        <div id="post_by_ctg_title_ctn">
+                            <span id="post_by_ctg_title1" class="post_by_ctg_title" style="display: inline">금융시장 빌런의 발견. '공매도'</span>
+                            <span id="post_by_ctg_title2" class="post_by_ctg_title">정부도 국민도 혼란 그 자체인 부동산 대책</span>
+                            <span id="post_by_ctg_title3" class="post_by_ctg_title">땅콩은 시작에 불과했지</span>
+                            <span id="post_by_ctg_title4" class="post_by_ctg_title">평창에 드리워진 '빙상연맹'이라는 그늘</span>
+                            <span id="post_by_ctg_title5" class="post_by_ctg_title">시간의 뒤안길을 걷는 지방 농촌</span>
+                            <span id="post_by_ctg_title6" class="post_by_ctg_title">여전히 갈 길이 먼 '동물보호법'</span>
+                            <span id="post_by_ctg_title7" class="post_by_ctg_title">마스크 언제 벗을 수 있을까요?</span>
+                            <span id="post_by_ctg_title8" class="post_by_ctg_title">탈원전, 이상과 현실의 괴리</span>
+                            <span id="post_by_ctg_title9" class="post_by_ctg_title">드랍 더 비트(코인)?</span>
+                            <span id="post_by_ctg_title10" class="post_by_ctg_title">일상에도 재난 문자가 있었더라면</span>
+                            <span id="post_by_ctg_title11" class="post_by_ctg_title">난민 청원으로 드러난 대한민국의 본심</span>
+                            <span id="post_by_ctg_title12" class="post_by_ctg_title">어린이집, 대체 뭐가 문제인걸까?</span>
+                            <span id="post_by_ctg_title13" class="post_by_ctg_title">성범죄에 갑질에 횡령을 더해서</span>
+                            <span id="post_by_ctg_title14" class="post_by_ctg_title">새로운 일자리보단 좋은 일자리가 먼저</span>
+                            <span id="post_by_ctg_title15" class="post_by_ctg_title">아기는 황새가 물어다 주는 거 아닌가요?</span>
+                            <span id="post_by_ctg_title16" class="post_by_ctg_title">파란만장했던 20대 국회 톺아보기</span>
+                            <span id="post_by_ctg_title17" class="post_by_ctg_title">단지 앞에 택배가 쌓인 이유</span>
+                            <hr id="post_by_ctg_hr" align="left">
+                        </div>
+
+                        <!--내용-->
                         <div id="post_by_ctg">
                             <!--그래프 이미지-->
                             <div id="category_graph_img_ctn">
-                                <img id="category_graph_img" height="100%" src="./images/category_graph1.jpeg"/>
+                                <img id="category_graph_img" height="100%" src="./images/category_graph1.jpg"/>
                             </div>
 
                             <!--설명 텍스트-->
                             <div id="category_desc_text_ctn">
                                 <!--경제민주화-->
                                 <div id="category_desc_text1" class="category_desc_txt" style="display: block;">
-                                    <span><em>주요 사안들</em> : 공매도 폐지, 국회의원 연봉 삭감, 특정 기업의 적폐 
-                                        및 비리 개선, 소상공인 지원, 주식 양도소득세 부과 반대</span>
-                                    <ul>
-                                        <li>2018년 4월 6일 : '삼성증권 시스템 규제와 공매도 금지'(청원인원 242,286명)</li>
-                                        <ul style="list-style: none; padding-left: 10px;">
-                                            <li>개요 : 삼성증권이 우리사주 보유 직원들에게 배당금을 주면서 28억원 대신 28억주(113조원 규모)를 잘못 지급한 사건</li>
-                                        </ul>
-                                        <li>2018년 10월 : '국민연금 주식 대여 금지'(청원인원 102,846명)</li>
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b>2018년 4월 ‘삼성증권 시스템 규제와 공매도 금지’ 청원</b><br>
+                                            삼성증권이 우리사주조합원에게 한 주당 1,000원을 배당해야 할 것을 한 주당 
+                                            1천주씩 배당하여 주식 거래 시스템 개편과 공매도 제도를 금지에 대한 목소리를 
+                                            담은 청원이 잇따라 올라왔다.
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <b>2018년 10월 ‘국민연금 주식 대여 금지’ 청원</b><br>
+                                            국내 대표 공적 연기금인 ‘국민연금’과 ‘우정사업본부’가 2008년 이후 10년간 주식을 
+                                            빌려주고 벌어들인 수수료가 공개되면서, 이러한 주식 대여가 공매도로 이어져 
+                                            개인투자자들의 피해와 국민연금의 수익 악화로 이어진다는 비판이 담긴 국민청원이 게시되었다.
+                                        </li>
                                     </ul>
                                 </div>
 
                                 <!--교통/건축/국토-->
                                 <div id="category_desc_text2" class="category_desc_txt"">
-                                    <span><em>주요 사안들</em> : 특정 시설 설립 요구 및 반대, 음주운전 처벌 강화, 그리벨트 
-                                    해제 반대 및 찬성, 부동산 대책</span>
-                                    <ul>
-                                        <li>2018년 4월</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>대한한공 항공사명 회수 청원 : 조현민의 물컵 갑질 사건 발생</li>
-                                            <li>다산신도시 ‘실버택배’ 반대 청원 : 택배 차량의 아파트 단지 
-                                                진입을 막아 '택배 갑질' '택배 전쟁' 논란을 일으킨 경기도 
-                                                남양주시의 다산 신도시가 '실버택배'를 도입하기로 결정한 가운데, 
-                                                이 금액의 일부를 지자체가 지원하기로 하면서 세금 투입 논란이 불거진 사건 
-                                                (*실버택배 : 노인 인력을 활용하는 아파트 단지 내 택배 화물 운송)
-                                            </li>
-                                            <li>무단 횡단 교통사고 법률 개선 청원 : 광주에서 무단횡단을 하다 대학생이 
-                                                숨지는 사건 발생, 무단횡단 사고 시 운전자에게 법적 책임과 구속을 금지하는 청원 
-                                            </li>
-                                        </ul>
-
-                                        <li>2018년 10월</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>카카오택시 카풀(car-pool) 반대 청원 : 카카오모빌리티의 카풀 서비스 사업 진출에 반대하는 청원</li>
-                                        </ul>
-
-                                        <li>2020년 7월</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>617, 710 부동산 대책 발표 관련 청원</li>
-                                        </ul>
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b>2018년 10월 ‘카풀 서비스 사업 반대’ 청원</b><br>
+                                            2018년 10월 모바일 앱을 통해 카풀(car-pool)을 중개하는 플랫폼 기업이 등장하자, 
+                                            택시업계를 포함한 많은 국민들이 열악한 택시 종사자의 여건이 더욱 악화되고, 
+                                            일자리가 사라질 것이라는 염려의 목소리를 국민청원에 담아냈다.
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <b>2020년 7월 ‘617 & 710 부동산 대책’ 관련 청원</b><br>
+                                            정부가 주택 가격 안정화를 위해 한 달 간격으로 번복해서 발표한 부동산 대책에 대한 
+                                            국민청원이 빠르게 증가했다. 특히 정부가 부동산에 징벌적 과세를 한다는 비판과 함께 
+                                            소급적용에 대한 우려가 컸다.
+                                        </li>
                                     </ul>
                                 </div>
 
                                 <!--기타-->
                                 <div id="category_desc_text3" class="category_desc_txt"">
-                                    <ul>
-                                        <li>2018년 4월</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>대한한공 항공사명 회수 청원</li>
-                                            <li>다산신도시 ‘실버택배’ 반대 청원 : 택배 차량의 아파트 단지 진입을 막아 
-                                                '택배 갑질' '택배 전쟁' 논란을 일으킨 경기도 남양주시의 다산 신도시가 
-                                                '실버택배'를 도입하기로 결정한 가운데, 이 금액의 일부를 지자체가 지원하기로 
-                                                하면서 세금 투입 논란이 불거진 사건 (*실버택배 : 노인 인력을 활용하는 
-                                                아파트 단지 내 택배 화물 운송)
-                                            </li>
-                                            <li>인천 초등생 폭행 사건 관련 청원 : 인천광역시 연수구 동춘동에서 사건 당시 
-                                                16세 고등학교를 자퇴한 김모 양이 당시 초등학교 2학년 여학생 A양을 유괴 살인한 
-                                                사건에 대한 판결이 징역 13년으로 감형되자 재심을 촉구하는 청원글 다수가 게시
-                                            </li>
-                                        </ul>
-
-                                        <li>2018년 7월</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>‘워마드’ 폐지 청원 : 워마드에 성체(聖體)를 훼손한 사진과 예수를 조롱하는 글이 올라와 
-                                                해당 사이트를 폐지하자는 청원글 다수가 게시됨.
-                                            </li>
-                                            <li>이재명,은수미의 진상규명 청원 : 2018년 6.13 지방선거에 이어 ‘그것이 알고 싶다’를 통해 
-                                                이재명 전 경기지사의 조폭연루설과 은수미 현 성남시장의 운전기사 무상지원 의혹이 제기됨.
-                                            </li>
-                                            <li>전기 누진세 폐지 청원 : 가정용 전기에 전력 사용량에 따라 전기요금 단가를 높이는 누진제 적용을 폐지할 것을 요청</li>
-                                        </ul>
-
-                                        <li>2018년 10월</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>강서구 PC방 살인사건 관련 청원 : 가해자 신상 공개, 심신미약으로 인해 감형을 받아서는 안된다는 청원글 다수가 게시됨</li>
-                                        </ul>
-
-                                        <li>2019년 11월</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>거제도 음주 폭행살인사건 관련 청원 : 가해자에 대한 엄중 처벌 청원</li>
-                                        </ul>
-
-                                        <li>2020년 3월</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>코로나19로 인한 중소기업 재정난 해소 청원</li>
-                                            <li>마스크 공급 관련 청원 : 마스크 부족 사태로 인한 공급 지원 관련 청원글이 다수 게시됨.</li>
-                                        </ul>
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b>2018년 4월 ‘대한한공 항공사명 회수’ 청원</b><br>
+                                            전 ‘대한항공’ 전무 조현민의 물컵 갑질 사건이 논란이 되면서 ‘대한한공’이라는 항공사명을 
+                                            회수하자는 국민 청원이 폭발적으로 급증했다.
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <b>2018년 4월 ‘다산신도시 실버택배 반대’ 청원</b><br>
+                                            다산 신도시의 한 아파트에서 후진하는 택배 차량에 아이가 치일 뻔한 사고가 발생하자 입주민들이 
+                                            단지 내 택배 차량의 출입을 막았다. 택배회사들은 이에 반발해 단지 입구에 배송물을 쌓아 두고 돌아갔으며 
+                                            이에 국토교통부가 중재에 나서 ‘실버 택배’를 도입하겠다고 나섰으나, 
+                                            여기에 국민 세금이 투입된다는 사실이 알려지면서 청원이 제기되었다.
+                                        </li>
+                                        <br>
+                                        <li><b>2020년 3월 ‘코로나19로 인한 소상공인 재정난 해소’ 청원</b></li>
                                     </ul>
-                                </div>
-
-                                <!--농산어촌-->
-                                <div id="category_desc_text4" class="category_desc_txt"">
-                                    <span><em>주요 사안들</em> : 농촌 소멸, 지역 방송국 폐쇄 중단, 농가 피해 보상,  AI로 인한 살처분 방지 정책 중단, 농산물 유통 구조 개혁
-                                    </span>
                                 </div>
 
                                 <!--문화/예술/체육/언론-->
-                                <div id="category_desc_text5" class="category_desc_txt"">
-                                    <span><em>주요 사안들</em> : 가짜뉴스 처벌, 평창올림픽, 포털 사이트 여론조작 방지, 체육계 내 폭행 사건 처벌, 드라마의 역사 왜곡, 코로나로 인한 문화예술 산업 쇠퇴
-                                    </span>
-                                    <ul>
-                                        <li>2018년 2월 : 2018 평창 동계올림픽/대한민국 여자 팀추월 대표팀 논란</li>
-                                        <ul style="list-style: none; padding-left: 10px;">
-                                            <li>
-                                                여자 팀추월 경기에서 마지막 두바퀴를 남기고 노선영 선수가 혼자 뒤처졌음에도 김보름과 박지우 선수가 알아채지 못하고 
-                                                계속 나아가며 셋 사이의 거리를 좁히지 못해 준결승 진출이 무산된 사건, 집단 따돌림 논란과 함께 빙상 연맹의 미숙한 행정에 
-                                                분노한 국민들이 선수 출전 중단, 빙상연맹 폐지 및 감사에 대해 청원함.
-                                            </li>
-                                        </ul>
-                                        <li>2018년 4월 : 전 대한빙상경기연맹 전 부회장 ‘전명규’ 파면 청원</li>
-                                        <ul style="list-style: none; padding-left: 10px;">
-                                            <li>
-                                                ‘그것이 알고싶다’가  빙상계 ‘적폐 논란’을 부른전명규(한국체대 교수)의 실세를 보도하면서 국민들이 대한빙상경기연맹 부회장 
-                                                보직에서 사퇴할 것을 청원, 故 노진규 선수가 종양이 있음에도 스케이트 출전을 요구한 한체대 전명규 교수의 파면을 요청
-                                            </li>
-                                        </ul>
-                                    </ul>
-                                </div>
-
-                                <!--미래-->
-                                <div id="category_desc_text6" class="category_desc_txt"">
-                                    <span><em>주요 사안들</em> : 가상 화폐 및 거래소 폐지, 조두순 출소 반대, 소년법 폐지, 난민 수용 반대
-                                    </span>
-                                    <ul>
-                                        <li>2018년 6월 : 제주도 예멘 난민 입국 반대</li>
-                                        <ul style="list-style: none; padding-left: 10px;">
-                                            <li>제주도에서 입국 신청을 한 예멘인 500여명에 대한 입국 찬반 논란</li>
-                                        </ul>
-                                    </ul>
-                                </div>
-
-                                <!--반려동물-->
-                                <div id="category_desc_text7" class="category_desc_txt"">
-                                    <span><em>주요 사안들</em>동물병원 의료 사고 처벌, 동물보호법 강화, 불법 동물 번식장 폐쇄, 반려동물 분양 금지
-                                    </span>
-                                </div>
-
-                                <!--보건복지-->
-                                <div id="category_desc_text8" class="category_desc_txt"">
-                                    <span><em>주요 사안들</em>수술실 CCTV 의무화(불법 대리시술 방지), 코로나 확산 방지, 백신 강제접종 반대, 마스크 공급 및 지원
-                                    </span>
-                                    <ul>
-                                        <li>2019년 8월 - 국민연금 폐지</li>
-                                        <ul style="list-style: none; padding-left: 10px;">
-                                            <li>국민연금 보험료 인상과 가입연령 상향조정 내용을 담은 연금 개정안을 발표되자 비판여론이 들끓고 국민연금 폐지 청원글 다수가 게시됨.</li>
-                                        </ul>
-                                        <li>2020년 2월 - 우한폐렴(현 코로나바이러스) 확산 방지를 위한 해외 출국 금지, 마스크 공급 및 지원 청원, 전국 신천지 교회 폐쇄</li>
-                                        <li>2020년 8월 - 가지각색 코로나 관련 청원</li>
-                                        <li>2021년 12월 - 백신 패스 도입 반대, 백신 접종 후 이상반응 및 사망</li>
-                                    </ul>
-                                </div>
-
-                                <!--성장동력-->
-                                <div id="category_desc_text9" class="category_desc_txt"">
-                                    <span><em>주요 사안들</em>가상화폐 규제 반대, 전기용품 및 생활용품 안전관리법 개정(전안법), 탈원전 정책 반대
-                                    </span>
-                                    <ul>
-                                        <li>전안법 관련 청원 :  기존에 전기 공산품이나 유아복에만 적용되었던 KC인증(국가통합인증)대상이 일반 의류, 
-                                            잡화 등 신체에 직접 접촉하는 대부분의 용품들로 확대되면서 소상공인이 20~30만원의 인증 비용을 부담해야 
-                                            하는 사실에 대한 문제 제기
+                                <div id="category_desc_text4" class="category_desc_txt"">
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b>2018년 2월 : ‘평창올림픽 대한민국 여자 팀추월 경기’ 관련 청원</b><br>
+                                            평창올림픽 여자 팀추월 경기에 출전한 대한민국 선수들이 서로 거리를 좁히지 못하면서 준결승 진출이 무산되었다. 
+                                            이후 집단 따돌림 논란과 함께 빙상 연맹의 미숙한 행정에 대한 국민의 분노가 고조되면서 선수 출전 중단, 
+                                            빙상연맹 감사를 요구하는 청원이 급증했다.
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <b>2018년 4월 : ‘전 대한빙상경기연맹 전명규 전 부회장 파면’ 청원</b><br>
+                                            ‘그것이 알고싶다’가 빙상계 적폐 논란을 부른 전명규 교수의 실세를 보도하면서 대한빙상경기연맹 부회장 보직에서 사퇴, 
+                                            한국체대 교수 파면에 대한 국민청원 여럿 게시되었다.
                                         </li>
                                     </ul>
                                 </div>
 
+                                <!--농산어촌-->
+                                <div id="category_desc_text5" class="category_desc_txt"">
+                                    <span class="major_petition">주요 사안</span>
+                                    <br><br>
+                                    <div class="hashtag_ctn">
+                                        <span class="hashtag">#농촌 소멸</span>
+                                        <span class="hashtag">#낚시부담금 도입 반대</span>
+                                        <span class="hashtag">#농업과 어업 소득의 과세 불균형 해소</span>
+                                        <span class="hashtag">#쌀 수급 안정</span>
+                                        <span class="hashtag">#AI 예방적 살처분 반대</span>
+                                        <span class="hashtag">#무허가 축사 적법화 기한 연장</span>
+                                        <span class="hashtag">#후쿠시마산 수산물 수입 반대</span>
+                                        <span class="hashtag">#일본 김 산업 업체의 한국 진출 반대</span>
+                                    </div>
+                                </div>
+
+                                <!--반려동물-->
+                                <div id="category_desc_text6" class="category_desc_txt"">
+                                    <span class="major_petition">주요 사안</span>
+                                    <br><br>
+                                    <div class="hashtag_ctn">
+                                        <span class="hashtag">#동물보호법 강화</span>
+                                        <span class="hashtag">#불법 동물 번식장 폐쇄</span>
+                                        <span class="hashtag">#개식용 금지</span>
+                                        <span class="hashtag">#동물복지</span>
+                                        <span class="hashtag">#동물학대 가해자 처벌</span>
+                                        <span class="hashtag">#유기견 보호소 폐쇄 반대</span>
+                                        <span class="hashtag">#반려동물 분양 금지</span>
+                                        <span class="hashtag">#반려동물의 의료사고 처벌</span>
+                                    </div>
+                                </div>
+
+                                <!--보건복지-->
+                                <div id="category_desc_text7" class="category_desc_txt"">
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b>2020년 2-3월 ‘코로나 바이러스 확산 방지를 위한 해외 입출국 금지 & 전국 신천지 교회 폐쇄 & 마스크 공급 및 지원’ 청원</b>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <b>2021년 12월 ‘백신 패스 도입 반대’ 청원</b><br>
+                                            정부가 도입한 방역패스 정책과 관련해 돌파 감염이 많아 백신을 맞고서도 안심할 수 없다는 점, 정부가 추가 접종을 요구하는 점, 
+                                            미접종자의 일상생활에 불이익이 생기는 점 등을 우려해 백신 패스 도입을 반대하는 청원들이 폭발적으로 급증했다.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!--성장동력-->
+                                <div id="category_desc_text8" class="category_desc_txt"">
+                                    <span class="major_petition">주요 사안</span>
+                                    <br><br>
+                                    <div class="hashtag_ctn">
+                                        <span class="hashtag">#탈원전 정책 반대</span>
+                                        <span class="hashtag">#가상 화폐 규제 반대 vs 찬성</span>
+                                        <span class="hashtag">#전기용품 및 생활용품 안전관리법(전안법) 개정</span>
+                                        <span class="hashtag">#방사광 가속기 유치</span>
+                                        <span class="hashtag">#SK 하이닉스 구미 유치</span>
+                                    </div>
+                                </div>
+
+                                <!--미래-->
+                                <div id="category_desc_text9" class="category_desc_txt"">
+                                    <span class="major_petition">주요 사안</span>
+                                    <br><br>
+                                    <div class="hashtag_ctn">
+                                        <span class="hashtag">#가상화폐 규제 반대 vs 찬성</span>
+                                        <span class="hashtag">#조두순 출소 반대</span>
+                                        <span class="hashtag">#신한울 3·4호기 건설</span>
+                                        <span class="hashtag">#세월호 참사 전면 재수사</span>
+                                        <span class="hashtag">#난민 입국 반대</span>
+                                        <span class="hashtag">#조선일보 폐간</span>
+                                        <span class="hashtag">#영아수당 지급</span>
+                                    </div>
+                                </div>
+
                                 <!--안전/환경-->
                                 <div id="category_desc_text10" class="category_desc_txt"">
-                                    <ul>
-                                        <li>2018.1</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>아동성범죄 처벌 강화 촉구 청원: 1월 3일 SBS뉴스는 경남 창원에서 50대 중년 남성이 6살 유치원생 여자아이를 성폭행한 혐의로 
-                                                경찰에 체포된 사실이 뒤늦게 알려졌다며 해당 사건을 보도. 가해자는 “술에 취해 기억이 나지 않는다"고 진술해 주취감형 폐지 청원이 
-                                                폭발적으로 증가했음.
-                                            </li>
-                                            <li>제천 화재 관련 소방공무원 사법 처리 반대 청원: 제천에서 화재로 29명이 숨지는 등 참사가 발생했는데, 이를 두고 경찰은 현장 지휘관들을 
-                                                소환해 피해 규모가 커지는 데 대해 책임을 물을 수 있는지 조사.
-                                            </li>
-                                            <li>미세먼지 대책 요구 청원</li>
-                                        </ul>
-                                        
-                                        <li>2018.5-7</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>광주 폭력조직의 집단 폭행 사건 엄벌 청원: 4월30일 광주 광산구 일대 한 도로에서 폭력조직 소속 남성 8명이 30대 남성을 집단폭행, 
-                                                사실상 실명 등 피해를 입힌 사건. 당시 현장에는 경찰관이 출동했지만 가해 남성들을 즉각 제압하지 않아 소극적으로 대응했다는 논란이 일었음.
-                                            </li>
-                                            <li>라돈 매트리스 처리 청원: 라돈(호흡기성 발암물질)이 대진침대 매트리스와 까사미아 침구류에서 발견돼 수십만 명의 사람들이 방사능에 피폭됐을 것으로 추정되지만, 
-                                                원자력 안전 위원회에서는 이를 방사성 폐기물이 아닌 ‘폐기물'로 보고 있어 국민의 불안이 높아졌던 사건.
-                                            </li>
-                                            <li>제주 난민 수용 반대 청원</li>
-                                            <li>대구 수돗물 청원: 5월 낙동강 대구 취수장에서 발암물질이 포함된 과불화화합물이 검출된 이후 수돗물에 대한 시민들의 불안과 불신이 높아진 사건.</li>
-                                            <li>여름철 누진세 폐지 청원</li>
-                                        </ul>
-
-                                        <li>2018.10-11</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>강서구 pc방 알바생 살인사건 강경처벌 청원</li>
-                                            <li>거제도 묻지마 살인사건 피의자 공개 청원</li>
-                                            <li>광양 중국 알루미늄 공장 반대 청원</li>
-                                        </ul>
-
-                                        <li>2020.2</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>코로나 바이러스 관련 청원: 중국발 입국 금지, 마스크 가격 안정화, 확진자 동선 공개 요청, 신천지 압수수색 요청 등</li>
-                                        </ul>
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b>2018년 5월 ‘광주 폭력조직의 집단 폭행 사건 엄벌’ 청원</b><br>
+                                            광주 광산구 일대 한 도로에서 폭력조직 소속 남성 8명이 30대 남성을 집단폭행하여 사실상 실명 등 피해를 입힌 사건이 발생했다. 
+                                            당시 현장에 경찰관이 출동했지만, 가해 남성들을 즉각 제압하지 않아 소극적으로 대응했다는 논란이 일어 이를 엄벌해달라는 국민청원이 제기되었다.
+                                        </li>
+                                        <br>
+                                        <li><b>2018년 10월 ‘강서구 PC방 아르바이트생 살인사건 강경처벌’ 청원</b></li>
+                                        <br>
+                                        <li>
+                                            <b>2020년 2월 ‘코로나19 확산 방지’ 청원</b><br>
+                                            코로나19의 확산으로 중국발 입국자 입국 금지, 마스크 가격 안정화, 확진자 동선 공개 요청, 
+                                            신천지 압수수색 요청 등을 요청하는 국민청원이 끊이질 않았다.
+                                        </li>
                                     </ul>
                                 </div>
 
                                 <!--외교/통일/국방-->
                                 <div id="category_desc_text11" class="category_desc_txt"">
-                                    <ul>
-                                        <li>2018.2</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>천안함 사건 재조사 청원: 북한 김영철 노동당 부위원장의 방남을 계기로 제기된 청원.</li>
-                                        </ul>
-
-                                        <li>2018.6-7</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>제주 예멘 난민 수용 반대 청원: 난민법 폐지 등</li>
-                                        </ul>
-
-                                        <li>2018.11</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>양구 군인 사망 사건 진상 규명 청원: GP 철수 이후 벌어진 일.</li>
-                                        </ul>
-
-                                        <li>2019.8</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>한일군사정보보호협정(GSOMIA) 청원 관련: 일본 여행 제한국 지정, COREA로 바꾸자는 청원, 주00을 처벌해달라는 청원 등</li>
-                                        </ul>
-
-                                        <li>2020.3</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>코로나 관련 청원: 입국 제한 청원 vs. 전세기 요청 청원 등 해외 교민 구제</li>
-                                        </ul>
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b>2018년 2월 ‘천안함 사건 재조사’ 청원</b><br>
+                                            평창 동계올림픽에 대표단으로 북한 김영철 노동당 부위원장이 방남하기로 하자, 아직 천안함의 배후를 명확히 밝히지 못했다며 제기된 청원이다.
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <b>2018년 7월 ‘제주 예멘 난민 수용 반대’ 청원</b><br>
+                                            내전을 피하기 위해 예멘에서 500여명의 난민이 제주도에 오자, 치안 불안과 난민 불인정 등을 이유로 난민법 폐지와 난민 추방 청원이 제기되었다.
+                                        </li>
                                     </ul>
                                 </div>
 
                                 <!--육야/교육-->
                                 <div id="category_desc_text12" class="category_desc_txt"">
-                                    <ul>
-                                        <li>2018.7</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>어린이집 아동학대 청원: 18일 서울 강서구 어린이집에서 영아 사망 사건이 발생했고, 보육교사 김씨가 사망한 피해 아동을 포함해 
-                                                원생 5명에 대해 잠을 재운다며 이불을 머리까지 씌운 채 10회 이상 팔이나 다리로 누름. 뿐만 아니라, 서울 도봉구 어린이집에서는 
-                                                교사 2명이 자신들이 돌보던 1~2세 아이 10명의 팔을 잡아끌어 강제로 자리에 앉히고 여러 차례 무릎으로 머리를 치거나 손으로 밀치는 등 총 30차례 학대함.
-                                            </li>
-                                        </ul>
-
-                                        <li>2018.10-11</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>울산 성민이 사건 재수사 청원: 23개월 영아가 어린이집 원장 남편의 폭행에 의해 장이 끊어져 복막염과 패혈증으로 사망한 성민이 사건이 
-                                                &lt;추적60분&gt;에 방영되면서 재조명 된 청원.
-                                            </li>
-                                            <li>사립유치원 비리 조사 청원: 박용진 더불어민주당 의원이 사립유치원 비리근절을 해결하기 위해 마련한 정책토론회가 
-                                                유치원 단체의 집단행동으로 아수라장으로 변했고, 이달 말 박 의원이 공개한 사립유치원 회계비리는 당시 최근 5년간 
-                                                16,122건(382억원)으로 드러났다.
-                                            </li>
-                                            <li>김포 맘카페 폐쇄 청원: 김포지역 맘카페에 “아이가 교사에게 안기려고 했지만, 교사가 돗자리 터는 데만 신경 써 밀쳤다"는 게시글이 올라와 
-                                                어린이집 실명과 해당 교사의 신상정보가 공개되었고, 이튿날 아이의 이모가 어린이집에 찾아와 교사를 질책해 이 다음날 교사가 극단적인 선택을 한 사건.
-                                            </li>
-                                            <li>경피용 bcg 백신 청원: 영아를 대상으로 접종하는 일본산 결핵 예방 도장형 BCG 백신에서 비소가 검출되었음.</li>
-                                            <li>수시 폐지 및 정시 확대 청원: 숙명여고 시험지 유출 후폭풍</li>
-                                        </ul>
-
-                                        <li>2020.3</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>코로나로 인한 개학 연기 요구 청원</li>
-                                        </ul>
-
-                                        <li>2020.5</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>등교 및 개학 연기 요구 청원</li>
-                                            <li>9월 학기제 시행 요구 청원</li>
-                                        </ul>
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b>2018년 7월  ‘어린이집 아동학대 근절’ 청원</b><br>
+                                            서울 강서구 어린이집에서 보육교사 김씨가 원생 5명에 대해 잠을 재운다며 이불을 머리까지 씌운 채 10회 이상 팔과 다리로 눌렀고, 
+                                            영아 1명이 사망하는 사고가 발생했다. 뿐만 아니라, 서울 도봉구 어린이집에서도 아동학대 사실이 발견돼 국민적 공분을 샀다.
+                                        </li><br>
+                                        <li>
+                                            <b>2018년 10월 ‘사립유치원 비리 조사’ 청원</b><br>
+                                            박용진 더불어민주당 의원이 사립유치원 비리 근절을 해결하기 위해 마련한 정책토론회가 유치원 단체의 집단행동으로 아수라장으로 변했고, 
+                                            이달 말 박 의원이 공개한 사립유치원 회계비리에서는 비리 규모가(당시) 최근 5년간 16,122건(382억원)으로 드러났다.
+                                        </li><br>
+                                        <li><b>2020년 3월 ‘코로나로 인한 개학 연기 요구’ 청원</b></li>
                                     </ul>
                                 </div>
 
                                 <!--인권/성평등-->
                                 <div id="category_desc_text13" class="category_desc_txt"">
-                                    <ul>
-                                        <li>2018.5</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>홍대 누드크로키 모델 불법촬영 관련 청원</li>
-                                        </ul>
-
-                                        <li>2018.10</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>김포 맘카페 폐지 청원</li>
-                                            <li>강서구 PC방 살인사건 엄벌 청원</li>
-                                            <li>위디스크 양진호 회장 처벌 청원: 위디스크와 파일노리의 실소유주인 양진호 한국미래기술 회장이 디지털성범죄에 연루
-                                                (각종 음란물과 리벤지 포르노 파일 등을 통해 막대한 부를 축적)돼 경찰 수사를 받고 있는 와중, 
-                                                전직 직원을 무차별 폭행한 영상이 폭로돼 처벌 여론이 들끓음.
-                                            </li>
-                                        </ul>
-
-                                        <li>2019.3</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>조선일보 방가와 고 장자연씨 사건에 대한 수사 연장 청원</li>
-                                        </ul>
-
-                                        <li>2020.3</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>텔레그램 N번방 청원 관련: 피의자 신상 공개, (관련) 지인능욕 관련자 처벌 등</li>
-                                        </ul>
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b>2018년 5월  홍대 누드 크로키 모델 불법 촬영 관련 청원</b><br>
+                                            초반 누드 크로키 모델을 불법 촬영하여 유포한 자를 처벌해달라는 청원이 주를 이뤘으나, 
+                                            수사가 빠르게 진행되자 이윽고 여태까지 불법 촬영을 일삼은 많은 몰카범을 수사하지 못한 게 아니라 않은 것 아니냐는 청원이 많은 동의를 얻었다.
+                                        </li><br>
+                                        <li>
+                                            <b>2018년 10월 위디스크 양진호 회장 처벌 청원</b><br>
+                                            과거 국내 웹하드 업계 1·2위인 ‘위디스크’와 ‘파일노리’의 실소유주인 양진호 전 한국미래기술 회장이 디지털성범죄에 연루
+                                            (각종 음란물과 리벤지 포르노 파일 등을 통해 막대한 부를 축적)돼 경찰 수사를 받고 있는 와중, 전직 직원을 무차별 폭행한 영상이 폭로돼 처벌 여론이 들끓었다.
+                                        </li>
                                     </ul>
                                 </div>
 
                                 <!--일자리-->
                                 <div id="category_desc_text14" class="category_desc_txt"">
-                                    <span><em>주요 사안들</em>노동 환경 개선, 기업 비리 척결, 공정한 채용 추진 등
-                                    </span>
+                                    <span class="major_petition">주요 사안</span>
+                                    <br><br>
+                                    <div class="hashtag_ctn">
+                                        <span class="hashtag">#비정규직 정규직 전환 찬성 vs 반대</span>
+                                        <span class="hashtag">#주휴수당 폐지</span>
+                                        <span class="hashtag">#주52시간제 강화 vs 폐지</span>
+                                        <span class="hashtag">#특정 기업의 비리 조사</span>
+                                        <span class="hashtag">#고졸 우대 정책 폐지</span>
+                                        <span class="hashtag">#일자리 처우 개선</span>
+                                        <span class="hashtag">#부당 해고 복직</span>
+                                        <span class="hashtag">#직장 내 괴롭힘 근절</span>
+                                        <span class="hashtag">#공정한 채용 추진</span>
+                                    </div>
                                 </div>
 
                                 <!--저출산/고령화대책-->
                                 <div id="category_desc_text15" class="category_desc_txt"">
-                                    <ul>
-                                        <li>2017.9</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>난임지원 횟수제한 폐지 청원</li>
-                                        </ul>
-
-                                        <li>그 외: 대부분 난임지원 횟수제한 폐지 청원 등 난임부부 지원 대책 촉구</li>
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b>2017년 9월 ‘난임 부부 지원 대책 마련’ 청원</b><br>
+                                            2017년 10월부터 난임 치료 시술에 건강보험이 적용되어 본인 부담금이 낮아질 전망이었으나, 
+                                            그 횟수가 제한되어 지원이 한정적이라는 지적이 나왔다. 이 때문에 난임 지원 횟수 제한을 폐지해달라는 청원이 제기되었다.
+                                        </li>
                                     </ul>
                                 </div>
 
                                 <!--정치개혁-->
                                 <div id="category_desc_text16" class="category_desc_txt"">
-                                    <ul>
-                                        <li>2018.4-5</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>국회의원 해외연수 전수조사 청원: 김기식 금융감독원장이 국회의원 시절 인턴 비서와의 ‘로비성 해외 출장’으로 논란을 빚었는데, 
-                                                여기에 의원 임기 말에 해외 출장이 추가로 논란이 되어 국회의원 해외연수를 전수조사 해야한다는 움직임이 생겼다.
-                                            </li>
-                                            <li>자유한국당 해산 청원: 홍준표 (당시) 자유한국당 대표가 “위장평화쇼” “세 번 속으면 공범” 등의 발언으로 남북한 정상회담 성과를 깎아내리자 생긴 반대 여론.</li>
-                                            <li>조원진 의원 처벌 청원: 4월 28일, 대한애국당 조원진 대표가 서울역 광장 '태극기 집회'에서 문재인 대통령을 향해 '미친 XX'라고 욕설. 해당 사실은 5월 1일 
-                                                서울의 소리 편집인인 백은종씨에 의해 폭로되었음.
-                                            </li>
-                                            <li>김성태 의원 단식투쟁 조사 청원: 거짓으로 단식을 하는 것 같으니 진짜로 단식을 하는건지 조사해 달라는 청원.</li>
-                                            <li>국회 해산 청원: 4월 국회파행에 이어 5월 국회까지 정쟁만 일삼는 국회의 모습을 보고 국민들이 청와대 청원 게시판에 국회해산을 요구. (당시 20대 국회)</li>
-                                            <li>박창훈 비서관 처벌 청원: 나경원 자유한국당 의원의 비서관이 한 중학생과의 통화 과정에서 욕설과 문재인 대통령을 비난하고 고 노 전 대통령을 조롱하는 듯한 발언을 하여 논란에 휩싸임. 
-                                                통화 녹음 파일은 백은종씨 유튜브에서 공개되었음.
-                                            </li>
-                                        </ul>
-
-                                        <li>2018.7</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>이재명 은수미 조폭 연루 사건 조사 청원: SBS <그것이 알고싶다>가 이재명 경기도지사와 조직폭력배가 연루돼있다는 의혹을 제기하였는데, 
-                                                보도된 사실에 의하면 은수미 성남시장도 연루되어 있는 것으로 추정돼 이를 조사해달라는 청원.
-                                            </li>
-                                        </ul>
-
-                                        <li>2018.12</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>국회의원 세비(연봉) 인상 반대 청원: 더불어민주당과 자유한국당이 합의한 2019년도 예산안 수정안에 국회의원 세비 인상이 포함돼, 
-                                                세비 결정을 하는 국회의원들의 ‘셀프 세비 인상’ 행태가 비판을 받음.
-                                            </li>
-                                        </ul>
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b>2018년 4월 국회의원 해외연수 전수조사 청원</b><br>
+                                            김기식 금융감독원장이 국회의원 시절 인턴 비서와의 ‘로비성 해외 출장’으로 논란을 빚었는데, 
+                                            여기에 의원 임기 말 해외 출장이 추가로 논란이 되어 국회의원 해외연수를 전수조사 해야한다는 청원이 발생했다.
+                                        </li><br>
+                                        <li>
+                                            <b>2018년 5월 ‘국회의원 불체포특권 폐지 및 기명투표실시’ 청원</b><br>
+                                            국회는 국회의원의 불체포특권을 이유로 홍문종·염동열 의원에 대한 체포 동의안을 상정했지만, 
+                                            무기명으로 실시된 투표에서 부결되었다. 이 때문에 ‘제 식구 감싸기’라는 비판이 나왔고, 
+                                            국회의원 불체포특권을 폐지하고 기명투표를 실시해야 한다는 청원이 빗발쳤다.
+                                        </li>
                                     </ul>
                                 </div>
 
                                 <!--행정-->
                                 <div id="category_desc_text17" class="category_desc_txt"">
-                                    <ul>
-                                        <li>2018.4</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>대한항공 갑질 청원 관련: 대한항공 명칭 변경, 태극문양 도안 사용금지</li>
-                                            <li>다산신도시 택배 지원 사업 반대 청원: 후진하는 택배 차량에 아이가 치일 뻔한 사고가 일어난 뒤에 입주민들이 단지 내 택배차량 출입을 막았는데, 
-                                                택배회사들은 이에 반발해 단지 입구에 배송물을 쌓아두고 돌아갔음. 이에 국토교통부가 중재에 나서 ‘실버 택배'를 도입하겠다고 나섰으나, 
-                                                여기에는 국민 세금이 투입된다는 사실이 알려지면서 발발한 청원.
-                                            </li>
-                                        </ul>
-
-                                        <li>2020.3</li>
-                                        <ul style="padding-left: 30px;">
-                                            <li>코로나19 청원 관련: 정책적 지원 촉구, 대구 경북 특별재난지역 선포 요청, 자가격리 중 여행한 확진자 처벌 등</li>
-                                        </ul>
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b>2018년 ‘4월 다산 신도시 택배 지원 사업 반대’ 청원</b><br>
+                                            다산 신도시의 한 아파트에서 후진하는 택배 차량에 아이가 치일 뻔한 사고가 발생하자 입주민들이 단지 내 택배 차량의 출입을 막았다. 
+                                            택배회사들은 이에 반발해 단지 입구에 배송물을 쌓아 두고 돌아갔으며 이에 국토교통부가 중재에 나서 ‘실버 택배’를 도입하겠다고 나섰으나, 
+                                            여기에 국민 세금이 투입된다는 사실이 알려지면서 청원이 제기되었다.
+                                        </li><br>
+                                        <li>
+                                            <b>2020년 3월 ‘코로나19’ 관련 청원</b><br>
+                                            코로나19로 피해를 본 소상공인 등을 위한 정책적 지원 촉구하고 대구 경북 지역을 특별재난지역 선포하기를 요청하는 등의 청원이 주를 이뤘다.
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
 
+                        <!--버튼-->
                         <div id="category_btn_ctn">
                             <button id="prev_btn" class="category_btn">
                                 &lt;
                             </button>
 
-                            <div class="graph_text_switch_btn_space" style="width: 10px;"></div>
+                            <div class="graph_text_switch_btn_space" style="width: 15px;"></div>
                             <button class="graph_text_switch_btn">
-                                T
+                                <center>
+                                    <img id="graph_text_switch_img" width="95%" src="./images/text_icon.png" style="margin-top: 2px;"/>
+                                </center>
                             </button>
 
-                            <div style="width: 10px;"></div>
+                            <div style="width: 15px;"></div>
                             <button id="next_btn" class="category_btn">
                                 &gt;
                             </button>
@@ -631,28 +628,46 @@
                 <div class="title_container">
                     <span class="title_text">"그들이 전하는 메시지의 전문"</span>
                 </div>
-                <br><br>
-                <div class="letters_container">
-                    <span class="letters">
-                        트랙1앞서 가장 많은 청원 수와 게시글 수를 기록했던 인권/성평등. 인권/성평등에 대해 많은 사람들이 목소리리를 내고 있다는 것은 파악
-                        했지만 세부적인 내용을 파악하기 위해서는 그들이 남긴 메시지를 하나씩 읽어보는 작업이 필요했음. 따라서 미성년자 성범죄 문제가 가장 
-                        심각하다는 것을 알 수 있었고 미성년자 성범죄 처벌 기준 조정의 문제가 해결되지 않아 혹은 의견이 분분하다는 것을 파악함. 
-                    </span>
-                </div>
-                <br><br>
-                <div class="image_container">
+                
+                <div class="flex_container">
                     <center>
-                        <img class="scroll-spy"/>
+                        <div class="category_container">
+                            <div class="category">검·경찰 개혁</div>
+                            <div class="category">노동 환경</div>
+                            <div class="category">디지털 성범죄</div>
+                            <div class="category">미성년자 대상 성범죄</div>
+                            <div class="category">북한</div>
+                            <div class="category">성평등</div>
+                            <div class="category">사회적 소수자</div>
+                            <div class="category">아동학대</div>
+                            <div class="category">역사왜곡</div>
+                            <div class="category">음주운전</div>
+                            <div class="category">의료사고</div>
+                            <div class="category">정치개혁</div>
+                            <div class="category">종교</div>
+                            <div class="category">청소년 범죄</div>
+                            <div class="category">코로나19</div>
+                            <div class="category">주식투자</div>
+                            <div class="category">디지털 플랫폼</div>
+                        </div>
                     </center>
                 </div>
+
                 <div class="letters_container">
-                    <span class="letters">
-                        워드클라우드가 - 했다는 것을 제시하며 분류의 타당성 제시, 부연설명 및 데이터 분석 결과 나열. 워드 클라우드가 -했다는 것을 제시하여
-                        분류의 타당성 제시, 부연설명 및 데이터 분석 결과 나열. 워드클라우드가 - 했다는 것을 제시하며 분류의 타당성 제시, 부연설명 및 
-                        데이터 분석 결과 나열. 워드클라우드가 - 했다는 것을 제시하며 분류의 타당성 제시, 부연설명 및 데이터 분석 결과 나열. 워드클라우드가
-                        - 했다는 것을 제시하며 분류의 타당성 제시, 부연설명 및 데이터 분석 결과 나열. 워드클라우드가 - 했다는 것을 제시하며 분류의 타당성 
-                        제시, 부연설명 및 데이터 분석 결과 나열.
-                    </span>
+                    <div class="letters">
+                        총 44,063의 국민청원 중에(100명 이상의 동의 수를 얻은 청원) 정부의 답변을 받은 청원은 272개로 그 비율은 6%에 불과하다. 
+                        이는 94% 비율의 청원이 아직도 미해결 상태로 남아있음을 의미한다.
+                    </div>
+                    <div class="letters">
+                        그래서 <SURFER>는 '20만 이상 동의'라는 조건의 경계를 더 넓혀 1만명 이상의 동의를 받은 청원들을 살펴보고, 
+                            기존의 국민청원 페이지의 17가지 분야를 그대로 따르기보다는 자주 나타나는 청원 주제를 토대로 키워드를 세 번에 걸쳐 재구성해보았다. 
+                            그 결과, 키워드는 크게 ‘검·경찰 개혁’, ‘노동 환경', ‘디지털 성범죄', ‘미성년자 성범죄', ‘북한', ‘성평등', ‘사회적 소수자', ‘아동학대', 
+                            ‘역사왜곡', ‘음주운전', ‘의료사고', ‘정치개혁', ‘종교', ‘청소년 범죄', ‘코로나19’, ‘주식투자', ‘디지털 플랫폼'로 나누어 볼 수 있었다.
+                    </div>
+                    <br>
+                    <div class="footnote">
+                        *청소년 성범죄는 범행 주체가 청소년인 경우를 의미한다. 
+                    </div>
                 </div>
             </div>
 

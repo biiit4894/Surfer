@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Song+Myung&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap");
 
 .menubar {
   position: fixed;
@@ -129,21 +130,19 @@ hr {
 
 .category_container {
   width: 60vw;
-  height: 45vh;
-  margin-top: 20px;
+  padding: 0vh 1vw;
   box-sizing: border-box;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 .category {
-  width: 20%;
-  padding: 15px;
+  padding: 15px 25px;
   margin: 10px;
   box-sizing: border-box;
-  border-radius: 10px;
+  border-radius: 7px;
   box-shadow: 3px 3px 10px gray;
   font-family: "Noto Sans KR", sans-serif;
   font-size: 1rem;
@@ -151,10 +150,6 @@ hr {
   text-align: center;
   background-color: #fffefc;
   opacity: 0.9;
-}
-
-.long_ctg {
-  font-size: 0.9rem;
 }
 
 .image_container {
@@ -195,7 +190,6 @@ img.show {
   left: 0px;
   z-index: 2;
   text-align: center;
-  padding-top: 3px;
 }
 
 .mobile_hamburger_button {
@@ -203,6 +197,7 @@ img.show {
   background-color: transparent;
   font-weight: border;
   font-size: 1.5rem;
+  height: 5vh;
 }
 
 .mobile_menu_container {
@@ -301,7 +296,7 @@ img.show {
 
 #post_by_ctg_ctn {
   box-sizing: border-box;
-  padding: 5vh 4vw;
+  padding: 5vh 19vw;
   width: 100vw;
   height: 60vh;
   background-color: white;
@@ -311,34 +306,82 @@ img.show {
   flex-direction: column;
 }
 
+#post_by_ctg_title_ctn {
+  width: 100%;
+  height: 10%;
+  font-family: "Nanum Gothic";
+}
+
+.post_by_ctg_title {
+  display: none;
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+
+#post_by_ctg_hr {
+  margin-top: 11px;
+  border: 1px solid black;
+  width: 49%;
+}
+
 #post_by_ctg {
   width: 100%;
-  height: 90%;
+  height: 80%;
+  margin-top: -9px;
   display: flex;
   justify-content: space-between;
 }
 
 #category_graph_img_ctn {
   display: block;
-  width: 47.5%;
+  width: 49%;
   overflow-x: scroll;
   overflow-y: hidden;
+  box-sizing: border-box;
+  padding-top: 10px;
 }
 
 #category_desc_text_ctn {
   display: block;
-  width: 47.5%;
+  width: 49%;
   overflow-x: hidden;
   overflow-y: scroll;
+  border: 2px solid black;
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 .category_desc_txt {
   width: 100%;
-  margin-top: 20px;
-  box-sizing: border-box;
-  padding-right: 20px;
   display: none;
   line-height: 30px;
+  font-size: 1.1rem;
+  font-family: "Nanum Gothic";
+}
+
+.major_petition {
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: "Nanum Gothic";
+}
+
+.petition_ul {
+  padding-left: 20px;
+}
+
+.hashtag_ctn {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.hashtag {
+  border: 2px solid black;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 0px 10px;
+  margin: 7px;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 #category_btn_ctn {
@@ -346,14 +389,15 @@ img.show {
   height: 10%;
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .category_btn {
   border: none;
+  border-radius: 7px;
   background-color: rgba(128, 128, 128, 0.7);
   width: 40px;
   height: 40px;
-  margin-top: 13px;
   color: white;
   font-size: 1.5rem;
 }
@@ -367,9 +411,12 @@ img.show {
   width: 40px;
   height: 40px;
   border: none;
-  margin-top: 13px;
-  color: white;
+  border-radius: 7px;
   background-color: rgba(128, 128, 128, 0.7);
+}
+
+.footnote {
+  font-size: 1.1rem;
 }
 
 /************************************************/
@@ -423,15 +470,12 @@ img.show {
   /*카테고리 부분*/
   .category_container {
     width: 80vw;
-    height: 45vh;
   }
 
   .category {
-    font-size: 0.9rem;
-  }
-
-  .long_ctg {
-    font-size: 0.7rem;
+    padding: 10px 20px;
+    margin: 7px;
+    font-size: 0.85rem;
   }
 
   .menubar {
@@ -466,29 +510,24 @@ img.show {
 
   /*분야별 게시글 수*/
   #post_by_ctg_ctn {
-    height: 55vh;
     margin-left: -11vw;
+    padding: 5vh 5vw;
   }
 
-  #post_by_ctg {
-    justify-content: center;
+  .post_by_ctg_title {
+    font-size: 1.45rem;
   }
 
-  #category_graph_img_ctn {
-    width: 90%;
+  .category_desc_txt {
+    font-size: 0.97rem;
   }
 
-  #category_desc_text_ctn {
-    width: 90%;
-    display: none;
+  .hashtag {
+    font-size: 0.9rem;
   }
 
-  .graph_text_switch_btn_space {
-    display: block;
-  }
-
-  .graph_text_switch_btn {
-    display: block;
+  .footnote {
+    font-size: 0.9rem;
   }
 }
 
@@ -538,17 +577,12 @@ img.show {
   /*카테고리 부분*/
   .category_container {
     width: 90vw;
-    height: 25vh;
   }
 
   .category {
-    margin: 3px;
-    padding: 5px;
+    margin: 5px;
+    padding: 5px 13px;
     font-size: 0.6rem;
-  }
-
-  .long_ctg {
-    font-size: 0.4rem;
   }
 
   .menubar {
@@ -580,22 +614,63 @@ img.show {
   }
 
   #post_by_ctg_ctn {
+    height: 55vh;
     margin-left: -6vw;
+    padding: 5vh 6vw;
+  }
+
+  .post_by_ctg_title {
+    font-size: 1.15rem;
+  }
+
+  .major_petition {
+    font-size: 0.95rem;
+  }
+
+  .hashtag {
+    font-size: 0.85rem;
   }
 
   .category_desc_txt {
-    font-size: 0.7rem;
-    line-height: 20px;
+    font-size: 0.92rem;
+    line-height: 25px;
   }
 
   .category_btn {
-    width: 35px;
-    height: 35px;
+    width: 37px;
+    height: 37px;
   }
 
   .graph_text_switch_btn {
-    width: 35px;
-    height: 35px;
+    width: 37px;
+    height: 37px;
+  }
+
+  /*화면 크기 변경에 따른 요소 변경사항*/
+  #post_by_ctg_hr {
+    width: 100%;
+  }
+
+  #category_graph_img_ctn {
+    width: 100%;
+  }
+
+  #category_desc_text_ctn {
+    width: 100%;
+    display: none;
+    border: none;
+  }
+
+  .graph_text_switch_btn_space {
+    display: block;
+  }
+
+  .graph_text_switch_btn {
+    display: block;
+  }
+
+  .footnote {
+    font-size: 0.73rem;
   }
 }
 
@@ -751,17 +826,16 @@ html {
   line-height: 300%;
 }
 
-#txt1_semititle, 
-#txt2_semititle, 
-#txt4_semititle, 
-#txt4_semititle_2, 
+#txt1_semititle,
+#txt2_semititle,
+#txt4_semititle,
+#txt4_semititle_2,
 #txt4_semititle_3,
-#txt5_semititle, 
+#txt5_semititle,
 #txt6_semititle1,
 #txt6_semititle2,
 #txt7_semititle1,
-#txt7_semititle2
-{
+#txt7_semititle2 {
   text-decoration: underline;
   padding-top: 7rem;
   text-align: center;
@@ -782,7 +856,7 @@ html {
   display: block;
   width: 6rem;
   margin: 0 auto;
-  margin-top: 5rem;;
+  margin-top: 5rem;
 }
 
 #topic2_interviewee_1_name,
@@ -871,9 +945,9 @@ html {
   background: linear-gradient(0deg, #cfcfcf 0%, #ffffff 100%);
 }
 
-.answer-box1, 
-.answer-box2, 
-.answer-box3, 
+.answer-box1,
+.answer-box2,
+.answer-box3,
 .answer-box4 {
   opacity: 0;
   float: left;
@@ -883,31 +957,34 @@ html {
 }
 
 .profile {
-  float:left; /*answer-box1, profile 둘다 left*/
+  float: left; /*answer-box1, profile 둘다 left*/
   width: 4rem;
   height: 4rem;
   border-radius: 70%;
   overflow: hidden;
 }
 
-.lee, .yoon, .sim, .ahn {
+.lee,
+.yoon,
+.sim,
+.ahn {
   width: 4rem;
 }
 
 .candidate-name {
-  color:#000000;
+  color: #000000;
 }
 
-.answer-box1-text, 
-.answer-box2-text, 
-.answer-box3-text, 
+.answer-box1-text,
+.answer-box2-text,
+.answer-box3-text,
 .answer-box4-text {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 1rem;
   color: rgb(0, 0, 0);
   line-height: 200%;
   background: #ffffff;
-  width:31.25rem;
+  width: 31.25rem;
   margin-left: 6rem;
   padding: 1.5rem;
   border-radius: 1.25rem;
@@ -928,9 +1005,7 @@ html {
 
 .answer-box4-text {
   border: 1px solid #e66327;
-} 
-
-
+}
 
 /*******잠깐숨김**************말풍선 코드 출처: https://ungdoli0916.tistory.com/753**********************/
 /* .balloon {
@@ -1343,7 +1418,10 @@ footer {
 }
 
 @media screen and (max-width: 850px) {
-  .answer-box1-text, .answer-box2-text, .answer-box3-text, .answer-box4-text {
+  .answer-box1-text,
+  .answer-box2-text,
+  .answer-box3-text,
+  .answer-box4-text {
     width: 20rem;
   }
 
@@ -1460,11 +1538,17 @@ footer {
     margin-right: 0;
   }
 
-  .answer-box1, .answer-box2, .answer-box3, .answer-box4 {
+  .answer-box1,
+  .answer-box2,
+  .answer-box3,
+  .answer-box4 {
     margin-left: 1rem;
   }
 
-  .answer-box1-text, .answer-box2-text, .answer-box3-text, .answer-box4-text {
+  .answer-box1-text,
+  .answer-box2-text,
+  .answer-box3-text,
+  .answer-box4-text {
     width: 14rem;
   }
 
