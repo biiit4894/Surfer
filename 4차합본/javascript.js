@@ -188,7 +188,7 @@ function resize_img() {
 let category_num = 1; 
 $('#next_btn').click(() => {
     category_num = (category_num % 17) + 1;
-    $('#category_graph_img').attr('src', './images/category_graph' + category_num + '.jpg'); 
+    $('#category_graph_img').attr('src', './images/category_graph' + category_num + '.png'); 
     $('#category_desc_text' + ((category_num == 1) ? 17 : category_num - 1)).css('display', 'none'); 
     $('#category_desc_text' + category_num).css('display', 'block');
 
@@ -198,7 +198,7 @@ $('#next_btn').click(() => {
 
 $('#prev_btn').click(() => {
     category_num = (category_num == 1) ? 17 : category_num - 1;
-    $('#category_graph_img').attr('src', './images/category_graph' + category_num + '.jpg'); 
+    $('#category_graph_img').attr('src', './images/category_graph' + category_num + '.png'); 
     $('#category_desc_text' + ((category_num % 17) + 1)).css('display', 'none'); 
     $('#category_desc_text' + category_num).css('display', 'block');
 
@@ -210,10 +210,10 @@ let post_num = 0;
 $('.graph_text_switch_btn').click(() => {
     if(post_num % 2 == 0) {
         $('#category_graph_img_ctn').css('display', 'none');
-        $('#category_desc_text_ctn').css('display', 'block');
+        $('#category_desc_text_ctn').css('display', 'flex');
         $('#graph_text_switch_img').attr('src', './images/graph_icon.png');
     } else {
-        $('#category_graph_img_ctn').css('display', 'block');
+        $('#category_graph_img_ctn').css('display', 'flex');
         $('#category_desc_text_ctn').css('display', 'none');
         $('#graph_text_switch_img').attr('src', './images/text_icon.png');
     }
