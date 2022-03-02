@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문 정부의 음성사서함, 해결하지 못한 메시지 | Surfer</title>
+
+    <!--
+    <style type="text/css">
+        div.jqcloud span.r1 {
+          -webkit-writing-mode: vertical-rl;
+          writing-mode: tb-rl;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="./jqcloud/jqcloud.css" />
+    -->
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <!--<script type="text/javascript" src="./jqcloud/jqcloud-0.2.10.js"></script>-->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="javascript.js"></script>
+
+    <link href="style.css" rel="stylesheet"/>
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap'); 
+        style.css에 사이트에서 쓴 폰트 4개(Montserrat, Noto Sans, Noto Serif, Song Myung) import했음*/
+    </style>
+</head>
+<div>
+    <div id="progressBar" class="menubar">
+        <div id="progress"></div>
+    </div>
+
+    <div id="container" class="menubar">
+        <div id="block1" class="progressBlock" onclick="animateScrollTo('#page0',500)">편집자주</div>
+        <div id="block2" class="progressBlock" onclick="animateScrollTo('#page1',500)">5년간의 목소리와 응답</div>
+        <div id="block3" class="progressBlock" onclick="animateScrollTo('#page2',500)">전문</div>
+        <div id="block4" class="progressBlock" onclick="animateScrollTo('#page3',500)">미회신 메시지1</div>
+        <div id="block5" class="progressBlock" onclick="animateScrollTo('#page4',500)">미회신 메시지2</div>
+    </div>
+
+    <div class="mobile_hamburger_container">
+        <button class="mobile_hamburger_button">&#9776;</button>
+    </div>
+
+    <div class="mobile_menu_container">
+        <div class="mobile_menu" onclick="animateScrollTo('#page0',500)">편집자주</div>
+        <div class="mobile_menu" onclick="animateScrollTo('#page1',500)">5년간의 목소리와 응답</div>
+        <div class="mobile_menu" onclick="animateScrollTo('#page2',500)">메시지 전문</div>
+        <div class="mobile_menu" onclick="animateScrollTo('#page3',500)">미회신 메시지1</div>
+        <div class="mobile_menu" onclick="animateScrollTo('#page4',500)">미회신 메시지2</div>
+    </div>
+
+    <div class="top_button_container">
+        <button class="top_button">▲</button>
+    </div>
+
+    <div id="top_container">
+        <div id="content_container">
+            <div style="margin-top: 20vh;"></div>
+            <div class="title-casette">
+                <!-- <div id="casette-wrap"> -->
+                    <img class="title-img" src="images/title.png">
+                <!-- </div> -->
+            </div>
+
+            <div id="page0" class="pages">   
+                <div class="menu_container">
+                    <span class="menu_text">편집자주</span>
+                    <hr size="2px" color="gray">
+                </div>
+                <div class="flex_container" style="text-align: center; font-weight: bold;">
+                    <span id="subject">온고지신</span>
+                    <span id="subject_desc">(溫故知新,옛것을 익히고 그것을 미루어서 새것을 앎)</span>
+                </div>
+
+                <div class="flex_container">
+                    <div class="letters" style="text-indent: 0;">
+                        2022년 3월 9일. 앞으로 대한민국의 5년을 좌우하는 날입니다. 민주주의의 축제인 선거가 코앞이지만, 
+                        사람들은 누군가의 배우자, 형수, 장모에 관심이 쏠린 모습입니다. 
+                        <a id="page0_link" href="https://m.hani.co.kr/arti/society/media/1032183.html#cb">대선미디어감시연대</a>에 따르면 
+                        지난 1월17일부터 2월20일까지 네이버 포털에서 많이 읽힌 기사 중 세부주제가 ‘정책’인 기사는 7.2%였습니다. 
+                        반면 후보 및 후보 부인 등의 논란은 44% 이상을 차지합니다. 이렇듯 네거티브로 얼룩진 선거에서는 유권자들이 어떤 후보가 사회에 필요한 정책을 내세우고 있는지 알기 힘듭니다. 
+                        그렇다면 우리는 어떻게 우리 사회에 필요한 정책을 알 수 있을까요?
+                    </div>
+                    <br>
+                    <div class="letters" style="text-indent: 0;">
+                        &lt;SURFER&gt;는 ‘청와대 국민청원'에서 답을 찾았습니다. 국민 청원에 올라온 게시판을 분석해 지난 정부의 5년을 추적해보고자 합니다. 
+                        5년 동안 올라왔던 청원을 범주화해 국민이 변화를 가장 원했던 분야는 무엇이었는지, 
+                        그리고 청원에서 해결하지 못한 메시지는 무엇이었는지 살펴봅니다. 
+                        대한민국을 이끌어갈 다음 주자는 놓치고 있던 문제에 대한 해결책을 준비하고 있을까요? 
+                    </div>
+                </div>
+            </div>
+
+            <div id="page1" class="pages"> 
+                <div class="menu_container">
+                    <span class="menu_text">국민청원 데이터 수집 및 분석 결과</span>
+                    <hr size="2px" color="gray">
+                </div>
+
+                <div class="title_container">
+                    <span class="title_text">"5년간 쌓여온 메시지들"</span>
+                </div>
+                <div class="flex_container">
+                    <div class="letters">
+                        제20대 대선이 얼마 남지 않았다. 새로운 정부가 출범하기 전 지난 5년간의 국정 현황을 되돌아볼 때가 왔다. 
+                        5년이라는 시간 동안 국민들은 정부에게 무엇을 묻고 요청했을까? 우리는 이 질문에 대한 답을 ‘국민청원 데이터’를 통해서 찾고자 한다. 
+                        5년 동안 켜켜이 쌓인 시민들의 메시지를 풀어보며 다양한 정책 분야의 공공 이슈를 톺아보자.
+                    </div>
+                </div>
+                <br>
+                <div id="analysis">
+                    <div>분석 방법</div>
+                    <ul>
+                        <li>
+                            데이터 수집 기간을  청와대 국민청원이 시작된 2017년 8월 19일부터 2021년 12월 31일로 설정한 후, 
+                            웹크롤링을 통해 국민청원 사이트에 접속해 ‘분야’, ‘청원 제목’, ‘청원 시작일’, ‘청원 마감일’, ‘참여 인원’을 수집했다.
+                        </li>
+                        <li>
+                            2019년 3월 31부터는 국민청원 시스템이 100명의 사전동의를 얻어야 글을 게시할 수 있도록 개편됨에 따라 
+                            2017-2018년 또한 청원 수가 100명 이상인 데이터만 수집했다.
+                        </li>
+                        <li>데이터분석과 시각화는 R과 Python을 통해 진행했다.</li>
+                    </ul>
+                </div>
+
+
+                <div class="flex_container">
+                    <div class="subtitle_container">
+                        <span class="subtitle_text">국민청원의 17가지 분야 구성</span>
+                    </div>
+                    <center>
+                        <div class="category_container" style="margin-top: 20px;">
+                            <div class="category">정치개혁</div>
+                            <div class="category">외교/통일/국민</div>
+                            <div class="category">일자리</div>
+                            <div class="category">미래</div>
+                            <div class="category">성장동력</div>
+                            <div class="category">인권/성평등</div>
+                            <div class="category">육아/교육</div>
+                            <div class="category">안전/환경</div>
+                            <div class="category">저출산/고령화대책</div>
+                            <div class="category">행정</div>
+                            <div class="category">반려동물</div>
+                            <div class="category">문화/예술/체육/언론</div>
+                            <div class="category">농산어촌</div>
+                            <div class="category">보건복지</div>
+                            <div class="category">교통/건축/국토</div>
+                            <div class="category">경제민주화</div>
+                            <div class="category">기타</div>
+                        </div>
+                    </center>
+                </div>
+                <div class="letters_container">
+                    <div class="letters">
+                        대한민국 국민이라면 누구나 국민청원을 신청할 수 있다. 국민청원에서는 청원을 등록할 때 청원인이 직접 분야를 선택할 수 있도록 되어 있다. 
+                        또, 이러한 분류를 통해 청원인은 자신이 관심있는 분야의 청원을 선택해서 볼 수도 있다.
+                    </div><br>
+                    <div class="letters">
+                        국민청원을 구성하고 있는 카테고리는 위와 같다. 청와대에 따르면, 
+                        위 17가지의 분야는 국민들의 다양한 목소리를 최대한 반영할 수 있도록 정책 분야 등을 참고하여 설정한 것이다.
+                    </div>
+                </div>
+
+                <div class="flex_container">
+                    <div id="img_ctn1" class="image_container">
+                        <img src="./images/petition_category.png" id="img1" class="scroll-spy"/>
+                    </div>
+                    <div class="letters_container">
+                        <div class="letters">
+                            그렇다면 지난 5년간 국민들은 어떤 정책 분야에 관심이 많았고 어떤 목소리를 냈을까? 
+                            국민의 정치적 관심 척도를 크게 ‘동의 수’와 ‘게시글 수’로 나누어 살펴보았다. 
+                            두 개의 표를 보면 전체 17개의 분야 중 10위까지는 ‘동의 수’와 ‘게시글 수’를 구성하고 있는 분야가 같은 것을 알 수 있다. 
+                            또한, 이를 차지하고 있는 순위 차이 또한 1-3단계 정도밖에 되지 않아 대략적으로 ‘동의 수'와 ‘게시글 수'는 비례한다고 볼 수 있다. 
+                        </div>
+                        <br>
+                        <div class="letters">
+                            그러나 ‘보건복지’와 ‘안전/환경’에서만큼은 두 지표의 순위 차이가 다른 분야들보다 뚜렷하다. 
+                            ‘보건복지’의 경우 청원 동의 수에서는 5위이지만 게시글 수에서는 1위를 차지하였으며 이는 코로나 정세를 반영한 결과로 보인다. 
+                            반대로 ‘안전/환경’의 청원 동의 수는 3위였지만 게시글 수에서는 7위로 내려갔다. 
+                            역대 가장 많은 동의 수를 얻은 청원 1,2위가 모두 ‘텔레그램 n번방 사태’ 관련 청원이었고 사회적 파급력이 높었던 두 청원 모두 ‘안전/환경’ 분야에 속했기 때문으로 풀이된다.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex_container">
+                    <div id="img_ctn2" class="image_container">
+                        <img src="./images/wordcloud.png" id="img2" class="scroll-spy"/>
+                    </div>
+
+                    <div class="letters_container">
+                        <div class="letters">
+                            그렇다면 동의 수와 게시글 수의 순위 차이가 유독 컸던 ‘보건복지’와 ‘안전/환경’에서는 어떤 목소리가 나왔을까.
+                        </div><br>
+                        <div class="letters">
+                            두 분야를 구성하는 국민청원의 제목을 수집해 워드클라우드 형태로 시각화해본 결과, 
+                            ‘보건복지’를 구성하고 있는 의제로는 ‘코로나’, ‘백신’, ‘마스크’ 등으로 코로나 바이러스와 관련된 키워드가 압도적인 비중을 차지하고 있었다. 
+                            이외에도 장애인, 의료사고, 의료보험, 건강보험 등의 키워드도 눈에 띈다.
+                        </div><br>
+                        <div class="letters">
+                            ‘안전/환경’의 경우 ‘처벌’과 ‘반대’와 같은 특정 사건과 정책에 대한 제재를 담은 키워드들이 높은 빈도수를 보이고 있으며 
+                            ‘강서구’, ‘조두순’, ‘살인사건’ 과 같이 특정 사건명의 일부도 함께 언급되었다. 이외에도 ‘미세먼지’ 키워드가 보이는데, 
+                            국민들이 국민청원을 통해 미세먼지에 대한 위험을 우려하여 저감 조치를 요구하였음을 유추해볼 수 있다. 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex_container">
+                    <div id="img_ctn3" class="image_container">
+                        <img src="./images/agree_category.gif" id="img3"/> <!--fade-in하고 싶으면 class="scroll-spy" 추가-->
+                    </div>
+                    <div class="letters_container">
+                        <div class="letters">
+                            5년치의 데이터를 연도별로 나누어 본다면, 각 분야별 청원 동의 수는 어떤 형태를 띄고 있을까. 위의 그래프는 17가지 분야의 국민청원 동의 수를 연도별로 나타낸 것이다.
+                        </div>
+                        <br>
+                        <div class="letters">
+                            ‘정치개혁' 청원이 빗발쳤던 2019년을 제외하고는 모든 년도에서 ‘인권/성평등’이 가장 높은 청원 수를 보였다. 
+                            이는 많은 국민들이 청원을 통해 사회권 보장의 목소리를 내고 있음을 보여준다.
+                            한편, 연도별로 ‘청원 동의 수’만을 놓고 보면 유독 2020년에 청원의 열기가 높았다. 
+                            2020년에 올라온 대표적인 청원으로는 ‘텔레그램 n번방 용의자 신상공개’, ‘신천지 강제 해체’ ,’중국인 입국 금지’가 있다. 
+                        </div>
+                    </div>
+
+                    <div id="img_ctn4" class="image_container">
+                        <img src="./images/bulletin_category.gif" id="img4"/>
+                    </div>
+                    <div class="letters_container">
+                        <div class="letters">
+                            청원 동의 수와 마찬가지로 17가지 분야의 게시글 수 또한 연도별 흐름을 볼 수 있다. 
+                            2019년까지만 해도 ‘정치개혁', ‘인권/성평등', ‘기타' 분야가 게시글 수 상위권을 차지했지만, 
+                            2020년 이후부터는 1000건 이하에 머물러있던 ‘보건복지’의 게시글 수가 2배 가량 증가함을 알 수 있다. 
+                            해당 수치의 변화는 코로나에 당면한 국내 정세의 반영이다.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex_container">
+                    <div class="subtitle_container">
+                        <span class="subtitle_text">게시글 수의 추이</span>
+                    </div>
+                    <div class="letters_container">
+                        <div class="letters">마지막으로 각 분야별로 ‘월’ 단위로 더 세밀하게 나누어 보았다.
+                            어떤 청원들이 17가지의 분야를 꾸리어 나가고 있었을까? 
+                            화살표 버튼을 클릭하면 2017년부터 2021년까지의 주요 청원과 정책적 사안들을 분야별로 하나씩 살펴볼 수 있다. 
+                            지난 5년간 쌓여온 공공 이슈들을 확인해볼 수 있을 것이다.
+                        </div>
+                    </div>
+
+                    <!--------------------------추가------------------------>
+                    <div id="post_by_ctg_ctn">
+                        <!--제목-->
+                        <div id="post_by_ctg_title_ctn">
+                            <span id="post_by_ctg_title1" class="post_by_ctg_title" style="display: inline">금융시장 빌런의 발견. '공매도'</span>
+                            <span id="post_by_ctg_title2" class="post_by_ctg_title">정부도 국민도 혼란 그 자체인 부동산 대책</span>
+                            <span id="post_by_ctg_title3" class="post_by_ctg_title">땅콩은 시작에 불과했지</span>
+                            <span id="post_by_ctg_title4" class="post_by_ctg_title">평창에 드리워진 '빙상연맹'이라는 그늘</span>
+                            <span id="post_by_ctg_title5" class="post_by_ctg_title">시간의 뒤안길을 걷는 지방 농촌</span>
+                            <span id="post_by_ctg_title6" class="post_by_ctg_title">여전히 갈 길이 먼 '동물보호법'</span>
+                            <span id="post_by_ctg_title7" class="post_by_ctg_title">마스크 언제 벗을 수 있을까요?</span>
+                            <span id="post_by_ctg_title8" class="post_by_ctg_title">탈원전, 이상과 현실의 괴리</span>
+                            <span id="post_by_ctg_title9" class="post_by_ctg_title">드랍 더 비트(코인)?</span>
+                            <span id="post_by_ctg_title10" class="post_by_ctg_title">일상에도 재난 문자가 있었더라면</span>
+                            <span id="post_by_ctg_title11" class="post_by_ctg_title">난민 청원으로 드러난 대한민국의 본심</span>
+                            <span id="post_by_ctg_title12" class="post_by_ctg_title">어린이집, 대체 뭐가 문제인걸까?</span>
+                            <span id="post_by_ctg_title13" class="post_by_ctg_title">성범죄에 갑질에 횡령을 더해서</span>
+                            <span id="post_by_ctg_title14" class="post_by_ctg_title">새로운 일자리보단 좋은 일자리가 먼저</span>
+                            <span id="post_by_ctg_title15" class="post_by_ctg_title">아기는 황새가 물어다 주는 거 아닌가요?</span>
+                            <span id="post_by_ctg_title16" class="post_by_ctg_title">파란만장했던 20대 국회 톺아보기</span>
+                            <span id="post_by_ctg_title17" class="post_by_ctg_title">단지 앞에 택배가 쌓인 이유</span>
+                            <!--<hr id="post_by_ctg_hr" align="left">-->
+                        </div>
+
+                        <!--내용-->
+                        <div id="post_by_ctg">
+                            <!--그래프 이미지-->
+                            <div id="category_graph_img_ctn">
+                                <img id="category_graph_img" width="100%" src="./images/category_graph1.png"/>
+                            </div>
+
+                            <!--설명 텍스트-->
+                            <div id="category_desc_text_ctn">
+                                <!--경제민주화-->
+                                <div id="category_desc_text1" class="category_desc_txt" style="display: block;">
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b class="petition_title">2018년 4월 ‘삼성증권 시스템 규제와 공매도 금지’ 청원</b><br>
+                                            삼성증권이 우리사주조합원에게 한 주당 1,000원을 배당해야 할 것을 한 주당 
+                                            1천주씩 배당하여 주식 거래 시스템 개편과 공매도 제도를 금지에 대한 목소리를 
+                                            담은 청원이 잇따라 올라왔다.
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <b class="petition_title">2018년 10월 ‘국민연금 주식 대여 금지’ 청원</b><br>
+                                            국내 대표 공적 연기금인 ‘국민연금’과 ‘우정사업본부’가 2008년 이후 10년간 주식을 
+                                            빌려주고 벌어들인 수수료가 공개되면서, 이러한 주식 대여가 공매도로 이어져 
+                                            개인투자자들의 피해와 국민연금의 수익 악화로 이어진다는 비판이 담긴 국민청원이 게시되었다.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!--교통/건축/국토-->
+                                <div id="category_desc_text2" class="category_desc_txt">
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b class="petition_title">2018년 10월 ‘카풀 서비스 사업 반대’ 청원</b><br>
+                                            2018년 10월 모바일 앱을 통해 카풀(car-pool)을 중개하는 플랫폼 기업이 등장하자, 
+                                            택시업계를 포함한 많은 국민들이 열악한 택시 종사자의 여건이 더욱 악화되고, 
+                                            일자리가 사라질 것이라는 염려의 목소리를 국민청원에 담아냈다.
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <b class="petition_title">2020년 7월 ‘617 & 710 부동산 대책’ 관련 청원</b><br>
+                                            정부가 주택 가격 안정화를 위해 한 달 간격으로 번복해서 발표한 부동산 대책에 대한 
+                                            국민청원이 빠르게 증가했다. 특히 정부가 부동산에 징벌적 과세를 한다는 비판과 함께 
+                                            소급적용에 대한 우려가 컸다.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!--기타-->
+                                <div id="category_desc_text3" class="category_desc_txt">
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b class="petition_title">2018년 4월 ‘대한한공 항공사명 회수’ 청원</b><br>
+                                            전 ‘대한항공’ 전무 조현민의 물컵 갑질 사건이 논란이 되면서 ‘대한한공’이라는 항공사명을 
+                                            회수하자는 국민 청원이 폭발적으로 급증했다.
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <b class="petition_title">2018년 4월 ‘다산신도시 실버택배 반대’ 청원</b><br>
+                                            다산 신도시의 한 아파트에서 후진하는 택배 차량에 아이가 치일 뻔한 사고가 발생하자 입주민들이 
+                                            단지 내 택배 차량의 출입을 막았다. 택배회사들은 이에 반발해 단지 입구에 배송물을 쌓아 두고 돌아갔으며 
+                                            이에 국토교통부가 중재에 나서 ‘실버 택배’를 도입하겠다고 나섰으나, 
+                                            여기에 국민 세금이 투입된다는 사실이 알려지면서 청원이 제기되었다.
+                                        </li>
+                                        <br>
+                                        <li><b class="petition_title">2020년 3월 ‘코로나19로 인한 소상공인 재정난 해소’ 청원</b></li>
+                                    </ul>
+                                </div>
+
+                                <!--문화/예술/체육/언론-->
+                                <div id="category_desc_text4" class="category_desc_txt">
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b class="petition_title">2018년 2월 : ‘평창올림픽 대한민국 여자 팀추월 경기’ 관련 청원</b><br>
+                                            평창올림픽 여자 팀추월 경기에 출전한 대한민국 선수들이 서로 거리를 좁히지 못하면서 준결승 진출이 무산되었다. 
+                                            이후 집단 따돌림 논란과 함께 빙상 연맹의 미숙한 행정에 대한 국민의 분노가 고조되면서 선수 출전 중단, 
+                                            빙상연맹 감사를 요구하는 청원이 급증했다.
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <b class="petition_title">2018년 4월 : ‘전 대한빙상경기연맹 전명규 전 부회장 파면’ 청원</b><br>
+                                            ‘그것이 알고싶다’가 빙상계 적폐 논란을 부른 전명규 교수의 실세를 보도하면서 대한빙상경기연맹 부회장 보직에서 사퇴, 
+                                            한국체대 교수 파면에 대한 국민청원 여럿 게시되었다.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!--농산어촌-->
+                                <div id="category_desc_text5" class="category_desc_txt">
+                                    <span class="major_petition">주요 사안</span>
+                                    <br><br>
+                                    <div class="hashtag_ctn">
+                                        <span class="hashtag">#농촌 소멸</span>
+                                        <span class="hashtag">#낚시부담금 도입 반대</span>
+                                        <span class="hashtag">#농업과 어업 소득의 과세 불균형 해소</span>
+                                        <span class="hashtag">#쌀 수급 안정</span>
+                                        <span class="hashtag">#AI 예방적 살처분 반대</span>
+                                        <span class="hashtag">#무허가 축사 적법화 기한 연장</span>
+                                        <span class="hashtag">#후쿠시마산 수산물 수입 반대</span>
+                                        <span class="hashtag">#일본 김 산업 업체의 한국 진출 반대</span>
+                                    </div>
+                                </div>
+
+                                <!--반려동물-->
+                                <div id="category_desc_text6" class="category_desc_txt">
+                                    <span class="major_petition">주요 사안</span>
+                                    <br><br>
+                                    <div class="hashtag_ctn">
+                                        <span class="hashtag">#동물보호법 강화</span>
+                                        <span class="hashtag">#불법 동물 번식장 폐쇄</span>
+                                        <span class="hashtag">#개식용 금지</span>
+                                        <span class="hashtag">#동물복지</span>
+                                        <span class="hashtag">#동물학대 가해자 처벌</span>
+                                        <span class="hashtag">#유기견 보호소 폐쇄 반대</span>
+                                        <span class="hashtag">#반려동물 분양 금지</span>
+                                        <span class="hashtag">#반려동물의 의료사고 처벌</span>
+                                    </div>
+                                </div>
+
+                                <!--보건복지-->
+                                <div id="category_desc_text7" class="category_desc_txt">
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b class="petition_title">2020년 2-3월 ‘코로나 바이러스 확산 방지를 위한 해외 입출국 금지 & 전국 신천지 교회 폐쇄 & 마스크 공급 및 지원’ 청원</b>
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <b class="petition_title">2021년 12월 ‘백신 패스 도입 반대’ 청원</b><br>
+                                            정부가 도입한 방역패스 정책과 관련해 돌파 감염이 많아 백신을 맞고서도 안심할 수 없다는 점, 정부가 추가 접종을 요구하는 점, 
+                                            미접종자의 일상생활에 불이익이 생기는 점 등을 우려해 백신 패스 도입을 반대하는 청원들이 폭발적으로 급증했다.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!--성장동력-->
+                                <div id="category_desc_text8" class="category_desc_txt">
+                                    <span class="major_petition">주요 사안</span>
+                                    <br><br>
+                                    <div class="hashtag_ctn">
+                                        <span class="hashtag">#탈원전 정책 반대</span>
+                                        <span class="hashtag">#가상 화폐 규제 반대 vs 찬성</span>
+                                        <span class="hashtag">#전기용품 및 생활용품 안전관리법(전안법) 개정</span>
+                                        <span class="hashtag">#방사광 가속기 유치</span>
+                                        <span class="hashtag">#SK 하이닉스 구미 유치</span>
+                                    </div>
+                                </div>
+
+                                <!--미래-->
+                                <div id="category_desc_text9" class="category_desc_txt">
+                                    <span class="major_petition">주요 사안</span>
+                                    <br><br>
+                                    <div class="hashtag_ctn">
+                                        <span class="hashtag">#가상화폐 규제 반대 vs 찬성</span>
+                                        <span class="hashtag">#조두순 출소 반대</span>
+                                        <span class="hashtag">#신한울 3·4호기 건설</span>
+                                        <span class="hashtag">#세월호 참사 전면 재수사</span>
+                                        <span class="hashtag">#난민 입국 반대</span>
+                                        <span class="hashtag">#조선일보 폐간</span>
+                                        <span class="hashtag">#영아수당 지급</span>
+                                    </div>
+                                </div>
+
+                                <!--안전/환경-->
+                                <div id="category_desc_text10" class="category_desc_txt">
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b class="petition_title">2018년 5월 ‘광주 폭력조직의 집단 폭행 사건 엄벌’ 청원</b><br>
+                                            광주 광산구 일대 한 도로에서 폭력조직 소속 남성 8명이 30대 남성을 집단폭행하여 사실상 실명 등 피해를 입힌 사건이 발생했다. 
+                                            당시 현장에 경찰관이 출동했지만, 가해 남성들을 즉각 제압하지 않아 소극적으로 대응했다는 논란이 일어 이를 엄벌해달라는 국민청원이 제기되었다.
+                                        </li>
+                                        <br>
+                                        <li><b class="petition_title">2018년 10월 ‘강서구 PC방 아르바이트생 살인사건 강경처벌’ 청원</b></li>
+                                        <br>
+                                        <li>
+                                            <b class="petition_title">2020년 2월 ‘코로나19 확산 방지’ 청원</b><br>
+                                            코로나19의 확산으로 중국발 입국자 입국 금지, 마스크 가격 안정화, 확진자 동선 공개 요청, 
+                                            신천지 압수수색 요청 등을 요청하는 국민청원이 끊이질 않았다.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!--외교/통일/국방-->
+                                <div id="category_desc_text11" class="category_desc_txt">
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b class="petition_title">2018년 2월 ‘천안함 사건 재조사’ 청원</b><br>
+                                            평창 동계올림픽에 대표단으로 북한 김영철 노동당 부위원장이 방남하기로 하자, 아직 천안함의 배후를 명확히 밝히지 못했다며 제기된 청원이다.
+                                        </li>
+                                        <br>
+                                        <li>
+                                            <b class="petition_title">2018년 7월 ‘제주 예멘 난민 수용 반대’ 청원</b><br>
+                                            내전을 피하기 위해 예멘에서 500여명의 난민이 제주도에 오자, 치안 불안과 난민 불인정 등을 이유로 난민법 폐지와 난민 추방 청원이 제기되었다.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!--육야/교육-->
+                                <div id="category_desc_text12" class="category_desc_txt">
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b class="petition_title">2018년 7월  ‘어린이집 아동학대 근절’ 청원</b><br>
+                                            서울 강서구 어린이집에서 보육교사 김씨가 원생 5명에 대해 잠을 재운다며 이불을 머리까지 씌운 채 10회 이상 팔과 다리로 눌렀고, 
+                                            영아 1명이 사망하는 사고가 발생했다. 뿐만 아니라, 서울 도봉구 어린이집에서도 아동학대 사실이 발견돼 국민적 공분을 샀다.
+                                        </li><br>
+                                        <li>
+                                            <b class="petition_title">2018년 10월 ‘사립유치원 비리 조사’ 청원</b><br>
+                                            박용진 더불어민주당 의원이 사립유치원 비리 근절을 해결하기 위해 마련한 정책토론회가 유치원 단체의 집단행동으로 아수라장으로 변했고, 
+                                            이달 말 박 의원이 공개한 사립유치원 회계비리에서는 비리 규모가(당시) 최근 5년간 16,122건(382억원)으로 드러났다.
+                                        </li><br>
+                                        <li><b class="petition_title">2020년 3월 ‘코로나로 인한 개학 연기 요구’ 청원</b></li>
+                                    </ul>
+                                </div>
+
+                                <!--인권/성평등-->
+                                <div id="category_desc_text13" class="category_desc_txt">
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b class="petition_title">2018년 5월  홍대 누드 크로키 모델 불법 촬영 관련 청원</b><br>
+                                            초반 누드 크로키 모델을 불법 촬영하여 유포한 자를 처벌해달라는 청원이 주를 이뤘으나, 
+                                            수사가 빠르게 진행되자 이윽고 여태까지 불법 촬영을 일삼은 많은 몰카범을 수사하지 못한 게 아니라 않은 것 아니냐는 청원이 많은 동의를 얻었다.
+                                        </li><br>
+                                        <li>
+                                            <b class="petition_title">2018년 10월 위디스크 양진호 회장 처벌 청원</b><br>
+                                            과거 국내 웹하드 업계 1·2위인 ‘위디스크’와 ‘파일노리’의 실소유주인 양진호 전 한국미래기술 회장이 디지털성범죄에 연루
+                                            (각종 음란물과 리벤지 포르노 파일 등을 통해 막대한 부를 축적)돼 경찰 수사를 받고 있는 와중, 전직 직원을 무차별 폭행한 영상이 폭로돼 처벌 여론이 들끓었다.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!--일자리-->
+                                <div id="category_desc_text14" class="category_desc_txt">
+                                    <span class="major_petition">주요 사안</span>
+                                    <br><br>
+                                    <div class="hashtag_ctn">
+                                        <span class="hashtag">#비정규직 정규직 전환 찬성 vs 반대</span>
+                                        <span class="hashtag">#주휴수당 폐지</span>
+                                        <span class="hashtag">#주52시간제 강화 vs 폐지</span>
+                                        <span class="hashtag">#특정 기업의 비리 조사</span>
+                                        <span class="hashtag">#고졸 우대 정책 폐지</span>
+                                        <span class="hashtag">#일자리 처우 개선</span>
+                                        <span class="hashtag">#부당 해고 복직</span>
+                                        <span class="hashtag">#직장 내 괴롭힘 근절</span>
+                                        <span class="hashtag">#공정한 채용 추진</span>
+                                    </div>
+                                </div>
+
+                                <!--저출산/고령화대책-->
+                                <div id="category_desc_text15" class="category_desc_txt">
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b class="petition_title">2017년 9월 ‘난임 부부 지원 대책 마련’ 청원</b><br>
+                                            2017년 10월부터 난임 치료 시술에 건강보험이 적용되어 본인 부담금이 낮아질 전망이었으나, 
+                                            그 횟수가 제한되어 지원이 한정적이라는 지적이 나왔다. 이 때문에 난임 지원 횟수 제한을 폐지해달라는 청원이 제기되었다.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!--정치개혁-->
+                                <div id="category_desc_text16" class="category_desc_txt">
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b class="petition_title">2018년 4월 국회의원 해외연수 전수조사 청원</b><br>
+                                            김기식 금융감독원장이 국회의원 시절 인턴 비서와의 ‘로비성 해외 출장’으로 논란을 빚었는데, 
+                                            여기에 의원 임기 말 해외 출장이 추가로 논란이 되어 국회의원 해외연수를 전수조사 해야한다는 청원이 발생했다.
+                                        </li><br>
+                                        <li>
+                                            <b class="petition_title">2018년 5월 ‘국회의원 불체포특권 폐지 및 기명투표실시’ 청원</b><br>
+                                            국회는 국회의원의 불체포특권을 이유로 홍문종·염동열 의원에 대한 체포 동의안을 상정했지만, 
+                                            무기명으로 실시된 투표에서 부결되었다. 이 때문에 ‘제 식구 감싸기’라는 비판이 나왔고, 
+                                            국회의원 불체포특권을 폐지하고 기명투표를 실시해야 한다는 청원이 빗발쳤다.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!--행정-->
+                                <div id="category_desc_text17" class="category_desc_txt">
+                                    <span class="major_petition">주요 청원</span>
+                                    <ul class="petition_ul">
+                                        <li>
+                                            <b class="petition_title">2018년 ‘4월 다산 신도시 택배 지원 사업 반대’ 청원</b><br>
+                                            다산 신도시의 한 아파트에서 후진하는 택배 차량에 아이가 치일 뻔한 사고가 발생하자 입주민들이 단지 내 택배 차량의 출입을 막았다. 
+                                            택배회사들은 이에 반발해 단지 입구에 배송물을 쌓아 두고 돌아갔으며 이에 국토교통부가 중재에 나서 ‘실버 택배’를 도입하겠다고 나섰으나, 
+                                            여기에 국민 세금이 투입된다는 사실이 알려지면서 청원이 제기되었다.
+                                        </li><br>
+                                        <li>
+                                            <b class="petition_title">2020년 3월 ‘코로나19’ 관련 청원</b><br>
+                                            코로나19로 피해를 본 소상공인 등을 위한 정책적 지원 촉구하고 대구 경북 지역을 특별재난지역 선포하기를 요청하는 등의 청원이 주를 이뤘다.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--버튼-->
+                        <div id="category_btn_ctn">
+                            <button id="prev_btn" class="category_btn">
+                                &lt;
+                            </button>
+
+                            <div class="graph_text_switch_btn_space" style="width: 15px;"></div>
+                            <button class="graph_text_switch_btn">
+                                <center>
+                                    <img id="graph_text_switch_img" width="95%" src="./images/text_icon.png" style="margin-top: 2px;"/>
+                                </center>
+                            </button>
+
+                            <div style="width: 15px;"></div>
+                            <button id="next_btn" class="category_btn">
+                                &gt;
+                            </button>
+                        </div>
+                    </div>
+                    <!------------------------------------------------->
+                </div>
+            </div>
+
+            <div id="page2" class="pages">
+                <div class="menu_container">
+                    <span class="menu_text">청원 주제 세분화 결과</span>
+                    <hr size="2px" color="gray">
+                </div>
+                <div class="title_container">
+                    <span class="title_text">"그들이 전하는 메시지의 전문"</span>
+                </div>
+                
+                <div class="flex_container">
+                    <center>
+                        <div class="category_container">
+                            <div class="category">검·경찰 개혁</div>
+                            <div class="category">노동 환경</div>
+                            <div class="category">디지털 성범죄</div>
+                            <div class="category">미성년자 대상 성범죄</div>
+                            <div class="category">북한</div>
+                            <div class="category">성평등</div>
+                            <div class="category">사회적 소수자</div>
+                            <div class="category">아동학대</div>
+                            <div class="category">역사왜곡</div>
+                            <div class="category">음주운전</div>
+                            <div class="category">의료사고</div>
+                            <div class="category">정치개혁</div>
+                            <div class="category">종교</div>
+                            <div class="category">청소년 범죄</div>
+                            <div class="category">코로나19</div>
+                            <div class="category">투자</div>
+                            <div class="category">플랫폼</div>
+                        </div>
+                    </center>
+                </div>
+
+                <div class="letters_container">
+                    <div class="letters">
+                        총 44,063의 국민청원 중에(100명 이상의 동의 수를 얻은 청원) 정부의 답변을 받은 청원은 272개로 그 비율은 6%에 불과하다. 
+                        이는 94% 비율의 청원이 아직도 미해결 상태로 남아있음을 의미한다.
+                    </div>
+                    <br>
+                    <div class="letters">
+                        그래서 &lt;SURFER&gt;는 '20만 이상 동의'라는 조건의 경계를 더 넓혀 1만명 이상의 동의를 받은 청원들을 살펴보고, 
+                        기존의 국민청원 페이지의 17가지 분야를 그대로 따르기보다는 자주 나타나는 청원 주제를 토대로 세분화하였다.
+                        그 결과, 키워드는 크게 ‘검·경찰 개혁’, ‘노동 환경', ‘디지털 성범죄', ‘미성년자 성범죄', ‘북한', ‘성평등', ‘사회적 소수자', ‘아동학대', 
+                        ‘역사왜곡', ‘음주운전', ‘의료사고', ‘정치개혁', ‘종교', ‘청소년 범죄', ‘코로나19’, ‘주식투자', ‘디지털 플랫폼'으로 나누어 볼 수 있었다.
+                    </div>
+                    <br>
+                    <div class="footnote">
+                        * ‘미성년자 성범죄’와 ‘디지털 성범죄’ 청원의 범행 주체가 미성년자인 경우 청소년 범죄로 분류했다
+                    </div>
+                </div>
+            </div>
+
+            <div style="height: 20vh;"></div>
+            <!-- 4. 기획기사 부분 --> 
+        </div>
+    </div>
+
+        <div class="container" id="page3">
+            <div class="txt1" id="txt1">
+                <center><p class="txt1-title">청소년 디지털 성범죄, 화살은 어디로 향해야 하는가</p></center>
+                <p id="txt1_semititle">디지털 성범죄 청원 합계 1위</p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11가지로 세분화한 주제에서 청원 합계 1위는 ‘디지털 성범죄'였다. 
+                &lt;SURFER&gt;는 ‘국민들이 가장 많이 동의한 분야’라는 스포트라이트에 가려져 외면 받은 문제를 찾아보기로 했다.  
+
+                <div id="chungwon_category_detail_wrap">
+                    <img id="topic1_chungwon_category_detail_img" src="images/chungwon_category_detail.png" alt="청원주제세분화결과">
+                </div>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;말 그대로 언론의 스포트라이트를 받은 청원으로 인해 성범죄 피해자 보호를 위한 제도 개선과 가해자의 처벌이 강화됐다. 
+                역대 가장 많은 동의를 받은 1위와 2위 모두 N번방과 관련된 청원이기 때문이다. 불법촬영물 판매 뿐 아니라 소지·구입·시청도 처벌 대상으로 바뀌었다. 
+                N번방 피해자 대다수가 미성년자였기에 미성년자 의제 강간 연령 기준을 만 13세에서 16세로 상향해 처벌하는 조건이 추가되고 아동청소년성착취물 법정형을 강화하기도 했다. <br>
+                
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;하지만 &lt;SURFER&gt;는 여성가족부가 지난해 공개한 '아동·청소년 대상 성범죄 발생 추세와 동향 분석' 보고서에서 지난 2019년 집계된 디지털 성범죄 피해 아동 ·소년은 총 505명으로, 
+                오히려 전년(251명) 대비 2배 이상 늘었다는 사실을 발견했다. 
+                따라서 처벌 강화와 피해자 보호가 디지털 성범죄의 해결책으로 작용하고 있는지 살펴봐야했다.<br>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11가지로 세분화한 ‘인권/성평등’ 항목에서 디지털 성범죄의 뒤를 잇는 건 미성년자 대상 성범죄가 아닌 청소년 범죄였다. 
+                미성년자 대상 성범죄는 7위를 차지했다. 
+                디지털 성범죄 피해자의 과반을 차지하는 미성년자인데도 미성년자 대상 성범죄가 아닌 청소년 범죄가 더 많았다. 
+                그 이유는 미성년자 대상 성범죄 가해자의 대다수가 청소년, 미성년자였기 때문이다. 
+                광주해바라기센터가 2005년부터 2019년까지 아동·청소년 대상 성범죄 가해자 연령대를 조사한 결과 2015년부터 2019년까지 63.6%가 미성년자였다.<br>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 그러나 가해자 다수가 ‘청소년’임을 고려한 디지털 성범죄 예방, 처벌 강화 법안은 만들어지지 않았다. 
+                이에 청소년 가해자의 특성을 고려해 미성년자 대상 디지털 성범죄를 근본적으로 해결할 수 있는 방법을 살펴보기로 했다.
+
+                <!-- <p id="txt1_semititle"></p> -->
+            </div>
+
+            <!-- <div class="fixed"> -->
+            <div class="txt1" id="txt2">
+                <p id="txt2_semititle">소년이 소년에게 저지르는 디지털 성범죄</p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;‘디지털 성범죄’로 세분화된 49개 청원에서 (가해자-성인)이고 
+                (피해자-미성년자)인 청원은 9개, (가해자-미성년자), (피해자-미성년자)인 ‘청소년 범죄’ 74개 중에서 청소년 성범죄는 35개. 
+                그 35개 중 디지털 성범죄는 17개이다.<br>
+                <div id="adult_teen_ratio_img_wrap">
+                    <img id="adult_teen_ratio_img" src="images/topic1_adult_teen_ratio.png" alt="">
+                </div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;74개의 청소년 범죄 청원 분야 중 청소년 성범죄는 35개로 61%를 차지한다. 청소년 성범죄의 약 48.5%가 청소년 디지털 성범죄 관련 청원으로 차지한다. 
+                <strong>즉, 국민청원에 올라온 청소년 범죄 중 절반 이상은 성범죄이고, 그 성범죄 중의 또 절반이 디지털 성범죄인 것이다.</strong>
+                성인 디지털 성범죄의 비율 18%에 비하면 청소년이 저지르는 디지털 성범죄는 두 배가 넘는 수치다. <br>
+
+                <div id="teen_digital_ratio_img_wrap">
+                    <img id="teen_digital_ratio_img" src="images/topic1_teen_digital_ratio.png" alt="">
+                </div>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;‘청소년 범죄’로 분류된 청원을 동의 인원수로 1위부터 10까지 순위를 매겨보았을 때도 상위 10개 중 5개가 스마트폰을 사용한 범죄 및 디지털 성범죄임을 알 수 있었다. 
+                강자겸 서울시립청소년아하!성문화센터 상담팀 팀장은 “청소년은 디지털 사용이 용이해서 디지털 성범죄에 노출되기 쉽다”며 “온라인으로 친구를 사귀는 문화가 활발하게 잘 이뤄져 있기 때문에 디지털을 이용한 범죄가 늘어나는 것이다”고 설명했다. <br>
+
+                <div id="table_wrap" style="width: 100%">
+                    <table class="tg">
+                        <colgroup>
+                        <col style="width: 37%">
+                        <col style="width: 63%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th class="tg-l0iv"><span style="color:#FFF">‘청소년 범죄' 청원 동의 수 순위</span></th>
+                            <th class="tg-f58y">내용</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="tg-p6wd">
+                                <a style="color: #000000" href="https://www1.president.go.kr/petitions/282903">1위(354,935 명)</a>
+                            </td>
+                            <td class="tg-p6wd">19세 남자 3명과 15살 또래 남학생 4명이 15살 여자이를 집단 성폭행함. 
+                                이 과정에서 피해자는 사진을 찍음. 가해자는 SNS에 성관계를 가졌다는 허위사실 유포.</td>
+                        </tr>
+                        <tr>
+                            <td class="tg-p6wd">
+                                <a style="color: #000000" href="https://www1.president.go.kr/petitions/582785">3위(250,092 명)</a>
+                            </td>
+                            <td class="tg-p6wd">06년생으로 추정되는 다수의 인원들이 한 여학생을 폭행한 영상이 SNS에 올라옴. 
+                                영상 속 피해자는 출혈이 심함. </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-p6wd">
+                                <a style="color: #000000" href="https://www1.president.go.kr/petitions/384676">4위(234,236 명)</a>
+                            </td>
+                            <td class="tg-p6wd">남자 중학생 2명이 친구로 지내오던 여자 중학생을 화장실로 데려가 강간(초등학교 졸업 후). 
+                                SNS를 통해 피해자에게 성희롱 발언도 일삼음. </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-p6wd">
+                                <a style="color: #000000" href="https://www1.president.go.kr/petitions/384676">5위(217,786 명)</a>
+                            </td>
+                            <td class="tg-p6wd">
+                                여자 고등학생이 알코올 과다 치사로 사망. 
+                                친구들이 술자리에서 술을 강권했음. 가해자들은 취한 피해자를 강간하고 신체 사진을 찍고 성관계 동영상 촬영.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tg-p6wd">
+                                <a style="color: #000000" href="https://www1.president.go.kr/petitions/294226">7위(208,202 명)</a>
+                            </td>
+                            <td class="tg-p6wd">
+                                고등학교 2학년 피해자는 SNS를 통해 또래에게 살인 협박을 받음. 
+                                이후 피해자는 옷이 다 벗겨진채 중고생 선후배 8명으로부터 집단 폭행을 당함. 
+                            </td>
+                        </tr>
+                        </tbody>
+                        </table>
+                </div>
+            </div>
+            <!-- </div> -->
+
+            <!--New-->
+            <div class="txt3" id="txt3">
+                <!--New-->
+                <p id="txt3_semititle">'청소년'이라는 과녁에 꽂히는 화살들</p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;‘청소년 범죄' 청원 동의 수 상위 10개 청원 중 4개는 ‘소년법 폐지'와 미성년 범죄자 형량 강화를 요구하는 글이었다. <br>
+
+                <div id="topic1_wordcloud_wrap">
+                    <img id="topic1_wordcloud_img" src="images/topic1_wordcloud.png" alt="청소년 범죄 청원 동의 1-10위 내용의 워드클라우드">
+                </div>
+                <div id="wordcloud_caption">△청소년 범죄 청원 동의 1-10위 내용의 워드클라우드</div>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;청소년이 ‘요즘' 영악하고 잔인해졌으며 ‘예전보다 신체 및 정신 발달 수준이 향상’됐기 때문에 
+                촉법소년으로서 보호 처분을 받는 연령을 하향해야 한다고 주장하는 청원도 있었다. 
+                촉법소년에 해당하는 만 10세 이상부터 만 14세 미만은 소년법이나 형법에 적용받지 않고 소년보호처분을 받는다. 
+                실제로 20대 대선 후보들도 촉법소년 연령 기준 하향을 공약으로 내걸었다. 
+                이재명 더불어민주당 후보는 구체적인 내용을 언급하지 않았지만 촉법소년 연령을 내리겠다고 밝혔다. 
+                윤석열 국민의힘 후보와 안철수 국민의당 후보는 각각 만 12살 미만으로 낮추겠다고 공약했다. 
+                안 후보는 1월 9일 자신의 SNS “형사미성년자인 촉법소년 연령을 만 14세 미만으로 정한 뒤 63년이 지났다”며 “범죄 현장에서 잡혀도 형사에게 
+                ‘나는 촉법소년이니 처벌 못할 것’이라며 비웃기까지 하는 게 현실”이라고 촉법 소년 연령 기준에 대해 지적했다.<br>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이에 서울 소년원장으로 재직했던 한영선 경기대학교 경찰학과 교수는 청소년 범죄에 대해 처벌을 강화한다고 해서 범죄를 근절할 수 없다고 말했다.
+
+                <div id="topic1_txt3_quote">“청소년 범죄는 개인의 문제가 아니에요. 개인이 해결할 수 없고 사회적 자원을 동원해야 해요. 
+                    그러나 법은 사회적 자원 중 하나일 뿐이에요. 처벌은 범죄의 만병통치약이 아니죠”</div><br><br>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;청원에 나타난 엄벌주의적 논의 방향으로는 근본적인 해결 방안을 제시할 수 없다. 
+                그렇다면 미성년자 대상 디지털 성범죄를 해결하는 방법을 제시하는 대선 후보는 누구일까. 그리고 그 근본적인 해결 방법은 무엇일까. <br>
+            </div>
+            <div class="txt4" width="100%" id="txt4">
+                <p id="txt4_semititle">청소년 디지털 성범죄 근절을 위한 '정조준'</p>
+                <p style="color: black;">청소년 디지털 성범죄의 근본적인 해결법을 찾기 위해 5명의 취재진을 만나 인터뷰했다. 
+                전 소년원장 경기대학교 경찰행정학과 한영선 교수와 전주대학교 경찰학과 노성호 교수, 
+                시립아하!청소년성문화센터 강자겸 팀장, 
+                부천시 청소년법률지원센터 센터장 윤정은 변호사, 
+                마지막으로 경기도소재 고교 선생님을 만났다.</p>
+                <div class="topic1_txt4_qna_ctn">
+                    <img id="topic1_txt4_qna1" class="scroll-spy" src="images/topic1_txt4_q&a1.png">
+                    <img id="topic1_txt4_qna2" class="scroll-spy" src="images/topic1_txt4_q&a2.png">
+                    <img id="topic1_txt4_qna3" class="scroll-spy" src="images/topic1_txt4_q&a3.png">
+                    <img id="topic1_txt4_qna4" class="scroll-spy" src="images/topic1_txt4_q&a4.png">
+                    <img id="topic1_txt4_qna4" class="scroll-spy" src="images/topic1_txt4_q&a4_2.png">
+                    <img id="topic1_txt4_qna5" class="scroll-spy" src="images/topic1_txt4_q&a5.png">
+                    <img id="topic1_txt4_qna5" class="scroll-spy" src="images/topic1_txt4_q&a5_2.png">
+                </div>
+            </div>
+
+            <div class="txt3" id="real_txt6">
+                <div class="real_txt6_quote">
+                    뜨거운 태양 아래<br> 물 한 모금도 얻기 어려운 황무지에 씨앗을 뿌려놓고 <br>
+                    <div id="real_txt6_quote_span1">“너는 왜 담장 안의 장미처럼 예쁘게 자라지 못하느냐”</div><br>타박하는 꼴이 아닐까?<br>
+                    <div id="real_txt6_quote_span2">P.26 &lt;소년을 위한 재판&gt; 전 서울가정법원 소년부 판사 심재광</div>
+                </div>
+                <div class="real_txt6_copyright">ⓒ reuters</div>
+            </div>
+            <!-- <div class="space"></div> -->
+
+            <div class="tape4you">
+                <img id="tape-hands" src="images/tape_hands.png">
+                <p class="tape-title">"당신께 테이프를 전달하며"</p>
+                <div id="description_wrap">
+                    <p class="description">전문가들은 청소년 디지털 성범죄를 근절할 수 있는 근본적인 해결방안으로 ‘안정적인 돌봄체계의 구축과 성 관련 공교육을 강화’로 입을 모았다.<br>
+                        그렇다면 20대 대선 후보가 내놓은 돌봄과 성교육 및 인권 교육 공약은 무엇이 있을까.
+                        20대 대통령 후보의 대표적인 아이 돌봄 공약과 성교육 및 인권 교육 공약을 정리했다.
+                    </p>
+                </div>
+                
+                
+                <p class="election-title">20대 대선 후보에게 묻는 '아이돌봄' 공약</p>
+                <hr class="election-hr" id="topic1_election-hr" size="2" noshade>
+                <div id="topic1_tape4you_color_division">🟡 = 부모가 아이를 안정적으로 돌볼 수 있는공약 🟢 = 성/인권 공교육 공약</div>
+                <div class="profile_copyright">대선 후보 사진 출처: © 중앙선거관리위원회</div>
+
+                <div class="gongyak_ctn">
+                    <div class="gongyak_question_ctn">
+                        <div class="question-box">
+                            <strong>청소년 디지털 성범죄 문제</strong>를 근본적으로 해결할 공약은 무엇인가요?
+                        </div><br>
+                        <button class="answer-button" id="answer_button1">답변 보기</button>
+                    </div>
+
+                    <div class="answer-box1" id="topic1-answer-box1">
+                        <div class="profile_ctn">
+                            <div class="profile">
+                                <img width="100%" class="lee" src="images/lee.png">
+                            </div>
+                        </div>
+                        <div class="answer-box1-text" id="topic1-answer-box1-text">
+                            <div class="candidate-name">&lt;더불어민주당 이재명&gt;</div>
+                            “하교 후 집에 혼자 있는 맞벌이 가정 초등학생들이 많다. 저학년은 1시에 집에 가고 있다. 돌봄과 안전을 위해 🟡<strong>초등학교 3시 동시 하교</strong>를 추진하겠다. 
+                            또 🟡<strong>정규 수업 종료 후 오후 7시까지 양질의 돌봄을 제공</strong>해 부모의 부담을 덜겠다”<br><br>
+                            “🟢전 국민 디지털 성범죄 예방교육을 실시해 성에 대한 인식을 개선하고, 디지털 문화를 인권 존중 문화로 만들겠다”<br><br>
+                            <a id="lee_gongyak" class="gongyak_page" href="https://www.jmleetogether.com/pledge2/index.php">공약 페이지</a>
+                        </div>
+                    </div>
+
+                    <div class="answer-box2" id="topic1-answer-box2">
+                        <div class="profile_ctn">
+                            <div class="profile">
+                                <img class="yoon" src="images/yoon.png">
+                            </div>
+                        </div>
+                        <div class="answer-box2-text" id="topic1-answer-box2-text">
+                            <div class="candidate-name">&lt;국민의 힘 윤석열&gt;</div>
+                            “아이를 키우는 노동자가 일정 기간 재택근무를 할 수 있도록 <strong>🟡육아 재택근무</strong>를 도입하겠다. 
+                            맞벌이 부부의 부담을 줄이기 위해 방학 중 <strong>🟡초등학생 돌봄교실을 저녁 8시까지 확대하고 희망하는 아이들 모두 참여할 수 있도록 대상을 확대</strong>하겠다”<br><br>
+                            <a id="yoon_gongyak" class="gongyak_page" href="https://yoonlove.com/promise">공약 페이지</a>
+                        </div>
+                    </div>
+
+                    <div class="answer-box4" id="topic1-answer-box4">
+                        <div class="profile_ctn">
+                            <div class="profile">
+                                <img class="ahn" src="images/ahn.png">
+                            </div>
+                        </div>
+                        <div class="answer-box4-text" id="topic1-answer-box4-text">
+                            <div class="candidate-name">&lt;국민의 당 안철수&gt;</div>
+                            <strong>"🟡한국형 전일제 교육시스템 도입</strong>해 방과 후 7시까지 전일제학교를 운영하고, 
+                            교육부 중심으로 돌봄정책 일원화 체계를 만들겠다. 
+                            부모는 안심하고 아이를 맡기고, 아이는 좋은 환경에서 생활하도록 <strong>🟡아이돌보미 및 민간 베이비시터 등록제를 도입</strong>하겠다."<br><br>
+                            "성폭력 범죄는 어릴 때부터 잘못된 성 인식에서 비롯되는 경우가 많다. 
+                            <strong>🟢성폭력 관련 교육 내실화</strong>를 위해 노력하겠다."<br><br>
+                            <a id="ahn_gongyak" class="gongyak_page" href="https://ahnflix.kr/videoMain/selectVideoList?videoCd=policy">공약 페이지</a>
+                        </div>
+                    </div>
+
+                    <div class="answer-box3" id="topic1-answer-box3">
+                        <div class="profile_ctn">
+                            <div class="profile">
+                                <img class="sim" src="images/sim.png">
+                            </div>
+                        </div>
+                        <div class="answer-box3-text" id="topic1-answer-box3-text">
+                            <div class="candidate-name">&lt;정의당 심상정&gt;</div>
+                            “일과 생활을 병행 가능하도록 <strong>🟡전 국민 육아휴직제도 도입</strong>하겠다. 
+                            국가에서 기업과 노동자가 대체인력 걱정이 없이 육아휴직을 쓰도록 <strong>🟡‘대체인력지원센터'를 설립</strong>하겠다. 
+                            육아휴직자 기존 급여의 1.5배를 지급하는 ‘대체인력평등수당'을 신설해서 대체인력의 원활한 공급을 지원하겠다."<br><br>
+                            “<strong>🟢초중고 공교육 과정에서 성평등 교육과 성차별, 성폭력 젠더감수성 교육을 체계화</strong>하고 <strong>🟢초등학교부터 대학교까지 공공기관 인권교육을 의무화</strong>하겠다."<br><br>
+                            <a id="sim_gongyak" class="gongyak_page" href="http://www.xn--hg4br3bj9g.com/home/post_list.php?mc=4">공약 페이지</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page4">    
+            <div id="txt7" width="100%"> <!--class="txt5"-->
+                <div class="txt5-title">당신이 모르는 어느 ‘집’에 관하여<br>[장애인 탈시설의 딜레마]</div>
+                <p id="txt5_semititle">북을 칠 수 없는 사람들</p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;‘국민이 물으면 정부가 답한다’는 국민청원, 그 안에서도 빛과 그늘은 존재한다. 
+                중대한 사안일수록, 보편적 이슈일수록 20만 동의라는 목표는 빠르게 달성된다. 
+                세상이 주목하지 않은 이들의 절규를 찾아 1만 이상 동의를 받은 5년간의 청원 2,701건을 분석했다. 
+                성범죄, 정치 개혁 등 소위 ‘인기 카테고리’는 최소 한 번씩 답변을 받았으며 물론 이 역시 중요한 사안임에는 뜻을 같이한다.<br><br>
+                <img id="topic2_txt7_img_chungwon" class="scroll-spy" src="images/topic2_txt7_chunngwon.png">
+                <div id="chungwon_copyright_wrap"><span id="topic2_txt7_img_chungwon_copyright">ⓒ청와대</span></div><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;다만, 대궐 밖에 신문고가 달려도 북을 치러 갈 수조차 없는 이들이 있다. 
+                분석 결과, 5년간의 국민청원에서 ‘장애인’에 관한 답변은 찾아볼 수 없었다. 애초에 1만 이상의 동의를 받은 청원조차 손에 꼽힌다.<br><br>
+                <div id="topic2_txt7_sinmoongo">* 신문고: 조선 시대에 백성들의 억울한 일을 해결하여 줄 목적으로 대궐 밖에 달았던 북. 
+                    북이 울리는 소리를 임금이 직접 듣고 북을 친자의 억울한 사연을 접수 처리하도록 하였다.</div> <br>
+                <div id="topic2_txt7_centertxt" style="opacity: 1;">
+                    <strong id="centertxt_strong1" class="scroll_txt">‘장애인’</strong> 키워드 청원, 5년간 
+                    <br>
+                    <strong class="scroll_txt">6,937건</strong>
+                    <br>
+                    <strong class="scroll_txt">.</strong>
+                    <br>
+                    <strong class="scroll_txt">.</strong>
+                    <br>
+                    그중, 1만 이상 동의는 
+                    <br>
+                    <strong class="scroll_txt">11건</strong>
+                    <br>
+                    <strong class="scroll_txt">.</strong>
+                    <br>
+                    <strong class="scroll_txt">.</strong>
+                    <br>
+                    <strong id="centertxt_strong1" class="scroll_txt">장애인 ‘생활권’</strong> 관련 청원
+                    <br>
+                    <strong class="scroll_txt">3건</strong>
+                    <small class="scroll_txt">(총합 약 6만 명 동의)</small>
+                </div>
+                <div id="topic2_txt7_slide_ctn">
+                    <div id="topic2_txt7_slide">
+                        <a href="https://www1.president.go.kr/petitions/599822">
+                            <img id="topic2_txt7_slide1" src="images/topic2_txt7_slide1.png">
+                        </a> 
+                        <a href="https://www1.president.go.kr/petitions/592030">
+                            <img id="topic2_txt7_slide2" src="images/topic2_txt7_slide2.png"> 
+                        </a>
+                        <a href="https://www1.president.go.kr/petitions/584988">
+                            <img id="topic2_txt7_slide3" src="images/topic2_txt7_slide3.png"> 
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="txt6" id="txt8" width="100%">
+                <p id="txt6_semititle">주거(住居) : 일정한 곳에 머물러 삶. 또는 그런 집.</p>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;위 청원들은 모두 장애인의 생활권에 대해 논한다. 
+                빠지지 않는 개념은 ‘탈시설’, 말 그대로 장애인의 시설 수용을 탈피하는 것이다.
+                궁극적으로는 장애인이 지역 사회에서 자립 생활을 영위할 수 있도록 필요한 서비스를 제공하는 것이다. 
+                혹자는 탈시설 대신 ‘장애인 자립 생활’이라는 용어를 써야 한다고 일컫기도 한다.<br>
+
+                <!--id="topic2_img_bokun_wrap" id="topic2_txt8_img_bokun"-->
+                <div class="image_container topic2_img_ctn" id="img_ctn5">
+                    <img id="img5" class="scroll-spy" src="images/topic2_txt8_bokun.png">
+                </div>
+                <div id="bokun_copyright_wrap">
+                    <span id="topic2_txt8_img_bokun_copyright">ⓒ보건복지부</span>
+                </div><br>
+                
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2020년 기준 전국에 있는 장애인 거주시설은 총 1,539개, 거주 인원은 2만 9천여 명이다. 
+                중증장애인과 발달장애인의 비율이 각각 98%, 80%를 차지한다. 
+                거주자들의 탈시설 욕구는 어느 정도 일까. 
+                2020년 9월부터 5개월간 한국장애인개발원이 6,035명의 시설 거주 장애인들을 대상으로 한 설문조사 결과, 
+                시설에서 ‘나가고 싶지 않다’는 응답이 약 60%, ‘나가고 싶다’는 응답은 약 33%를 차지했다. 
+                탈시설을 비 희망한 장애인은 중증장애인(약 62%), 지적장애인(약 60%), 청각언어장애인(약 51%) 순으로 높은 비율을 차지했다.<br>
+
+                <!--id="topic2_desire_wrap" id="topic2_txt8_img_desire"-->
+                <div class="image_container topic2_img_ctn" id="img_ctn6">
+                    <img id="img6" class="scroll-spy" src="images/topic2_txt8_desire.png">
+                </div>
+                <br>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;시설 밖으로 나가고 싶지 않은 이유는 무엇일까. 
+                동일 자료(복수응답 허용)에 따르면 ‘이곳에 사는 것이 좋아서’라는 답변이 약 70%, ‘나가서 어떻게 살아야 할지 몰라서’라는 답변이 약 22%, ‘경제적 자립 자신 없음’의 답변이 약 15%를 차지했다. 
+                긍정적 답변이 압도적 비율을 차지했으나 부정적 답변, 그리고 향후 변화가 가능할 답변에 초점을 맞춰 취재를 진행했다.<br>
+
+                <!--id="topic2_desire_reason_wrap" id="topic2_txt8_img_desire_reason"-->
+                <div class="image_container topic2_img_ctn" id="img_ctn7">
+                    <img id="img7" class="scroll-spy" src="images/topic2_txt8_desire_reason.png">
+                </div><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;자립에 대한 불안감과 넉넉지 못한 재정 상황을 지닌 이들에게 정책은 제대로 작동하고 있을까? 
+                문재인 정부는 임기 초 100대 국정과제 중 42번째로 장애인 탈시설을 선정했다. 
+                2018년 하반기 발표로 예정됐던 ‘장애인 지역사회 자립지원에 관한 로드맵’은 임기를 1년도 채 남기지 않은 작년 8월에 발표됐다.<br>
+
+                <div id="roadmap_wrap">
+                    <img id="topic2_txt8_img_roadmap" class="scroll-spy" src="images/roadmap.png">
+                    <div id="roadmap_copyright">ⓒ보건복지부</div>
+                </div><br>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;주요 내용은 탈시설 장애인이 독립생활을 영위할 수 있도록 물리적 거주공간과 복지서비스를 결합 지원한다는 것이다. 
+                정부는 거주시설의 신규개소를 금지하고 기존 시설은 변환하며 2024년까지 시범사업을 추진해 2041년에는 완전히 거주 전환을 마무리할 계획이다. 
+                저소득·취약계층 장애인에게는 공공임대 주택인 ‘장애인 지원주택’이 제공된다. 
+                지원주택에서는 주거 관리 뿐 아니라 생활 관리 전반에 대한 서비스가 이루어진다. 
+                작년 9월 말 기준 서울시 7개 자치구에 장애인지원주택 127호가 자리하고 있으며 입주인은 131명이다. 
+
+            </div>
+        
+            <div class="txt7" id="txt9">
+
+                <p id="txt7_semititle2">시설 밖 사람들<br>“혼자 아침 차려 먹고 옆집 석희 만나요” </p>
+                <div id="supporthouse12">
+                    <img id="topic2_txt9_supporthouse1_img" src="images/topic2_txt9_supporthouse1.png">
+                    <img id="topic2_txt9_supporthouse2_img" src="images/topic2_txt9_supporthouse2.png">
+                </div>
+                <div id="topic2_txt9_supporhouse_caption">△성민장애인지원주택</div>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;서울 강동구에 위치한 성민장애인지원주택을 직접 찾았다. 
+                이곳은 최초의 아파트형 지원주택으로 일반 아파트에 장애인과 비장애인이 함께 살고 있다. 
+                이들은 작년 11월 아파트에서 열린 플리마켓 행사에 참여해 함께 어울리기도 했다. 
+                집 내부에는 문턱이 없고, 손잡이가 곳곳에 설치돼 있다. 
+                현재 뇌병변·지적장애인 14명이 각각 자신의 집에 거주하고 있으며 주거 코디네이터(성민복지관 사회복지사) 4명이 이들에게 생활 서비스를 제공한다. 
+                중증지적장애인 입주자 2명을 만나 이야기를 나눴다. 
+                문장을 완벽히 구사할 수는 없지만 간단한 소통이 가능했다.<br>
+
+                <img id="topic2_txt9_mrcha_img" src="images/topic2_txt9_mrcha.png">
+                <div id="topic2_txt9_mrcha_caption">△집에 방문한 사회복지사에게 직접 문을 열어주는 차민석 씨</div>
+                
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;작년 5월 입주한 차민석(49세, 중증지적장애) 씨는 아침 7시 10분에 혼자 일어나 학교(평생교육센터)에 간다. 
+                학교에 안 가는 날은 10시 55분까지 늦잠을 잔다. 
+                아침밥과 약은 혼자 챙긴다. 
+                그는 “혼자 있을 때는 드라마 전원일기를 보고 옆집에 사는 석희를 자주 만난다”고 말했다. 
+                주거 코디네이터와 활동지원사의 도움도 받는다.<br>
+
+                <img id="topic2_txt9_lees_closet_img" src="images/topic2_txt9_lees_closet.png">
+                <div id="topic2_txt9_lees_closet_caption">△이석희 씨의 옷장</div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;같은 달 입주한 이석희(51세, 중증지적장애)씨는 “옷 사는 것을 좋아한다”며 자신의 옷장을 자랑했다. 
+                지원주택에서 찍은 사진이 담긴 달력을 꺼내며 공원에서 자전거 타는 사진을 보여주기도 했다. 
+                석희 씨는 일주일에 친구들을 5번 만날 정도로 쾌활하다. 
+                집 앞 편의점은 혼자 갈 수 있지만 그래도 주거 코치님과 함께 다닌다. 
+                장애인지원주택의 장점을 묻는 말에 민석 씨는 “개인 공간”, 석희 씨는 손가락을 하나로 접으며 “딱 한 명”이라고 답했다. 
+                이들은 모두 시설에서 7명과 함께 거주하다가 자립생활주택을 거쳐 ‘내 집’이 생겼다.<br>
+
+                <div id="topic2_txt9_cha_livingroom_wrap">
+                    <img id="topic2_txt9_cha_livingroom_img" src="images/topic2_txt9_cha_livingroom.png">
+                </div>
+                <div id="topic2_txt9_cha_livingroom_caption">△차민석 씨의 집 거실</div><br>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;함께 만난 성민장애인지원주택 안은정 사회복지사는 “활동지원사 전문성 강화와 개인 맞춤형 지원이 중요하다”고 강조했다. 
+                중증장애인은 자립 생활이 어려운 부분이 있기에 활동지원사의 역량이 뒷받침되어야 한다는 것이다. 
+                그는 “활동지원사 전문성 강화 이후 24시간 지원 체계가 이루어져야 한다”고 말하기도 했다. 
+                마지막으로 안 씨는 “지원주택이 물리적 공간보다 정서적 공간이 되는 게 중요하다”며 “장애 유형과 정도, 특성을 고려한 맞춤형 지원이 이뤄져야 한다”고 설명했다.<br><br>
+
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;지원주택 방문 이후, 온전히 독립해 임대주택서 거주 중인 장애인도 만나봤다. 
+                추경진(55세, 척수손상 지체장애)씨는 30대 초반에 교통사고로 척수가 손상돼 15년간 시설에 거주하다 지난 2016년 퇴소했다. 
+                그는 “장애를 얻은 1997년 당시 저상버스는 물론 활동지원제도조차 없어 후천적 장애인이었음에도 시설에 들어갈 수밖에 없었다”고 말했다. 
+                그는 손과 발을 자유롭게 쓸 수 없고 전동휠체어로만 이동할 수 있으며 하루 대부분을 활동지원사와 함께한다. 
+                추 씨는 “24시간 활동지원과 거주지 선택권 보장을 바란다”고 말했다. 탈시설을 했더라도 거주했던 시설과 동일한 지역에 살아야 활동 지원 등을 원활히 받을 수 있기 때문이다.<br>
+            </div>
+
+            <div class="topic2_fixed">
+                <div class="txt7" id="txt9_2">
+                    <!-- <img id="topic2_txt9_rights_footact_img" src="images/topic2_txt9_rights_footact.png">
+                    <div id="topic2_txt9_rights_footact_copyright">ⓒ장애와인권발바닥행동</div><br> -->
+    
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;함께 만난 장애와인권발바닥행동 이정하 활동가는 “인권에 기반한 탈시설이 이루어져야 한다”며 장애인 당사자가 탈시설의 중심이 될 것을 강조했다. 
+                    탈시설 로드맵에 대해서는 “장애인 자립 지원 서비스가 전무한 상태에서 인프라를 조금 제공하고, 잘 사는지 보는 것”이라며 “인권이 시범사업이 되어서는 안 된다”고 비판했다. 
+                    부족한 주택과 돌봄 시간을 늘려 개인별 주거 및 24시간 지원 체계를 구축해야 한다는 것이다. 
+                    이 활동가는 “현 (탈시설) 정책은 지나치게 경증 장애인 중심”이라며 “중증·아동·고령 장애인이 모두 고려돼야 한다”고 주장했다. 
+                </div>
+            </div>
+            
+
+            <div id="txt10">
+                <p id="txt10_semititle1">시설 안 사람들<br>“환갑이 된 제가, 아들을 잘 키울 수 있을까요”</p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;탈시설을 마냥 찬성할 수는 없는 이들도 존재한다. 
+                자녀에게 세상의 가혹함을 느끼게 하고 싶지 않은 부모들이다. 
+                경기도 화성에 위치한 장애인거주시설 ‘둘다섯해누리’에서 중증발달장애인 정순성(39)씨의 어머니 최경자(60)씨를 만날 수 있었다. 
+                11년째 둘다섯해누리서 거주하고 있는 정순성 씨는 신체 한쪽을 쓸 수 없어 밥을 먹이고 배변을 닦아주는 1:1 밀착 돌봄이 필요하다. 
+                그는 시설 안에서 물리치료를 받고 카페를 이용하며, 매일 본인이 선택한 활동을 한다. 
+                코로나19 유행 전에는 사회복지사와 스포츠 경기를 관람하고 여행도 다녔다. 
+                최 씨는 아들의 모습을 매일 사진으로 받아본다.<br>
+                
+                <div id="threepeople_wrap">
+                    <img id="topic2_txt10_twofive_threepeople_img" src="images/topic2_txt10_twofive_threepeople.png">
+                </div>
+                <div id="topic2_txt10_twofive_threepeople_caption">△왼쪽부터 최경자 씨, 둘다섯해누리 시설장 이기수 신부, 금형민 사무국장</div><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;최 씨는 “환갑이 되다 보니 허리가 많이 안 좋다. 
+                집에서는 서른아홉 먹은 아들을 씻기기도 힘든데 이곳에서는 일대일 돌봄이 제공된다”고 반색했다. 
+                또, “여름엔 덥고 겨울엔 추운 집보다 쾌적한 시설에서 아들이 친구들과 함께 어울려 지내니 마음이 놓인다”라고 덧붙였다. 
+                최 씨는 장애 유형에 맞는 자립 지원은 물론, 아들이 곧 마흔이 되는 만큼 “노인이 된 발달장애인들이 거주할 수 있는 장애인 요양 시설이 필요하다”고 강조했다.<br>
+
+                <div id="topic2_twofivehouse12">
+                    <img id="topic2_txt10_twofive_house1_img" src="images/topic2_txt10_twofive_house1.png">
+                    <img id="topic2_txt10_twofive_house2_img" src="images/topic2_txt10_twofive_house2.png">
+                </div>
+                <div id="topic2_txt10_twofive_house2_caption">△둘다섯해누리의 별빛누리그룹홈(공동생활가정)</div><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;함께 만난 둘다섯해누리 시설장 이기수 신부는 “탈시설의 취지에는 공감하나 시설에 대한 전면적 부정은 이해하기 어렵다”고 밝혔다. 
+                시설 폐쇄 이전에 지역사회 내에서 장애인과 함께 살아갈 준비를 마쳐야 한다는 것이다. 
+                그는 “발달장애인은 폭력적 행동과 고함이 자연스러운 일이다. 
+                우리 사회는 옆집에 이들이 살아도 용인할 수 있는 분위기인가”라며 물었다. 
+                이 신부는 탈시설 정책에 대해 “문제는 ‘낙후된 폐쇄적 시설’이다. 
+                시설을 질적으로 보강하고 그사이에 지역사회는 장애인 자립 생활을 위한 인프라를 구축해야 한다”고 지적했다. 
+                실제로 둘다섯해누리에는 2,3인이 한 방을 쓰는 시설과 각방을 사용하고 거실에 나와 함께 담소를 나누는 그룹홈이 자리하고 있다. 
+                그룹홈은 소규모의 장애인이 공동으로 생활하는 가정이다. 
+                야외에는 수영장과 미로공원, 산책로도 조성되어 있다.<br><br> 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이 신부는 장애 유형별 다양한 주거 형태를 강조했다.
+                대형 시설을 소형화하거나 시설 내 독립적 공간을 구축하는 게 자립이 불가한 중증발달장애인들의 자립을 돕는 실질적 방안이라는 것이다.
+                마지막으로 그는 “사고가 발생할 수밖에 없는 시스템을 개선해야 한다”고도 주장했다.
+                한 사람당 수많은 사람을 맡는 현 돌봄 구조와 인력에 대한 처우 개선이 시설에서 발생하는 각종 사고를 막을 수 있다는 것이다.
+            </div>
+
+            <div id="txt11">
+                <p id="txt11_semititle1">선택권은 장애인 손에 쥐어져야</p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;탈시설의 딜레마는 해결될 수 있을까. 
+                ‘장애인 탈시설의 법체계 개선 방안(2021.02)’에 관해 논문을 쓴 유동철 동의대 사회복지학과 교수와 만나 이야기를 나눴다. 
+                그는 “장애인 거주에는 세 가지 권리가 실현되어야 한다”고 말했다. 
+                거주 공간을 선택할 권리, 동거인을 선택할 권리, 자유의지에 따라 생활을 유지할 권리이다. 
+                그는 국내 대부분 시설에서 세 가지 권리가 충족되고 있지 않은 것과 서비스 수혜자가 상대적으로 을에 위치한 점을 지적했다.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;탈시설에 관해서는 “장애의 중증과 경증을 따지기보다 의료나 요양이 필요한지를 판단해 별도의 기관을 구축해야 한다”고 설명했다. 
+                유 교수는 활동 지원부터 야간 응급지원까지 연계되는 24시간 지원 시스템과 지원주택, 임대주택, 공동체 주택 등 다양한 장애인 주거 공간 확충의 필요성도 강조했다. 
+                또한, 지역사회 이전부터 안정적 자립까지 지속해서 지원하는 “자립생활 전환 센터(탈시설 센터)의 역할이 중요하다”고 설명하며 “광역자치단체마다 센터가 만들어져야 한다“고 강조했다.<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;마지막으로 그는 돌봄을 온전히 가족의 책임으로 맡겨뒀던 현 사회의 시스템을 지적했다. 
+                국가가 약자를 돌보는 돌봄의 탈 가족화·사회화가 필요하다는 것이다. 
+                결국 탈시설에 있어 가장 중요한 것은 자기 결정권이다. 
+                유 교수는 “탈시설이 지역사회로 몸만 옮기는 것이 아니라, 본인이 선택하고 통제할 수 있는 방향에 대해 합의하는 과정까지 포함되어야 한다”고 주장했다. 
+            </div>
+
+            <div id="txt12">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;세상의 관심이 비껴간 그늘 속에서 누군가는 꾸준히 권리를 주장해왔다. 
+                당신이 모르는 사이, 어느 ‘집’에서는 자유권 보장을, 어느 ‘집’에서는 돌봄의 탈 가족화를 외쳤다. 
+                이들은 모두 장애 유형을 뭉뚱그려 턱- 내놓은 정책에 부단히 소리를 냈다. 
+                그것이 설령 아주 작은 목소리였을 지라도, 여전히 이들은 당신과 같은 세상에 살고 있다. 
+            </div>
+        
+            <div class="tape4you"> <!--id="topic2_tape4you"-->
+                <img id="tape-hands" src="images/tape_hands.png">
+                <p class="tape-title">"당신께 테이프를 전달하며"</p>
+                <div id="description_wrap">
+                    <div class="description">음성사서함에서 떠나가지 못한 목소리를 해결해 줄 앞으로의 정부가 해야할 일은 무엇일까.<br>
+                        각 대선 후보들의 공약을 분석한 후 국민청원의 이야기를 담고 있는지 현황을 파악하며 마무리한다.</div>
+                </div>
+                
+                <p class="election-title">20대 대선 후보에게 묻는 '탈시설' 공약</p>
+                <hr class="election-hr" id="topic2_election-hr" width="30%" size="2" noshade><br>
+                <div class="profile_copyright">대선 후보 사진 출처: © 중앙선거관리위원회</div>
+
+                <div class="gongyak_ctn">
+                    <div class="gongyak_question_ctn">
+                        <div class="question-box">
+                            <strong>장애인 자립생활을 지원</strong>할 공약은 무엇인가요?
+                        </div><br>
+                        <button class="answer-button" id="answer_button2">답변 보기</button>
+                    </div>
+    
+                    <div class="answer-box1" id="topic2-answer-box1">
+                        <div class="profile_ctn">
+                            <div class="profile">
+                                <img class="lee" src="images/lee.png">
+                                <!-- <div class="candidate-name">이재명 후보</div> -->
+                            </div>
+                        </div>
+                        <div class="answer-box1-text" id="topic2-answer-box1-text">
+                            <div class="candidate-name">&lt;더불어민주당 이재명&gt;</div>
+                            <strong>국가가 돌봄을 책임</strong>지겠다. <strong>시설 입소 없이 지역사회에서</strong> 요양, 가사간병, 의료 등 서비스를 <strong>편리하고 저렴하게 이용할 수 있는 환경 조성</strong>하겠다. 
+                            장애인 <strong>개인별 맞춤형 서비스를 강화</strong>하겠다. 지역사회 자립 생활을 지원하고, <strong>활동지원 서비스 시간 확대</strong> 및 <strong>장애 유형별 활동지원 전문가를 양성</strong>하겠다. <strong>장애인 활동지원제도도 개선</strong>하겠다. 
+                            발달장애인을 위한 <strong>의사결정 지원 제도를 법제화</strong>하고 권익옹호 지원체계를 강화하겠다. 
+                            <strong>의사결정 지원 제도를 법제화</strong>를 구축하고 위기쉼터, 응급병상 등 <strong>정신장애인의 위기 지원 체계를 확립</strong>하겠다.<br><br>
+                            <a id="lee_gongyak" class="gongyak_page" href="https://www.jmleetogether.com/pledge2/index.php">공약 페이지</a>
+                        </div>
+                    </div>
+    
+                    <div class="answer-box2" id="topic2-answer-box2">
+                        <div class="profile_ctn">
+                            <div class="profile">
+                                <img class="yoon" src="images/yoon.png">
+                            </div>
+                        </div>
+                        <div class="answer-box2-text" id="topic2-answer-box2-text">
+                            <div class="candidate-name">&lt;국민의 힘 윤석열&gt;</div>
+                            없음. <br><br>
+                            장애인 생활권 관련으로는 장애인 본인이 예산 내에서 원하는 복지서비스<small>(ex. 활동지원 서비스)</small>를 선택할 수 있게 하겠다.<br><br>
+    
+                            <a id="yoon_gongyak" class="gongyak_page" href="https://yoonlove.com/promise">공약 페이지</a>
+                        </div>
+                    </div>
+    
+                    <div class="answer-box4" id="topic2-answer-box4">
+                        <div class="profile_ctn">
+                            <div class="profile">
+                                <img class="ahn" src="images/ahn.png">
+                            </div>
+                        </div>
+                        <div class="answer-box4-text" id="topic2-answer-box4-text">
+                            <div class="candidate-name">&lt;국민의 당 안철수&gt;</div>
+                            없음.<br><br>
+                            <a id="ahn_gongyak" class="gongyak_page" href="https://ahnflix.kr/videoMain/selectVideoList?videoCd=policy">공약 페이지</a>
+                        </div>
+                    </div>
+    
+                    <div class="answer-box3" id="topic2-answer-box3">
+                        <div class="profile_ctn">
+                            <div class="profile">
+                                <img class="sim" src="images/sim.png">
+                            </div>
+                        </div>    
+                        <div class="answer-box3-text" id="topic2-answer-box3-text">
+                            <div class="candidate-name">&lt;정의당 심상정&gt;</div>
+                            <strong>10년 이내에 장애인의 완전한 탈시설</strong>을 이행하고 <strong>지역사회 지원 체계를 마련</strong>하겠다. 
+                            가족에게 맡겨졌던 <strong>돌봄의 책임을 국가 책임으로 전환</strong>하고, <strong>비리 시설 원스트라이크 아웃제</strong>를 도입하겠다. 
+                            <strong>신규 거주시설 설치를 금지</strong>하겠다. 발달장애인 포함, 중증장애인 <strong>24시간 지원 체계</strong>를 구축하겠다. 장애인 <strong>개인 맞춤형 서비스 지원</strong>을 위해 공적 책임을 강화하겠다.<br><br>
+                            <a id="sim_gongyak" class="gongyak_page" href="http://www.xn--hg4br3bj9g.com/home/post_list.php?mc=4">공약 페이지</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+            <div class="projectname">
+                <img class="sea-waves" src="images/sea-waves.png">
+                <p class="surfer"><a id="surfer_notion" href="https://www.notion.so/About-us-8ca5aeb54d814e4c9f9a96c2cf18b81e">Surfer</a></p>
+            </div>
+            <div class="about-us">
+                    <div class="datateam">
+                        <div class="team-name">데이터팀</div>
+                        <div class="member-name">조은수 <small>joeun115@naver.com</small></div>
+                        <div class="member-name">박성영 <small>tina106@naver.com</small></div>
+                    </div>
+                    <div class="coverteam">
+                        <div class="team-name">취재팀</div>
+                        <div class="member-name">정세진 <small>se0524099@gmail.com</small></div>
+                        <div class="member-name">고나린 <small>knr7763@naver.com</small></div>
+                        <div class="member-name">이나혜 <small>iamhye0101@gmail.com</small> </div>
+                        <div class="member-name">최인선 <small>insun5308@gmail.com</small></div>
+                    </div>
+                    <div class="developmentteam">
+                        <div class="team-name">개발팀</div>
+                        <div class="member-name">장한빛 <small>hanbitj4894@gmail.com</small></div>
+                        <div class="member-name">김다은 <small>jkde7721@naver.com</small></div>
+                    </div>
+            </div>
+            <!-- <div class="sns">
+                    <img src="images/notion.png">
+                    <img src="images/instagram.png">
+            </div> -->
+            <div class="copyright">2022. Project Surfer. All rights reserved.</div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
