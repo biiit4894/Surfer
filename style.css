@@ -337,6 +337,10 @@ img.show {
   font-family: "AppleSDGothicNeoB00";
 }
 
+.post_by_ctg_title_long {
+  font-size: 1.4rem;
+}
+
 #post_by_ctg_hr {
   margin-top: 6px;
   border: 1px solid black;
@@ -579,6 +583,10 @@ img.show {
     font-size: 1.45rem;
   }
 
+  .post_by_ctg_title_long {
+    font-size: 1.35rem;
+  }
+
   .category_desc_txt {
     font-size: 0.97rem;
   }
@@ -683,6 +691,10 @@ img.show {
 
   .post_by_ctg_title {
     font-size: 1.15rem;
+  }
+
+  .post_by_ctg_title_long {
+    font-size: 1rem;
   }
 
   .major_petition {
